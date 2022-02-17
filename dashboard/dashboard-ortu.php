@@ -2,7 +2,7 @@
 <html>
 <script src="https://kit.fontawesome.com/3cd968700c.js" crossorigin="anonymous"></script>
 <link rel="apple-touch-icon" sizes="76x76" href="assets/img/logo-simodis.png">
-    <link rel="icon" type="image/png" href="assets/img/logo-simodis.png">
+    <link rel="icon" type="image/png" href="img/logo-simodis.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <title>SIMODIS</title>
 <meta charset="UTF-8">
@@ -29,8 +29,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     </div>
     <div class="w3-col s8 w3-bar">
       <span>Welcome, <strong>Orang Tua Siswa</strong></span><br>
-      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
-      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
+      <a href="profile-dashboardOrtu.php" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
       <a href="#" class="w3-bar-item w3-button"><i class="fa fa-cog"></i></a>
     </div>
   </div>
@@ -43,7 +42,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     <a href="#" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa-solid fa-house"></i>  Beranda</a>
     <a href="identitas-sekolah.php" class="w3-bar-item w3-button w3-padding"><i class="fa-solid fa-school"></i>  Identitas Sekolah</a>
     <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa-solid fa-diagram-predecessor"></i>  Absensi Siswa</a>
-    <a href="spp-sekolah/login.php" class="w3-bar-item w3-button w3-padding"><i class="fa-solid fa-money-bill"></i>  SPP Sekolah</a>
+    <a href="spp-sekolah/datasiswa.php" class="w3-bar-item w3-button w3-padding"><i class="fa-solid fa-money-bill"></i>  SPP Sekolah</a>
     <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa-solid fa-pager"></i>  Nilai Evaluasi</a>
     <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bell fa-fw"></i>  News</a>
     <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Settings</a><br><br>
@@ -68,31 +67,31 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
         <h5>Mata Pelajaran</h5>
         <table class="w3-table w3-striped w3-white">
           <tr>
-          <td><i class="fa fa-bookmark w3-text-blue w3-large"></i></td>
+          <td><i class="fa-solid fa-book"></i></td>
             <td>Matematika</td> 
           </tr>
           <tr>
-          <td><i class="fa fa-bookmark w3-text-blue w3-large"></i></td>
+          <td><i class="fa-solid fa-book"></i></td>
             <td>Bahasa Indonesia</td>
           </tr>
           <tr>
-          <td><i class="fa fa-bookmark w3-text-blue w3-large"></i></td>
+          <td><i class="fa-solid fa-book"></i></td>
             <td>Pendidikan Jasmani & Kesehatan</td>
           </tr>
           <tr>
-          <td><i class="fa fa-bookmark w3-text-blue w3-large"></i></td>
+          <td><i class="fa-solid fa-book"></i></td>
             <td>Bahasa Inggris</td>
           </tr>
           <tr>
-            <td><i class="fa fa-bookmark w3-text-blue w3-large"></i></td>
+            <td><i class="fa-solid fa-book"></i></td>
             <td>Pendidikan Pancasila Dan Kewarganegaraan</td>
           </tr>
           <tr>
-          <td><i class="fa fa-bookmark w3-text-blue w3-large"></i></td>
+          <td><i class="fa-solid fa-book"></i></td>
             <td>Pendidikan Agama Islam</td>
           </tr>
           <tr>
-          <td><i class="fa fa-bookmark w3-text-blue w3-large"></i></td>
+          <td><i class="fa-solid fa-book"></i></td>
             <td>Kewirausahaan</td>
           </tr>
         </table>
@@ -118,12 +117,6 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     </div>
   </div>
   <hr>
-  
-  <!-- Footer -->
-  <footer class="w3-container w3-padding-16 w3-light-grey">
-    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">PT Laras Adhi Praya</a></p>
-  </footer>
-
   <!-- End page content -->
 </div>
 

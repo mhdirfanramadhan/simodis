@@ -39,18 +39,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="./" style="font-family: Cambria;">Pembayaran SPP</a>
+          <a class="navbar-brand" href="http://localhost/simodisApp-noDB/dashboard/dashboard-ortu.php" style="font-family: Cambria;"> << Kembali Ke Aplikasi</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="./" style="font-family: Times New Roman;">Beranda</a></li>
-            <li><a href="dataadmin.php" style="font-family: Times New Roman;">DATA ADMIN</a></li>
-            <li><a href="dataguru.php" style="font-family: Times New Roman;">DATA GURU</a></li>
-            <li><a href="datawali.php" style="font-family: Times New Roman;">DATA WALI KELAS</a></li>
+            <li><a href="dataguru.php" style="font-family: Times New Roman;">GURU</a></li>
+            <li><a href="datawali.php" style="font-family: Times New Roman;">WALI KELAS</a></li>
             <li><a href="datasiswa.php" style="font-family: Times New Roman;">DATA SISWA</a></li>
-            <li><a href="transaksi.php" style="font-family: Times New Roman;">TRANSAKSI</a></li>
-            <li><a href="laporan.php" style="font-family: Times New Roman;">LAPORAN</a></li>
-            <li><a href="logout.php" style="font-family: Times New Roman;">LOGOUT</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

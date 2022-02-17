@@ -15,10 +15,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>  
 <head>
 	<meta charset="UTF-8">
-	<title>Simodis APP</title>
+	<title>Registrasi Simodis</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Free HTML5 Website Template by FreeHTML5.co" />
 	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
@@ -46,10 +49,6 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/registrasi.css">
-    <style>
-html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
-</style>
-
 </head>
 <body>
 <div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
@@ -64,7 +63,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     </div>
     <div class="w3-col s8 w3-bar">
       <span>Welcome, <strong>Orang Tua Siswa</strong></span><br>
-      <a href="profile-dashboardOrtu.php" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
+      <a href="profile-dashboardOrtu.php" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-user"></i></a>
       <a href="#" class="w3-bar-item w3-button"><i class="fa fa-cog"></i></a>
     </div>
   </div>
@@ -75,7 +74,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   <div class="w3-bar-block">
   <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
     <a href="dashboard-ortu.php" class="w3-bar-item w3-button w3-padding"><i class="fa-solid fa-house"></i>  Beranda</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa-solid fa-school"></i>  Identitas Sekolah</a>
+    <a href="identitas-sekolah.php" class="w3-bar-item w3-button w3-padding"><i class="fa-solid fa-school"></i>  Identitas Sekolah</a>
     <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa-solid fa-diagram-predecessor"></i>  Absensi Siswa</a>
     <a href="spp-sekolah/index.php" class="w3-bar-item w3-button w3-padding"><i class="fa-solid fa-money-bill"></i>  SPP Sekolah</a>
     <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa-solid fa-pager"></i>  Nilai Evaluasi</a>
@@ -84,8 +83,6 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   </div>
 </nav>
 
-
-<!-- Overlay effect when opening sidebar on small screens -->
 <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 <!-- !PAGE CONTENT! -->
@@ -114,8 +111,8 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
                                 <div class="row no-gutters">
                                     <div class="col-xl-12">
                                         <div class="auth-form">
-                                            <h4 class="text-center mb-4" style="margin-top:-50px";>Edit Data Sekolah</h4>
-                                            <form action="identitas-sekolah.php" method="post">
+                                            <h4 class="text-center mb-4" style="margin-top:-50px";>Edit Profile</h4>
+                                            <form action="profile-dashboardOrtu.php"  method="post">
                                                 <div class="row">
                                                     <div class="col-lg-3">
                                                 </div>
@@ -124,125 +121,122 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
                                                     <div class="form-group">
                                                         <div class="row">
                                                             <div class="col-lg-4">
-                                                            <label style="color:grey; padding:8px ">NPSN</label>
+                                                            <label style="color:grey; padding:8px ">Username</label>
                                                             </div>
                                                             <div class="col-lg-8">
-                                                                <input type="text" class="form-control" name="username" style="background-color: #ECE4E0; border-radius: 15px" requried>
+                                                                <input type="text" class="form-control" name="username" placeholder="Username" style="background-color: #F39C12; border-radius: 15px" requried>
                                                             </div>
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-lg-4">
-                                                            <label style="color:grey; padding:8px">NSS</label>
+                                                            <label style="color:grey; padding:8px">Password</label>
                                                             </div>
                                                             <div class="col-lg-8">
-                                                                <input type="text" class="form-control" name="password" style="background-color: #ECE4E0; border-radius: 15px" required>
+                                                                <input type="password" class="form-control" name="password" placeholder="Password" style="background-color: #F39C12; border-radius: 15px" required>
                                                             </div>
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-lg-4">
-                                                            <label style="color:grey; padding:8px">Nama Sekolah</label>
+                                                            <label style="color:grey; padding:8px">Nama</label>
                                                             </div>
                                                             <div class="col-lg-8">
-                                                                <input type="text" class="form-control" name="nama" style="background-color: #ECE4E0; border-radius: 15px" required>
+                                                                <input type="text" class="form-control" name="nama" placeholder="Nama Lengkap Anda" style="background-color: #F39C12; border-radius: 15px" required>
                                                             </div>
                                                         </div>   
+                                                        <div class="row">
+                                                            <div class="col-lg-4">
+                                                            <label style="color:grey; padding:8px">NPSN</label>
+                                                            </div>
+                                                            <div class="col-lg-8">
+                                                                <input type="text" class="form-control" name="npsn"  placeholder="NPSN Lengkap Anda" style="background-color: #F39C12; border-radius: 15px" required>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-lg-4">
+                                                            <label style="color:grey; padding:8px">Tempat Lahir </label>
+                                                            </div>
+                                                            <div class="col-lg-8">
+                                                                <input type="text" class="form-control" name="tempat_lahir" placeholder="Masukkan tempat lahir Anda" style="background-color: #F39C12; border-radius: 15px" required>
+                                                            </div>
+                                                        </div> 
+                                                        <div class="row">
+                                                            <div class="col-lg-4">
+                                                            <label style="color:grey; padding:8px">Tanggal Lahir</label>
+                                                            </div>
+                                                            <div class="col-lg-8">
+                                                                <input type="date" class="form-control" name="tanggal_lahir" placeholder="Masukkan Tanggal Lahir Anda" style="background-color: #F39C12; border-radius: 15px" required>
+                                                            </div>
+                                                        </div> 
+                                                        <div class="row">
+                                                            <div class="col-lg-4">
+                                                            <label style="color:grey; padding:8px">Jenis Kelamin</label>
+                                                            </div>
+                                                            <div class="col-lg-8">
+                                                                <input type="radio" name="id_jk" value="1" required><label style="color:black; padding:4px">Pria</label></input>
+                                                                <input type="radio" name="id_jk" value="2" required><label style="color:black; padding:4px">Wanita</label></input>
+                                                            </div>
+                                                        </div>
                                                         <div class="row">
                                                             <div class="col-lg-4">
                                                             <label style="color:grey; padding:8px">Alamat</label>
                                                             </div>
                                                             <div class="col-lg-8">
-                                                                <input type="text" class="form-control" name="npsn" style="background-color: #ECE4E0; border-radius: 15px" required>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-lg-4">
-                                                            <label style="color:grey; padding:8px">Kelurahan </label>
-                                                            </div>
-                                                            <div class="col-lg-8">
-                                                                <input type="text" class="form-control" name="tempat_lahir" style="background-color: #ECE4E0; border-radius: 15px" required>
+                                                                <input type="text" class="form-control" name="alamat" placeholder="Silahkan Isi Alamat Lengkap Anda" style="background-color: #F39C12; border-radius: 15px required">
                                                             </div>
                                                         </div> 
                                                         <div class="row">
                                                             <div class="col-lg-4">
-                                                            <label style="color:grey; padding:8px">Kecamatan</label>
+                                                                <label style="color:grey; padding:8px">Agama</label>
                                                             </div>
                                                             <div class="col-lg-8">
-                                                                <input type="text" class="form-control" name="tanggal_lahir" style="background-color: #ECE4E0; border-radius: 15px" required>
+                                                                <select id="inputState" class="form-control" name="id_agama" style="background-color: #F39C12; border-radius: 15px" required>
+                                                                    <option value="" required>Silahkan dipilih</option> 
+                                                                                                                                                                                                                            <option value="1">Islam</option> 
+                                                                                                                                                    <option value="2">Kristen Protestan</option> 
+                                                                                                                                                    <option value="3">Kristen Katolik</option> 
+                                                                                                                                                    <option value="4">Hindu</option> 
+                                                                                                                                                    <option value="5">Buddha</option> 
+                                                                                                                                                    <option value="6">Konghucu</option> 
+                                                                          
+                                                                </select>
                                                             </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-lg-4">
-                                                            <label style="color:grey; padding:8px">Kabupaten</label>
-                                                            </div>
-                                                            <div class="col-lg-8">
-                                                                <input type="text" class="form-control" name="tanggal_lahir" style="background-color: #ECE4E0; border-radius: 15px" required>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-lg-4">
-                                                            <label style="color:grey; padding:8px">Provinsi</label>
-                                                            </div>
-                                                            <div class="col-lg-8">
-                                                                <input type="text" class="form-control" name="tanggal_lahir" style="background-color: #ECE4E0; border-radius: 15px" required>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-lg-4">
-                                                            <label style="color:grey; padding:8px">Kode Pos</label>
-                                                            </div>
-                                                            <div class="col-lg-8">
-                                                                <input type="text" class="form-control" name="tanggal_lahir" style="background-color: #ECE4E0; border-radius: 15px" required>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-lg-4">
-                                                            <label style="color:grey; padding:8px">Telephone</label>
-                                                            </div>
-                                                            <div class="col-lg-8">
-                                                                <input type="text" class="form-control" name="tanggal_lahir" style="background-color: #ECE4E0; border-radius: 15px" required>
-                                                            </div>
-                                                        </div>
+                                                        </div> 
                                                         <div class="row">
                                                             <div class="col-lg-4">
                                                                 <label style="color:grey; padding:8px">Email</label>
                                                             </div>
                                                             <div class="col-lg-8">
-                                                                <input type="email" class="form-control" name="email" style="background-color: #ECE4E0; border-radius: 15px" required>
+                                                                <input type="email" class="form-control" name="email" placeholder="Masukkan email Anda" style="background-color: #F39C12; border-radius: 15px" required>
                                                             </div>
                                                         </div> 
-                                                        
-                                                        <div class="row">
-                                                            <div class="col-lg-4">
-                                                            <label style="color:grey; padding:8px">Website</label>
-                                                            </div>
-                                                            <div class="col-lg-8">
-                                                                <input type="text" class="form-control" name="tanggal_lahir" style="background-color: #ECE4E0; border-radius: 15px" required>
-                                                            </div>
-                                                        </div>
-                                                        
 
                                                         <div class="row">
                                                             <div class="col-lg-4">
-                                                                <label style="color:grey; padding:8px">Kepala Sekolah</label>
+                                                                <label style="color:grey; padding:8px">No Handphone</label>
                                                             </div>
                                                             <div class="col-lg-8">
-                                                                <select id="inputState" class="form-control" name="status_kepegawaian" style="background-color: #ECE4E0; border-radius: 15px" required>
-                                                                    <option>Silahkan Dipilih</option>
-                                                                    <option value="PNS">Nama Kepala Sekolah</option>
-                                                                    <option value="Non PNS">Nama Kepala Sekolah</option>
+                                                                <input type="tel" class="form-control" name="no_hp" placeholder="Masukkan No Handphone Anda" style="background-color: #F39C12; border-radius: 15px" required>
+                                                            </div>
+                                                        </div> 
+
+                                                        <div class="row">
+                                                            <div class="col-lg-4">
+                                                                <label style="color:grey; padding:8px">Status Kepegawaian</label>
+                                                            </div>
+                                                            <div class="col-lg-8">
+                                                                <select id="inputState" class="form-control" name="status_kepegawaian" style="background-color: #F39C12; border-radius: 15px" required>
+                                                                    <option>Pilih Status Kepegawaian</option>
+                                                                    <option value="PNS">PNS</option>
+                                                                    <option value="Non PNS">Non PNS</option>
                                                                 </select>
                                                             </div>
-                                                            <div class="row">
-                                                            <div class="col-lg-4">
-                                                        </div>
-                                                        
-                                                        <div class="col-lg-12 mt-2" style="margin: 1000px; margin-left: 52px;">
+                                                            <div class="col-lg-12 mt-2" style="margin: 1px; margin-left: 10px;">
                                                              <input type="file" name="gambar" id="image" onchange="showImage(this);" class="custom-file-input" required>
-                                                             <label class="custom-file-label">Upload Foto Sekolah</label>
+                                                             <label class="custom-file-label">Foto Profile</label>
                                                             </div>
                                                         </div> 
                                     
-                                                       
+                                                        
                                                         <br/>
                                                         <div class="col-sm-4 text-center" style="margin: auto;">
                                                             <input type="submit" name="daftar" id="daftar" value="Edit" class="btn btn-secondary btn-block" style="background-color: blue; border-color: #39B44a; height: 15%">
