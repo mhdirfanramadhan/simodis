@@ -7,7 +7,8 @@
 <title>SIMODIS</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="css/dashb.css">
+<link rel="stylesheet" href="css/main.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
@@ -65,34 +66,34 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     <div class="w3-row-padding" style="margin:0 -16px">
       <div class="w3-twothird">
         <h5>Mata Pelajaran</h5>
-        <table class="w3-table w3-striped w3-white">
+        <table class="w3-table w3-striped w3-orange">
           <tr>
           <td><i class="fa-solid fa-book"></i></td>
             <td><a href="identitas-sekolah.php" style="text-decoration: none;">Matematika</a></td> 
           </tr>
           <tr>
           <td><i class="fa-solid fa-book"></i></td>
-            <td>Bahasa Indonesia</td>
+            <td><a href="identitas-sekolah.php" style="text-decoration: none;">Bahasa Indonesia</a></td>
           </tr>
           <tr>
           <td><i class="fa-solid fa-book"></i></td>
-            <td>Pendidikan Jasmani & Kesehatan</td>
+            <td><a href="identitas-sekolah.php" style="text-decoration: none;">Pendidikan Jasmani & Kesehatan</a></td>
           </tr>
           <tr>
           <td><i class="fa-solid fa-book"></i></td>
-            <td>Bahasa Inggris</td>
+            <td><a href="identitas-sekolah.php" style="text-decoration: none;">Bahasa Inggris</a></td>
           </tr>
           <tr>
             <td><i class="fa-solid fa-book"></i></td>
-            <td>Pendidikan Pancasila Dan Kewarganegaraan</td>
+            <td><a href="identitas-sekolah.php" style="text-decoration: none;">Pendidikan Pancasila & Kewarganegaraan</a></td>
           </tr>
           <tr>
           <td><i class="fa-solid fa-book"></i></td>
-            <td>Pendidikan Agama Islam</td>
+            <td><a href="identitas-sekolah.php" style="text-decoration: none;">Pendidikan Agama Islam</a></td>
           </tr>
           <tr>
           <td><i class="fa-solid fa-book"></i></td>
-            <td>Kewirausahaan</td>
+            <td><a href="identitas-sekolah.php" style="text-decoration: none;">Kewirausahaan</a></td>
           </tr>
         </table>
       </div>
