@@ -68,7 +68,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
         <table class="w3-table w3-striped w3-white">
           <tr>
           <td><i class="fa-solid fa-book"></i></td>
-            <td>Matematika</td> 
+            <td><a href="identitas-sekolah.php" style="text-decoration: none;">Matematika</a></td> 
           </tr>
           <tr>
           <td><i class="fa-solid fa-book"></i></td>
