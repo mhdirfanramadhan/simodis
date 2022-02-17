@@ -14,14 +14,14 @@
 <body background ="assets/img/background.png">
 
 <ul>
-  <li style="float:right"><a href="#">Log in</a></li>
-  <li style="float:right"><a href="#">Features</a></li>
+  <li style="float:right"><a href="login.php">Log in</a></li>
+  <li style="float:right"><a href="features.php">Features</a></li>
   <li style="float:right"><a href="#">Home</a></li>
 </ul>
 
 
 
-<button><a href="#" class="btn third">Create Account</a></button>
+<button><a href="register.php" class="btn third">Create Account</a></button>
 
 <script src="main.js"></script>
 </body>

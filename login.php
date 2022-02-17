@@ -43,7 +43,7 @@
             </nav>
             <!-- End Navbar -->
             <div class="content">
-                <center><form action="login/proses.php" method="post">
+                <center><form action="dashboard/dashboard-ortu.php" method="post">
                             <div class="col-md-6">
                                 <div class="card">
                                     <div class="card-header ">
@@ -76,7 +76,7 @@
                                                 <div class="row">
                                                         <div class="col-sm-12">
                                                             <div class="form-group">
-                                                            &ensp;&ensp;<button type="submit" class="btn btn-primary btn-fill btn-wd" >Login</button>
+                                                            &ensp;&ensp;<button type="submit" class="btn btn-primary btn-fill btn-wd">Login</button>
                                                             </div>
                                                         </div>
                                                     </div>

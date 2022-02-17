@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-  <head><script src="https://kit.fontawesome.com/3cd968700c.js" crossorigin="anonymous"></script></head>
+<script src="https://kit.fontawesome.com/3cd968700c.js" crossorigin="anonymous"></script>
 <link rel="apple-touch-icon" sizes="76x76" href="assets/img/logo-simodis.png">
     <link rel="icon" type="image/png" href="assets/img/logo-simodis.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<title>Dashboard SIMODIS</title>
+<title>SIMODIS</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -25,10 +25,10 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
   <div class="w3-container w3-row">
     <div class="w3-col s4">
-      <img src="assets/img/logo-simodis.png" class="w3-circle w3-margin-right" style="width:46px">
+      <img src="img/logo-simodis.png" class="w3-circle w3-margin-right" style="width:46px">
     </div>
     <div class="w3-col s8 w3-bar">
-      <span>Welcome, <strong>Admin</strong></span><br>
+      <span>Welcome, <strong>Orang Tua Siswa</strong></span><br>
       <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
       <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
       <a href="#" class="w3-bar-item w3-button"><i class="fa fa-cog"></i></a>
@@ -41,8 +41,10 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   <div class="w3-bar-block">
     <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
     <a href="#" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa-solid fa-house"></i>  Beranda</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa-solid fa-chart-bar"></i>  Grafik Jumlah Pengunjung</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa-solid fa-chart-column"></i>  Grafik Jumlah Pengguna Seruni</a>
+    <a href="identitas-sekolah.php" class="w3-bar-item w3-button w3-padding"><i class="fa-solid fa-school"></i>  Identitas Sekolah</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa-solid fa-diagram-predecessor"></i>  Absensi Siswa</a>
+    <a href="spp-sekolah/login.php" class="w3-bar-item w3-button w3-padding"><i class="fa-solid fa-money-bill"></i>  SPP Sekolah</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa-solid fa-pager"></i>  Nilai Evaluasi</a>
     <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bell fa-fw"></i>  News</a>
     <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Settings</a><br><br>
   </div>
@@ -57,81 +59,41 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 
   <!-- Header -->
   <header class="w3-container" style="padding-top:22px">
-    <h5><b><i class="fa fa-dashboard"></i>Dashboard Monitoring Seruni</b></h5>
+    <h5><b><i class="fa fa-dashboard"></i> Dashboard Monitoring Orang Tua</b></h5>
   </header>
-
-  <div class="w3-row-padding w3-margin-bottom">
-    <div class="w3-quarter">
-    <div class="w3-container w3-orange w3-text-white w3-padding-16">
-    <div class="w3-left"><i class="fa fa-users w3-xxxlarge"></i></div>
-        <div class="w3-right">
-          <h3>99</h3>
-        </div>
-        <div class="w3-clear"></div>
-        <h4>( SD )</h4>
-      </div>
-    </div>
-    <div class="w3-quarter">
-    <div class="w3-container w3-orange w3-text-white w3-padding-16">
-    <div class="w3-left"><i class="fa fa-users w3-xxxlarge"></i></div>
-        <div class="w3-right">
-          <h3>23</h3>
-        </div>
-        <div class="w3-clear"></div>
-        <h4>( SMP )</h4>
-      </div>
-    </div>
-    <div class="w3-quarter">
-      <div class="w3-container w3-orange w3-text-white w3-padding-16">
-      <div class="w3-left"><i class="fa fa-users w3-xxxlarge"></i></div>
-        <div class="w3-right">
-          <h3>50</h3>
-        </div>
-        <div class="w3-clear"></div>
-        <h4>( SMA )</h4>
-      </div>
-    </div>
-  </div>
 
   <div class="w3-panel">
     <div class="w3-row-padding" style="margin:0 -16px">
       <div class="w3-twothird">
-        <h5>Feeds</h5>
+        <h5>Mata Pelajaran</h5>
         <table class="w3-table w3-striped w3-white">
           <tr>
-            <td><i class="fa fa-user w3-text-blue w3-large"></i></td>
-            <td>New record, over 90 views.</td>
-            <td><i>10 mins</i></td>
+          <td><i class="fa fa-bookmark w3-text-blue w3-large"></i></td>
+            <td>Matematika</td> 
           </tr>
           <tr>
-            <td><i class="fa fa-bell w3-text-red w3-large"></i></td>
-            <td>Database error.</td>
-            <td><i>15 mins</i></td>
+          <td><i class="fa fa-bookmark w3-text-blue w3-large"></i></td>
+            <td>Bahasa Indonesia</td>
           </tr>
           <tr>
-            <td><i class="fa fa-users w3-text-yellow w3-large"></i></td>
-            <td>New record, over 40 users.</td>
-            <td><i>17 mins</i></td>
+          <td><i class="fa fa-bookmark w3-text-blue w3-large"></i></td>
+            <td>Pendidikan Jasmani & Kesehatan</td>
           </tr>
           <tr>
-            <td><i class="fa fa-comment w3-text-red w3-large"></i></td>
-            <td>New comments.</td>
-            <td><i>25 mins</i></td>
+          <td><i class="fa fa-bookmark w3-text-blue w3-large"></i></td>
+            <td>Bahasa Inggris</td>
           </tr>
           <tr>
             <td><i class="fa fa-bookmark w3-text-blue w3-large"></i></td>
-            <td>Check transactions.</td>
-            <td><i>28 mins</i></td>
+            <td>Pendidikan Pancasila Dan Kewarganegaraan</td>
           </tr>
           <tr>
-            <td><i class="fa fa-laptop w3-text-red w3-large"></i></td>
-            <td>CPU overload.</td>
-            <td><i>35 mins</i></td>
+          <td><i class="fa fa-bookmark w3-text-blue w3-large"></i></td>
+            <td>Pendidikan Agama Islam</td>
           </tr>
           <tr>
-            <td><i class="fa fa-share-alt w3-text-green w3-large"></i></td>
-            <td>New shares.</td>
-            <td><i>39 mins</i></td>
+          <td><i class="fa fa-bookmark w3-text-blue w3-large"></i></td>
+            <td>Kewirausahaan</td>
           </tr>
         </table>
       </div>
@@ -139,59 +101,24 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   </div>
   <hr>
   <div class="w3-container">
-    <h5>General Stats</h5>
-    <p>New Visitors</p>
+    <h5>Keaktifan Anak</h5>
+    <p>Kehadiran</p>
     <div class="w3-grey">
       <div class="w3-container w3-center w3-padding w3-green" style="width:25%">+25%</div>
     </div>
 
-    <p>New Users</p>
+    <p>Kegiatan Ekstrakulikuler</p>
     <div class="w3-grey">
       <div class="w3-container w3-center w3-padding w3-orange" style="width:50%">50%</div>
     </div>
 
-    <p>Bounce Rate</p>
+    <p>Kegiatan Pramuka</p>
     <div class="w3-grey">
       <div class="w3-container w3-center w3-padding w3-red" style="width:75%">75%</div>
     </div>
   </div>
   <hr>
-
-  <div class="w3-container">
-    <h5>Countries</h5>
-    <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
-      <tr>
-        <td>United States</td>
-        <td>65%</td>
-      </tr>
-      <tr>
-        <td>UK</td>
-        <td>15.7%</td>
-      </tr>
-      <tr>
-        <td>Russia</td>
-        <td>5.6%</td>
-      </tr>
-      <tr>
-        <td>Spain</td>
-        <td>2.1%</td>
-      </tr>
-      <tr>
-        <td>India</td>
-        <td>1.9%</td>
-      </tr>
-      <tr>
-        <td>France</td>
-        <td>1.5%</td>
-      </tr>
-    </table><br>
-    <button class="w3-button w3-dark-grey">More Countries  <i class="fa fa-arrow-right"></i></button>
-  </div>
-  <hr>
-  <hr>
-
   
-  <br>
   <!-- Footer -->
   <footer class="w3-container w3-padding-16 w3-light-grey">
     <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">PT Laras Adhi Praya</a></p>

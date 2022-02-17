@@ -86,7 +86,7 @@
     <div class="row">
       <div class="col-md-4">
       <center><div class="foto">
-        <img src="assets/img/tritech2.jpg" class="img-thumbnail" alt="" width="400" height="180">
+        <img src="img/tritech2.jpg" class="img-thumbnail" alt="" width="500" height="180">
       </div></center>
       </div>
       <div class="col-md-8 kertas-biodata">
