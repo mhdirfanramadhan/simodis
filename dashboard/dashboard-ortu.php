@@ -31,7 +31,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     <div class="w3-col s8 w3-bar">
       <span>Welcome, <strong>Orang Tua Siswa</strong></span><br>
       <a href="profile-dashboardOrtu.php" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
-      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-cog"></i></a>
+      <a href="http://localhost/simodisApp-noDB/login.php" class="w3-bar-item w3-button"><i class="fa-solid fa-right-from-bracket"></i></a>
     </div>
   </div>
   <hr>
@@ -40,13 +40,11 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
   </div>
   <div class="w3-bar-block">
     <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa-solid fa-house"></i>  Beranda</a>
+    <a href="dashboard-ortu.php" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa-solid fa-house"></i>  Beranda</a>
     <a href="identitas-sekolah.php" class="w3-bar-item w3-button w3-padding"><i class="fa-solid fa-school"></i>  Identitas Sekolah</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa-solid fa-diagram-predecessor"></i>  Absensi Siswa</a>
+    <a href="absensi.php" class="w3-bar-item w3-button w3-padding"><i class="fa-solid fa-diagram-predecessor"></i>  Absensi Siswa</a>
     <a href="spp-sekolah/datasiswa.php" class="w3-bar-item w3-button w3-padding"><i class="fa-solid fa-money-bill"></i>  SPP Sekolah</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa-solid fa-pager"></i>  Nilai Evaluasi</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bell fa-fw"></i>  News</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Settings</a><br><br>
+    <a href="nilai-evaluasi.php" class="w3-bar-item w3-button w3-padding"><i class="fa-solid fa-pager"></i>  Nilai Evaluasi</a>
   </div>
 </nav>
 
@@ -69,31 +67,43 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
         <table class="w3-table w3-striped w3-orange">
           <tr>
           <td><i class="fa-solid fa-book"></i></td>
-            <td><a href="identitas-sekolah.php" style="text-decoration: none;">Matematika</a></td> 
+            <td><a href="nilai-evaluasi.php" style="text-decoration: none;">Matematika</a></td> 
           </tr>
           <tr>
           <td><i class="fa-solid fa-book"></i></td>
-            <td><a href="identitas-sekolah.php" style="text-decoration: none;">Bahasa Indonesia</a></td>
+            <td><a href="nilai-evaluasi.php" style="text-decoration: none;">Bahasa Indonesia</a></td>
           </tr>
           <tr>
           <td><i class="fa-solid fa-book"></i></td>
-            <td><a href="identitas-sekolah.php" style="text-decoration: none;">Pendidikan Jasmani & Kesehatan</a></td>
+            <td><a href="nilai-evaluasi.php" style="text-decoration: none;">Pendidikan Jasmani & Kesehatan</a></td>
           </tr>
           <tr>
           <td><i class="fa-solid fa-book"></i></td>
-            <td><a href="identitas-sekolah.php" style="text-decoration: none;">Bahasa Inggris</a></td>
+            <td><a href="nilai-evaluasi.php" style="text-decoration: none;">Bahasa Inggris</a></td>
           </tr>
           <tr>
             <td><i class="fa-solid fa-book"></i></td>
-            <td><a href="identitas-sekolah.php" style="text-decoration: none;">Pendidikan Pancasila & Kewarganegaraan</a></td>
+            <td><a href="nilai-evaluasi.php" style="text-decoration: none;">Pendidikan Pancasila & Kewarganegaraan</a></td>
           </tr>
           <tr>
           <td><i class="fa-solid fa-book"></i></td>
-            <td><a href="identitas-sekolah.php" style="text-decoration: none;">Pendidikan Agama Islam</a></td>
+            <td><a href="nilai-evaluasi.php" style="text-decoration: none;">Pendidikan Agama Islam</a></td>
           </tr>
           <tr>
           <td><i class="fa-solid fa-book"></i></td>
-            <td><a href="identitas-sekolah.php" style="text-decoration: none;">Kewirausahaan</a></td>
+            <td><a href="nilai-evaluasi.php" style="text-decoration: none;">Kewirausahaan</a></td>
+          </tr>
+          <tr>
+          <td><i class="fa-solid fa-book"></i></td>
+            <td><a href="nilai-evaluasi.php" style="text-decoration: none;">Kimia</a></td>
+          </tr>
+          <tr>
+          <td><i class="fa-solid fa-book"></i></td>
+            <td><a href="nilai-evaluasi.php" style="text-decoration: none;">Biologi</a></td>
+          </tr>
+          <tr>
+          <td><i class="fa-solid fa-book"></i></td>
+            <td><a href="nilai-evaluasi.php" style="text-decoration: none;">Ekonomi</a></td>
           </tr>
         </table>
       </div>
