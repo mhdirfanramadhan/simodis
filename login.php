@@ -43,7 +43,7 @@
             </nav>
             <!-- End Navbar -->
             <div class="content">
-                <center><form action="dashboard/dashboard-ortu.php" method="post">
+                <center><form action="ruang-admin/index.html" method="post">
                             <div class="col-md-6">
                                 <div class="card">
                                     <div class="card-header ">
