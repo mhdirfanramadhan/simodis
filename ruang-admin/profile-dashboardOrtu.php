@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
   <head>
   <script src="https://kit.fontawesome.com/3cd968700c.js" crossorigin="anonymous"></script>
     <!-- Required meta tags -->
@@ -9,10 +10,13 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="img/logo/logo-simodis.png" rel="icon">
-  <title>Simodis - Sekolah</title>
+  <title>Simodis - Profile</title>
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="css/ruang-admin.min.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
     <style>
       html,body,h1,h2,h3,h4,h5 {}
       body {
@@ -34,16 +38,14 @@
     transition: all .3s;
            background-color: #D9860A;
     border: solid 8px #B04E03;
-    border-top-right-radius: 80px;
-    border-bottom-left-radius: 80px;
       } 
       .kartu:hover {
         background-color: #DF9D3B;
         border: solid 10px #FE6F01;
         border-top-left-radius: 80px;
     border-bottom-right-radius: 80px;
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 0px;
+    border-top-right-radius: 80px;
+    border-bottom-left-radius: 80px;
       }
       .foto {
             padding: 50px;
@@ -82,7 +84,6 @@
     box-shadow: 0 0 10px 0 #fe9718 inset, 0 0 10px 4px #f7a643;
   }
     </style>
-    <body class="w3-light-grey">
   </head>
   <body>
   <body id="page-top">
@@ -107,7 +108,7 @@
       </div>
       
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-target="#collapseForm" aria-expanded="true"
+        <a class="nav-link collapsed" href="identitas-sekolah.php" data-target="#collapseForm" aria-expanded="true"
           aria-controls="collapseForm">
           <i class="fab fa-fw fa-wpforms"></i>
           <span>Identitas Sekolah</span>
@@ -134,14 +135,13 @@
         </a>
         <div id="collapsePage" class="collapse" aria-labelledby="headingPage" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Example Pages</h6>
             <a class="collapse-item" href="login.html">UTS</a>
-            <a class="collapse-item" href="register.html">UAS</a>
+            <a class="collapse-item" href="register.html">UAS</a>>
           </div>
         </div>
       </li>
     </ul>
-    <!-- Sidebar -->
+
     <div id="content-wrapper" class="d-flex flex-column">
       <div id="content">
         <!-- TopBar -->
@@ -205,7 +205,6 @@
           </ul>
         </nav>
 
-        <!-- Modal Logout -->
         <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout"
             aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -227,15 +226,16 @@
             </div>
           </div>
         <!-- Topbar -->
-        <h3 class="text-center text-success mt-3">Informasi Sekolah</h3></a>  
-        <a href="edit-profile-sekolah.php" class="btn2 third">Edit Profil Sekolah</a>           
+  
+        <h3 class="text-center text-success mt-3">Profil Akun</h3></a>  
+        <a href="edit-profile.php" class="btn2 third">Edit Profil</a>           
         <!-- Isi Biodata Paling Keren di HTML disini -->
 <div class="container">
   <div class="card kartu">
     <div class="row">
       <div class="col-md-4">
       <center><div class="foto">
-        <img src="img/screenshot/tritech2.jpg" class="img-thumbnail" alt="" width="500" height="180">
+        <img src="img/madara.jpg" class="img-thumbnail" alt="" width="400" height="180">
       </div></center>
       </div>
       <div class="col-md-8 kertas-biodata">
@@ -245,65 +245,66 @@
         <td valign="top">
         <table border="0" width="100%" style="padding-left: 2px; padding-right: 13px;">
           <tbody>
+              <p> Hallo! , Admin</p>
             <tr>
-              <td width="25%" valign="top" class="textt" style="font-family: Cambria;">NPSN</td>
+              <td width="25%" valign="top" class="textt" style="font-family: Cambria;">Username</td>
                 <td width="2%">:</td>
-                <td style="color: #e9a7f9; font-weight:bold" >412898749</td>
+                <td style="color: #e9a7f9; font-weight:bold" >admin</td>
             </tr>
           <tr>
-              <td class="textt" style="font-family: Cambria;">NSS</td>
+              <td class="textt" style="font-family: Cambria;">Password</td>
                 <td>:</td>
-                <td style="font-family: Courier New;">42104021</td>
+                <td style="font-family: Courier New;">*******</td>
             </tr>
           <tr>
-              <td class="textt" style="font-family: Cambria;">Nama Sekolah</td>
+              <td class="textt" style="font-family: Cambria;">Nama</td>
                 <td>:</td>
-                <td style="font-family: Courier New;">TRITECH INFORMATIKA</td>
+                <td style="font-family: Courier New;">M Irfan Ramadhan</td>
             </tr>
           <tr>
-              <td class="textt" style="font-family: Cambria;">Alamat</td>
+              <td class="textt" style="font-family: Cambria;">NPSN</td>
                 <td>:</td>
-                <td style="font-family: Courier New;">Medan</td>
+                <td style="font-family: Courier New;">102388279</td>
             </tr>
           <tr>
-              <td class="textt" style="font-family: Cambria;">Kelurahan</td>
+              <td class="textt" style="font-family: Cambria;">Tempat Lahir</td>
                 <td>:</td>
-                <td style="font-family: Courier New;">Medan Deli</td>
+                <td style="font-family: Courier New;">Rantau</td>
             </tr>
           <tr>
-              <td valign="top" class="textt" style="font-family: Cambria;">Kecamatan</td>
+              <td valign="top" class="textt" style="font-family: Cambria;">Tanggal Lahir</td>
                 <td valign="top">:</td>
-                <td style="font-family: Courier New;">Medan</td>
+                <td style="font-family: Courier New;">11/10/2005</td>
             </tr>
             <tr>
-              <td valign="top" class="textt" style="font-family: Cambria;">Kabupaten</td>
+              <td valign="top" class="textt" style="font-family: Cambria;">Jenis Kelamin</td>
                 <td valign="top">:</td>
-                <td style="font-family: Courier New;">Medan kota</td>
+                <td style="font-family: Courier New;">Pria</td>
             </tr>
             <tr>
-              <td valign="top" class="textt" style="font-family: Cambria;">Provinsi</td>
+              <td valign="top" class="textt" style="font-family: Cambria;">Alamat</td>
                 <td valign="top">:</td>
-                <td style="font-family: Courier New;">Sumatera Utara</td>
+                <td style="font-family: Courier New;">Sumatera Utara , Medan , Tj. Mulia Hilir Kawat 6 , NO 40</td>
             </tr>
             <tr>
-              <td valign="top" class="textt" style="font-family: Cambria;">Kode Pos</td>
+              <td valign="top" class="textt" style="font-family: Cambria;">Agama</td>
                 <td valign="top">:</td>
-                <td style="font-family: Courier New;">-</td>
-            </tr>
-            <tr>
-              <td valign="top" class="textt" style="font-family: Cambria;">Telephone</td>
-                <td valign="top">:</td>
-                <td style="font-family: Courier New;" >-</td>
+                <td style="font-family: Courier New;">Islam</td>
             </tr>
             <tr>
               <td valign="top" class="textt" style="font-family: Cambria;">Email</td>
                 <td valign="top">:</td>
+                <td style="font-family: Courier New;" >akunml12ku@gmail.com</td>
+            </tr>
+            <tr>
+              <td valign="top" class="textt" style="font-family: Cambria;">Telephone</td>
+                <td valign="top">:</td>
                 <td style="font-family: Courier New;">smktritech@sch.id</td>
             </tr>
             <tr>
-              <td valign="top" class="textt" style="font-family: Cambria;">Kep. Sekolah</td>
+              <td valign="top" class="textt" style="font-family: Cambria;">Kepegawaian</td>
                 <td valign="top">:</td>
-                <td style="font-family: Courier New;">-</td>
+                <td style="font-family: Courier New;">NON PNS</td>
             </tr>
             
         </tbody></table>
@@ -316,9 +317,8 @@
     </div>
   </div>
 </div>
-    <script src="js/bootstrap.min.js"></script>
-    <!-- Scroll to top -->
-  <a class="scroll-to-top rounded" href="#page-top">
+<!-- Scroll to top -->
+<a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
   </a>
 
@@ -328,5 +328,6 @@
   <script src="js/ruang-admin.min.js"></script>
   <script src="vendor/chart.js/Chart.min.js"></script>
   <script src="js/demo/chart-area-demo.js"></script>  
+    <script src="js/bootstrap.min.js"></script>
   </body>
 </html>

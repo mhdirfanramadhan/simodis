@@ -1,7 +1,16 @@
-<!doctype html>
+
+<!DOCTYPE html>
+<!--
+	App by FreeHTML5.co
+	Twitter: http://twitter.com/fh5co
+	URL: http://freehtml5.co
+-->
 <html lang="en">
-  <head>
-  <script src="https://kit.fontawesome.com/3cd968700c.js" crossorigin="anonymous"></script>
+<style>
+html,body,h1,h2,h3,h4,h5 {}
+</style>  
+<head>
+<script src="https://kit.fontawesome.com/3cd968700c.js" crossorigin="anonymous"></script>
     <!-- Required meta tags -->
     <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,54 +22,12 @@
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="css/ruang-admin.min.css" rel="stylesheet">
-    <style>
-      html,body,h1,h2,h3,h4,h5 {}
-      body {
-        background-color: #e8e8e8;
-        background-position: absolute;    
-        background-size: cover;          
-        margin:0;
-      }
 
-      h3 {
-          text-align: center;
-      }
-      
-      .kartu {
-        width: 800px;
-        margin: 0 auto;
-        margin-top: 70px;
-            box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,.03);
-    transition: all .3s;
-           background-color: #D9860A;
-    border: solid 8px #B04E03;
-    border-top-right-radius: 80px;
-    border-bottom-left-radius: 80px;
-      } 
-      .kartu:hover {
-        background-color: #DF9D3B;
-        border: solid 10px #FE6F01;
-        border-top-left-radius: 80px;
-    border-bottom-right-radius: 80px;
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 0px;
-      }
-      .foto {
-            padding: 50px;
-    margin-left: 1px;
-    margin-top: 10px;
-      }
-      tbody {
-    font-size: 20px;
-    font-weight: 300;
-    color:white;
-}
-.biodata {
-    margin-top: 10px;
-}
-
-.btn2 {
-    margin: 10px;
+	
+</head>
+<style>
+    .btn2 {
+    margin: -140px;
     border-radius: 0.6em;
     color: #e74c3c;
     font-size: 1rem;
@@ -81,11 +48,9 @@
   .third:hover {
     box-shadow: 0 0 10px 0 #fe9718 inset, 0 0 10px 4px #f7a643;
   }
-    </style>
-    <body class="w3-light-grey">
-  </head>
-  <body>
-  <body id="page-top">
+</style>
+<body>
+<body id="page-top">
   <div id="wrapper">
     <!-- Sidebar -->
     <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
@@ -134,13 +99,14 @@
         </a>
         <div id="collapsePage" class="collapse" aria-labelledby="headingPage" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Example Pages</h6>
             <a class="collapse-item" href="login.html">UTS</a>
             <a class="collapse-item" href="register.html">UAS</a>
           </div>
         </div>
       </li>
     </ul>
-    <!-- Sidebar -->
+
     <div id="content-wrapper" class="d-flex flex-column">
       <div id="content">
         <!-- TopBar -->
@@ -204,7 +170,6 @@
           </ul>
         </nav>
 
-        <!-- Modal Logout -->
         <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout"
             aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -226,10 +191,35 @@
             </div>
           </div>
         <!-- Topbar -->
-        <h3 class="text-center text-success mt-3">Edit Data Sekolah</h3></a>  
-        <a href="identitas-sekolah.php" class="btn2 third"> < Kembali</a>           
-        <!-- Isi Biodata Paling Keren di HTML disini -->
-        <form action="identitas-sekolah.php"  method="post">
+  
+
+    <div id="page-wrap">
+
+
+        <div class="fh5co-slider-outer wow fadeIn" data-wow-delay="0.36s" align="center">
+            <!-- <small>Drag and Drop</small> -->
+            <div class="container fh5co-slider-inner">
+                <div class="owl-carousel owl-theme">
+                    <div class="item"><img src="img/phone_dashboard_orangtua.png" alt=""></div>
+                    <div class="item"><img src="img/phone_guru.png" alt=""></div>
+                    <div class="item"><img src="img/phone_siswa.png" alt=""></div>
+                    <div class="item"><img src="img/phone_hitam.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+
+		<div class="curved-bg-div wow animated fadeIn" > </div>
+            <div class="authincation" >
+                <div class="container-fluid">
+                    <div class="row justify-content-center h-100 align-items-center">
+                        <div class="col-md-8">
+                            <div class="authincation-content" style="background-color:transparent;">
+                                <div class="row no-gutters">
+                                    <div class="col-xl-12">
+                                        <div class="auth-form">
+                                            <h4 class="text-center mb-4" style="margin-top:-50px";>Edit Profile</h4>
+                                            <a href="profile-dashboardOrtu.php" class="btn2 third"> < Kembali</a> 
+                                            <form action="profile-dashboardOrtu.php"  method="post">
                                                 <div class="row">
                                                     <div class="col-lg-3">
                                                 </div>
@@ -238,109 +228,122 @@
                                                     <div class="form-group">
                                                         <div class="row">
                                                             <div class="col-lg-4">
-                                                            <label style="color:grey; padding:8px ">NPSN</label>
+                                                            <label style="color:grey; padding:8px ">Username</label>
                                                             </div>
                                                             <div class="col-lg-8">
-                                                                <input type="text" class="form-control" name="NPSN"  style="background-color: #F39C12; border-radius: 15px" requried>
+                                                                <input type="text" class="form-control" name="username" placeholder="Username" style="background-color: #F39C12; border-radius: 15px" requried>
                                                             </div>
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-lg-4">
-                                                            <label style="color:grey; padding:8px">NSS</label>
+                                                            <label style="color:grey; padding:8px">Password</label>
                                                             </div>
                                                             <div class="col-lg-8">
-                                                                <input type="text" class="form-control" name="nss" style="background-color: #F39C12; border-radius: 15px" required>
+                                                                <input type="password" class="form-control" name="password" placeholder="Password" style="background-color: #F39C12; border-radius: 15px" required>
                                                             </div>
                                                         </div>
                                                         <div class="row">
                                                             <div class="col-lg-4">
-                                                            <label style="color:grey; padding:8px">Nama Sekolah</label>
+                                                            <label style="color:grey; padding:8px">Nama</label>
                                                             </div>
                                                             <div class="col-lg-8">
-                                                                <input type="text" class="form-control" name="nama_sekolah" style="background-color: #F39C12; border-radius: 15px" required>
+                                                                <input type="text" class="form-control" name="nama" placeholder="Nama Lengkap Anda" style="background-color: #F39C12; border-radius: 15px" required>
                                                             </div>
                                                         </div>   
+                                                        <div class="row">
+                                                            <div class="col-lg-4">
+                                                            <label style="color:grey; padding:8px">NPSN</label>
+                                                            </div>
+                                                            <div class="col-lg-8">
+                                                                <input type="text" class="form-control" name="npsn"  placeholder="NPSN Lengkap Anda" style="background-color: #F39C12; border-radius: 15px" required>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-lg-4">
+                                                            <label style="color:grey; padding:8px">Tempat Lahir </label>
+                                                            </div>
+                                                            <div class="col-lg-8">
+                                                                <input type="text" class="form-control" name="tempat_lahir" placeholder="Masukkan tempat lahir Anda" style="background-color: #F39C12; border-radius: 15px" required>
+                                                            </div>
+                                                        </div> 
+                                                        <div class="row">
+                                                            <div class="col-lg-4">
+                                                            <label style="color:grey; padding:8px">Tanggal Lahir</label>
+                                                            </div>
+                                                            <div class="col-lg-8">
+                                                                <input type="date" class="form-control" name="tanggal_lahir" placeholder="Masukkan Tanggal Lahir Anda" style="background-color: #F39C12; border-radius: 15px" required>
+                                                            </div>
+                                                        </div> 
+                                                        <div class="row">
+                                                            <div class="col-lg-4">
+                                                            <label style="color:grey; padding:8px">Jenis Kelamin</label>
+                                                            </div>
+                                                            <div class="col-lg-8">
+                                                                <input type="radio" name="id_jk" value="1" required><label style="color:black; padding:4px">Pria</label></input>
+                                                                <input type="radio" name="id_jk" value="2" required><label style="color:black; padding:4px">Wanita</label></input>
+                                                            </div>
+                                                        </div>
                                                         <div class="row">
                                                             <div class="col-lg-4">
                                                             <label style="color:grey; padding:8px">Alamat</label>
                                                             </div>
                                                             <div class="col-lg-8">
-                                                                <input type="text" class="form-control" name="alamat" style="background-color: #F39C12; border-radius: 15px" required>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row">
-                                                            <div class="col-lg-4">
-                                                            <label style="color:grey; padding:8px">Kelurahan</label>
-                                                            </div>
-                                                            <div class="col-lg-8">
-                                                                <input type="text" class="form-control" name="kelurahan" style="background-color: #F39C12; border-radius: 15px" required>
+                                                                <input type="text" class="form-control" name="alamat" placeholder="Silahkan Isi Alamat Lengkap Anda" style="background-color: #F39C12; border-radius: 15px required">
                                                             </div>
                                                         </div> 
                                                         <div class="row">
                                                             <div class="col-lg-4">
-                                                            <label style="color:grey; padding:8px">Kecamatan</label>
+                                                                <label style="color:grey; padding:8px">Agama</label>
                                                             </div>
                                                             <div class="col-lg-8">
-                                                                <input type="text" class="form-control" name="kecamatan" style="background-color: #F39C12; border-radius: 15px" required>
-                                                            </div>
-                                                        </div> 
-                  
-                                                        <div class="row">
-                                                            <div class="col-lg-4">
-                                                            <label style="color:grey; padding:8px">Kabupaten</label>
-                                                            </div>
-                                                            <div class="col-lg-8">
-                                                                <input type="text" class="form-control" name="kabupaten" style="background-color: #F39C12; border-radius: 15px" required>
-                                                            </div>
-                                                        </div> 
-                                                        <div class="row">
-                                                            <div class="col-lg-4">
-                                                            <label style="color:grey; padding:8px">Provinsi</label>
-                                                            </div>
-                                                            <div class="col-lg-8">
-                                                                <input type="text" class="form-control" name="provinsi" style="background-color: #F39C12; border-radius: 15px" required>
+                                                                <select id="inputState" class="form-control" name="id_agama" style="background-color: #F39C12; border-radius: 15px" required>
+                                                                    <option value="" required>Silahkan dipilih</option> 
+                                                                                                                                                                                                                            <option value="1">Islam</option> 
+                                                                                                                                                    <option value="2">Kristen Protestan</option> 
+                                                                                                                                                    <option value="3">Kristen Katolik</option> 
+                                                                                                                                                    <option value="4">Hindu</option> 
+                                                                                                                                                    <option value="5">Buddha</option> 
+                                                                                                                                                    <option value="6">Konghucu</option> 
+                                                                          
+                                                                </select>
                                                             </div>
                                                         </div> 
                                                         <div class="row">
                                                             <div class="col-lg-4">
-                                                            <label style="color:grey; padding:8px">Kode POS</label>
+                                                                <label style="color:grey; padding:8px">Email</label>
                                                             </div>
                                                             <div class="col-lg-8">
-                                                                <input type="number" class="form-control" name="kode_pos" style="background-color: #F39C12; border-radius: 15px" required>
-                                                            </div>
-                                                        </div>  
-
-                                                        <div class="row">
-                                                            <div class="col-lg-4">
-                                                            <label style="color:grey; padding:8px">Telephone</label>
-                                                            </div>
-                                                            <div class="col-lg-8">
-                                                                <input type="number" class="form-control" name="telephone" style="background-color: #F39C12; border-radius: 15px" required>
-                                                            </div>
-                                                        </div> 
-                                                        <div class="row">
-                                                            <div class="col-lg-4">
-                                                            <label style="color:grey; padding:8px">Email</label>
-                                                            </div>
-                                                            <div class="col-lg-8">
-                                                                <input type="email" class="form-control" name="email" style="background-color: #F39C12; border-radius: 15px" required>
+                                                                <input type="email" class="form-control" name="email" placeholder="Masukkan email Anda" style="background-color: #F39C12; border-radius: 15px" required>
                                                             </div>
                                                         </div> 
 
                                                         <div class="row">
                                                             <div class="col-lg-4">
-                                                                <label style="color:grey; padding:8px">Kepala Sekolah</label>
+                                                                <label style="color:grey; padding:8px">No Handphone</label>
                                                             </div>
                                                             <div class="col-lg-8">
-                                                                <input type="text" class="form-control" name="kepala_sekolah" style="background-color: #F39C12; border-radius: 15px" required>
+                                                                <input type="tel" class="form-control" name="no_hp" placeholder="Masukkan No Handphone Anda" style="background-color: #F39C12; border-radius: 15px" required>
                                                             </div>
-                                                            
-                                                            <div class="col-lg-12 mt-2">
+                                                        </div> 
+
+                                                        <div class="row">
+                                                            <div class="col-lg-4">
+                                                                <label style="color:grey; padding:8px">Status Kepegawaian</label>
+                                                            </div>
+                                                            <div class="col-lg-8">
+                                                                <select id="inputState" class="form-control" name="status_kepegawaian" style="background-color: #F39C12; border-radius: 15px" required>
+                                                                    <option>Pilih Status Kepegawaian</option>
+                                                                    <option value="PNS">PNS</option>
+                                                                    <option value="Non PNS">Non PNS</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-lg-12 mt-2" style="margin: 1px; margin-left: 10px;">
                                                              <input type="file" name="gambar" id="image" onchange="showImage(this);" class="custom-file-input" required>
-                                                             <label class="custom-file-label" style="margin-right: 20px">Upload Foto Sekolah</label>
+                                                             <label class="custom-file-label">Foto Profile</label>
                                                             </div>
                                                         </div> 
                                     
+                                                        
                                                         <br/>
                                                         <div class="col-sm-4 text-center" style="margin: auto;">
                                                             <input type="submit" name="daftar" id="daftar" value="Edit" class="btn btn-secondary btn-block" style="background-color: blue; border-color: #39B44a; height: 15%">
@@ -348,9 +351,23 @@
                                                     </div>
                                                 </div>
                                             </form>
-    <script src="js/bootstrap.min.js"></script>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- main page wrapper -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/main.js"></script>
     <!-- Scroll to top -->
-  <a class="scroll-to-top rounded" href="#page-top">
+<a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
   </a>
 
@@ -360,5 +377,6 @@
   <script src="js/ruang-admin.min.js"></script>
   <script src="vendor/chart.js/Chart.min.js"></script>
   <script src="js/demo/chart-area-demo.js"></script>  
-  </body>
+    <script src="js/bootstrap.min.js"></script>
+</body>
 </html>
