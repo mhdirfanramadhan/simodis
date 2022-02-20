@@ -1,3 +1,39 @@
+<?php 
+session_start();
+include_once('db_connect.php');
+$database = new database();
+ 
+if(isset($_SESSION['is_login']))
+{
+    header('location:ruang-admin/index.html');
+}
+ 
+if(isset($_COOKIE['username']))
+{
+  $database->relogin($_COOKIE['username']);
+  header('location:ruang-admin/index.html');
+}
+ 
+if(isset($_POST['login']))
+{
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    if(isset($_POST['remember']))
+    {
+      $remember = TRUE;
+    }
+    else
+    {
+      $remember = FALSE;
+    }
+ 
+    if($database->login($username,$password,$remember))
+    {
+      header('location:ruang-admin/index.html');
+    }
+}
+?>
+
  <!DOCTYPE html>
 <html lang="en">
 
@@ -43,7 +79,7 @@
             </nav>
             <!-- End Navbar -->
             <div class="content">
-                <center><form action="ruang-admin/index.html" method="post">
+                <center><form method="post">
                             <div class="col-md-6">
                                 <div class="card">
                                     <div class="card-header ">

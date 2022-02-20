@@ -86,8 +86,8 @@ html,body,h1,h2,h3,h4,h5 {}
         </a>
         <div id="collapseTable" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="simple-tables.html">Siswa</a>
-            <a class="collapse-item" href="datatables.html">Guru</a>
+            <a class="collapse-item" href="absensi-siswa.html">Siswa</a>
+            <a class="collapse-item" href="absensi-guru.php">Guru</a>
           </div>
         </div>
       </li>
