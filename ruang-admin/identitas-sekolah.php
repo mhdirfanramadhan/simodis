@@ -114,10 +114,17 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTable" aria-expanded="true"
+        <a class="nav-link collapsed" href="identitas-sekolah.php" data-target="#collapseForm" aria-expanded="true"
+          aria-controls="collapseForm">
+          <i class="fa-solid fa-money-check"></i>
+          <span>SPP Sekolah</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="absensi-siswa.html" data-target="#collapseTable" aria-expanded="true"
           aria-controls="collapseTable">
           <i class="fas fa-fw fa-table"></i>
-          <span>Absensi Sekolah</span>
+          <span>Absensi Siswa</span>
         </a>
         <div id="collapseTable" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
