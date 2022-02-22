@@ -134,8 +134,8 @@
         </a>
         <div id="collapsePage" class="collapse" aria-labelledby="headingPage" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="login.html">UTS</a>
-            <a class="collapse-item" href="register.html">UAS</a>
+            <a class="collapse-item" href="nilaiUTS.html">UTS</a>
+            <a class="collapse-item" href="nilaiUAS.html">UAS</a>
           </div>
         </div>
       </li>
@@ -216,11 +216,11 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <p>Are you sure you want to logout?</p>
+                  <p>Anda yakin ingin logout?</p>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
-                  <a href="login.html" class="btn btn-primary">Logout</a>
+                  <a href="http://localhost/simodis/login.php" class="btn btn-primary">Logout</a>
                 </div>
               </div>
             </div>
