@@ -79,17 +79,18 @@ html,body,h1,h2,h3,h4,h5 {}
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTable" aria-expanded="true"
+        <a class="nav-link collapsed" href="http://localhost/simodis/dashboard/spp-sekolah/datasiswa.php" data-target="#collapseForm" aria-expanded="true"
+          aria-controls="collapseForm">
+          <i class="fa-solid fa-money-check"></i>
+          <span>SPP Sekolah</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="absensi-siswa.html" data-target="#collapseTable" aria-expanded="true"
           aria-controls="collapseTable">
           <i class="fas fa-fw fa-table"></i>
-          <span>Absensi Sekolah</span>
-        </a>
-        <div id="collapseTable" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="absensi-siswa.html">Siswa</a>
-            <a class="collapse-item" href="absensi-guru.php">Guru</a>
-          </div>
-        </div>
+          <span>Absensi Siswa</span>
+        </a>  
       </li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePage" aria-expanded="true"
@@ -99,7 +100,6 @@ html,body,h1,h2,h3,h4,h5 {}
         </a>
         <div id="collapsePage" class="collapse" aria-labelledby="headingPage" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Example Pages</h6>
             <a class="collapse-item" href="login.html">UTS</a>
             <a class="collapse-item" href="register.html">UAS</a>
           </div>
@@ -151,14 +151,6 @@ html,body,h1,h2,h3,h4,h5 {}
                 <a class="dropdown-item" href="profile-dashboardOrtu.php">
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                   Profile
-                </a>
-                <a class="dropdown-item" href="#">
-                  <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Settings
-                </a>
-                <a class="dropdown-item" href="#">
-                  <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Activity Log
                 </a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="javascript:void(0);" data-toggle="modal" data-target="#logoutModal">

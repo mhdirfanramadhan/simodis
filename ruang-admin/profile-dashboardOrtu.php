@@ -115,17 +115,18 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTable" aria-expanded="true"
+        <a class="nav-link collapsed" href="http://localhost/simodis/dashboard/spp-sekolah/datasiswa.php" data-target="#collapseForm" aria-expanded="true"
+          aria-controls="collapseForm">
+          <i class="fa-solid fa-money-check"></i>
+          <span>SPP Sekolah</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="absensi-siswa.html" data-target="#collapseTable" aria-expanded="true"
           aria-controls="collapseTable">
           <i class="fas fa-fw fa-table"></i>
-          <span>Absensi Sekolah</span>
-        </a>
-        <div id="collapseTable" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="absensi-siswa.html">Siswa</a>
-            <a class="collapse-item" href="absensi-guru.php">Guru</a>
-          </div>
-        </div>
+          <span>Absensi Siswa</span>
+        </a>  
       </li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePage" aria-expanded="true"
@@ -136,7 +137,7 @@
         <div id="collapsePage" class="collapse" aria-labelledby="headingPage" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <a class="collapse-item" href="login.html">UTS</a>
-            <a class="collapse-item" href="register.html">UAS</a>>
+            <a class="collapse-item" href="register.html">UAS</a>
           </div>
         </div>
       </li>
