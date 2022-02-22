@@ -114,17 +114,25 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTable" aria-expanded="true"
-          aria-controls="collapseTable">
-          <i class="fas fa-fw fa-table"></i>
-          <span>Absensi Sekolah</span>
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrap"
+          aria-expanded="true" aria-controls="collapseBootstrap">
+          <i class="fa-solid fa-money-check"></i>
+          <span>SPP Sekolah</span>
         </a>
-        <div id="collapseTable" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
+        <div id="collapseBootstrap" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="absensi-siswa.html">Siswa</a>
-            <a class="collapse-item" href="absensi-guru.php">Guru</a>
+            <a class="collapse-item" href="murid.html">Murid</a>
+            <a class="collapse-item" href="wali-kelas.html">Wali Kelas</a>
+            <a class="collapse-item" href="Guru.html">Guru</a>
           </div>
         </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="absensi-siswa.html" data-target="#collapseTable" aria-expanded="true"
+          aria-controls="collapseTable">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Absensi Siswa</span>
+        </a>  
       </li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePage" aria-expanded="true"
@@ -220,7 +228,7 @@
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
-                  <a href="http://localhost/simodis/login.php" class="btn btn-primary">Logout</a>
+                  <a href="http://localhost/simodis/" class="btn btn-primary">Logout</a>
                 </div>
               </div>
             </div>

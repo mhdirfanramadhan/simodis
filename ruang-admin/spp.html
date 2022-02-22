@@ -9,10 +9,25 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="img/logo/logo-simodis.png" rel="icon">
-  <title></title>
+  <title>Simodis - Beranda</title>
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="css/ruang-admin.min.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet">
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
 </head>
 
 <body id="page-top">
@@ -44,18 +59,11 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrap"
-          aria-expanded="true" aria-controls="collapseBootstrap">
+        <a class="nav-link collapsed" href="http://localhost/simodis/dashboard/spp-sekolah/datasiswa.php" data-target="#collapseForm" aria-expanded="true"
+          aria-controls="collapseForm">
           <i class="fa-solid fa-money-check"></i>
           <span>SPP Sekolah</span>
         </a>
-        <div id="collapseBootstrap" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="murid.html">Murid</a>
-            <a class="collapse-item" href="wali-kelas.html">Wali Kelas</a>
-            <a class="collapse-item" href="Guru.html">Guru</a>
-          </div>
-        </div>
       </li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="absensi-siswa.html" data-target="#collapseTable" aria-expanded="true"
@@ -72,8 +80,9 @@
         </a>
         <div id="collapsePage" class="collapse" aria-labelledby="headingPage" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item active" href="nilaiUTS.html">UTS</a>
+            <a class="collapse-item" href="nilaiUTS.html">UTS</a>
             <a class="collapse-item" href="nilaiUAS.html">UAS</a>
+
           </div>
         </div>
       </li>
@@ -107,8 +116,8 @@
                 </form>
               </div>
             </li>
-
             
+
             <div class="topbar-divider d-none d-sm-block"></div>
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
@@ -117,12 +126,13 @@
                 <span class="ml-2 d-none d-lg-inline text-white small">User</span>
               </a>
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="profile-dashboardOrtu.php">
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                   Profile
                 </a>
+               
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="javascript:void(0);" data-toggle="modal" data-target="#logoutModal">
+                <a class="dropdown-item" href="" data-toggle="modal" data-target="#logoutModal">
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                   Logout
                 </a>
@@ -131,95 +141,39 @@
           </ul>
         </nav>
         <!-- Topbar -->
+
         <!-- Container Fluid-->
         <div class="container-fluid" id="container-wrapper">
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Selamat Datang, User</h1>
+            <h1 class="h3 mb-0 text-gray-800">Dashboard Orang Tua</h1>
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="./">Beranda</a></li>
-              <li class="breadcrumb-item">Nilai Evaluasi</li>
-              <li class="breadcrumb-item active" aria-current="page">UTS</li>
+              <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
             </ol>
           </div>
 
-          <div class="row">
-            <div class="col-lg-12 mb-4">
-              <!-- Simple Tables -->
-              <div class="card">
-                <div class="table-responsive">
-                  <table class="table align-items-center table-flush">
-                    <thead class="thead-light">
-                      <tr>
-                        <th>No</th>
-                        <th>Mata Pelajaran</th>
-                        <th>Kelas</th>
-                        <th>Jurusan</th>
-                        <th>Guru Mapel</th>
-                        <th>Tahun Akademik</th>
-                        <th>Semester</th>
-                        <th>Action</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td><a href="#">Matematika</a></td>
-                        <td>XI-01</td>
-                        <td>RPL</td>
-                        <td><span class="badge badge-success">Fatimah Dewi</span></td>
-                        <td>2021/2022</td>
-                        <td>Genap</td>
-                        <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td><a href="#">B. Indonesia</a></td>
-                        <td>XI-01</td>
-                        <td>RPL</td>
-                        <td><span class="badge badge-success">Andin</span></td>
-                        <td>2021/2022</td>
-                        <td>Genap</td>
-                        <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                        <td><a href="#">B. Indonesia</a></td>
-                        <td>XI-01</td>
-                        <td>RPL</td>
-                        <td><span class="badge badge-success">Andin</span></td>
-                        <td>2021/2022</td>
-                        <td>Genap</td>
-                        <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
-                      </tr>
-                      <tr>
-                        <td>4</td>
-                        <td><a href="#">Kewirausahaan</a></td>
-                        <td>XI-01</td>
-                        <td>RPL</td>
-                        <td><span class="badge badge-success">Keddy</span></td>
-                        <td>2021/2022</td>
-                        <td>Genap</td>
-                        <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
-                      </tr>
-                      <tr>
-                        <td>5</td>
-                        <td><a href="#">Pendidikan Agama Islam</a></td>
-                        <td>XI-01</td>
-                        <td>RPL</td>
-                        <td><span class="badge badge-success">Lufita</span></td>
-                        <td>2021/2022</td>
-                        <td>Genap</td>
-                        <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="card-footer"></div>
-              </div>
-            </div>
-          </div>
-          <!--Row-->
-
+          <div class="row mb-3">
+<!-- Fixed navbar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="http://localhost/simodis/ruang-admin/index.html" style="font-family: Cambria;"> << Kembali Ke Aplikasi</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="dataguru.php" style="font-family: Times New Roman;">GURU</a></li>
+          <li><a href="datawali.php" style="font-family: Times New Roman;">WALI KELAS</a></li>
+          <li><a href="datasiswa.php" style="font-family: Times New Roman;">DATA SISWA</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
           <!-- Modal Logout -->
           <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout"
             aria-hidden="true">
@@ -232,11 +186,11 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <p>Anda Yakin ingin  logout?</p>
+                  <p>Apakah anda yakin ingin Logout?</p>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
-                  <a href="http://localhost/simodis/" class="btn btn-primary">Logout</a>
+                    <a href="http://localhost/simodis/" class="btn btn-primary">Logout</a>
                 </div>
               </div>
             </div>
@@ -260,7 +214,8 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
   <script src="js/ruang-admin.min.js"></script>
-
+  <script src="vendor/chart.js/Chart.min.js"></script>
+  <script src="js/demo/chart-area-demo.js"></script>  
 </body>
 
 </html>

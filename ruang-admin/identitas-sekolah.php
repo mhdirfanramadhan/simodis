@@ -114,11 +114,18 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link collapsed" href="http://localhost/simodis/dashboard/spp-sekolah/datasiswa.php" data-target="#collapseForm" aria-expanded="true"
-          aria-controls="collapseForm">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrap"
+          aria-expanded="true" aria-controls="collapseBootstrap">
           <i class="fa-solid fa-money-check"></i>
           <span>SPP Sekolah</span>
         </a>
+        <div id="collapseBootstrap" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="murid.html">Murid</a>
+            <a class="collapse-item" href="wali-kelas.html">Wali Kelas</a>
+            <a class="collapse-item" href="Guru.html">Guru</a>
+          </div>
+        </div>
       </li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="absensi-siswa.html" data-target="#collapseTable" aria-expanded="true"
@@ -228,7 +235,7 @@
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
-                  <a href="http://localhost/simodis/login.php" class="btn btn-primary">Logout</a>
+                  <a href="http://localhost/simodis/" class="btn btn-primary">Logout</a>
                 </div>
               </div>
             </div>

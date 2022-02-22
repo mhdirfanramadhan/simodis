@@ -47,7 +47,7 @@ and is wrapped around the whole page content, except for the footer in this exam
 
     <!-- Blog entry -->
 
-  <img src="assets/img/dashboard-ortu.jpg" alt="Norway" style="width:100%">
+  <img src="assets/img/dashb-ortu.jpg" alt="Norway" style="width:100%">
     <div class="w3-container">
       <h3><b>Dashboard Monitoring Orang Tua</b></h3>
     </div>
