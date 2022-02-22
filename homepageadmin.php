@@ -10,9 +10,9 @@
 <body>
 <h2>Selamat Datang</h2>
 <main>
-	<button><span>Monitoring Seruni</span></button>
-	<button>Monitoring Dinas</button>
-	<button>Monitoring Orang Tua</button>
+	<button style="font-family: Cambria;"><span>Monitoring Seruni</span></button> 
+	<button style="font-family: Cambria;">Monitoring Dinas</button>
+	<button style="font-family: Cambria;">Monitoring Orang Tua</button>
 </main> 
 
 <p>© 2021 Simodis. All rights reserved. Powered by PT Laras Adhi Praya</p>

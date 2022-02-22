@@ -39,7 +39,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="http://localhost/simodisApp-noDB/dashboard/dashboard-ortu.php" style="font-family: Cambria;"> << Kembali Ke Aplikasi</a>
+          <a class="navbar-brand" href="http://localhost/simodis/ruang-admin/index.html" style="font-family: Cambria;"> << Kembali Ke Aplikasi</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
