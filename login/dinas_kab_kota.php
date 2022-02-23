@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
- <title>Halaman Pimpinan</title>
+ <title>Simodis - Admin Dinas Kab/kot</title>
 </head>
 <body>
+<script>
+     alert('Selamat Datang, Anda Login Sebagai ADMIN');
+   </script>
  <?php
  session_start();
 
  // cek apakah yang mengakses halaman ini sudah login
  if($_SESSION['level']==""){
-  header("location:index.php?pesan=gagal");
+    echo "<script> 
+    alert('Silahkan Login Dahulu');
+    document.location.href = 'http://localhost/simodis/login/index.php';
+</script>
+";
  }
 
  ?>

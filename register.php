@@ -62,7 +62,7 @@
                                     <div class="col-xl-12">
                                         <div class="auth-form">
                                             <h4 class="text-center mb-4" style="margin-top:-50px";>Register</h4>
-                                            <form method="post" action="template-login/after-regist.php">
+                                            <form method="post" action="login/after-regist.php">
                                                 <div class="row">
                                                     <div class="col-lg-3">
                                                 </div>
