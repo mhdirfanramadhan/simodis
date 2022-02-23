@@ -1,8 +1,10 @@
-<?php 
+<?php
+// mengaktifkan session php
 session_start();
-session_unset();
+
+// menghapus semua session
 session_destroy();
-setcookie('username', '', 0, '/');
-setcookie('nama', '', 0, '/');
-header('location:http://localhost/simodis/login/login.php');
+
+// mengalihkan halaman ke halaman login
+header("location:index.php");
 ?>
