@@ -1,0 +1,47 @@
+html {
+	height: 100%;
+	display: flex;
+}
+body {
+	position: relative;
+	margin: auto;
+	background: orange;
+	perspective: 500px;
+}
+
+h2 {
+    text-align: center;
+}
+main {
+	display: flex;
+	flex-direction: column;
+}
+
+button {
+	display: block;
+	position: relative;
+	margin: 0.5em 0;
+	padding: .8em 2.2em;
+	cursor: pointer;
+	background: #FFFFFF;
+	border: none;
+	border-radius: .4em;
+
+
+
+
+	mix-blend-mode: color-dodge;
+	perspective: 500px;
+
+	&:before, &:after {
+		--z: 0px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		content: '';
+		width: 1%;
+		height: 100%;
+		opacity: 0;
+
+	}

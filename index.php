@@ -14,7 +14,7 @@
 <body background ="assets/img/background.png">
 
 <ul>
-  <li style="float:right"><a href="login.php">Log in</a></li>
+  <li style="float:right"><a href="template-login/index.php">Log in</a></li>
   <li style="float:right"><a href="features.php">Features</a></li>
   <li style="float:right"><a href="#">Home</a></li>
 </ul>

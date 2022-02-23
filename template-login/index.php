@@ -21,10 +21,8 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.2/css/buttons.dataTables.min.css">
 </head>
-
 <body>
-    
-    <div class="wrapper">
+<div class="wrapper">
         <div class="sidebar"  data-color="orange" data-image="assets/img/sidebar-4.jpg">
             <div class="sidebar-wrapper">
                 <div class="logo">
@@ -43,27 +41,38 @@
                 </div>
             </nav>
             <!-- End Navbar -->
-            <div class="content">
-                <center><form method="post">
+
+<div class="content">
+<?php
+ if(isset($_GET['pesan'])){
+  if($_GET['pesan']=="gagal"){
+    echo "<script> 
+    alert('Username Atau Password Anda Salah!');
+    document.location.href = 'index.php';
+    </script>
+";
+  }
+ }
+ ?>
+                <center><form action="cek_login.php" method="post">
                             <div class="col-md-6">
                                 <div class="card">
                                     <div class="card-header ">
                                         <h4 class="card-title text-center"> Selamat Datang Di SIMODIS</h4>
                                     </div>
                                     <div class="card-body table-full-width table-responsive">
-                            
-                                        <div class="col-sm-12">
+                                    <div class="col-sm-12">
                                                 <div class="row">
                                                     <div class="col-sm-12">
                                                         <div class="form-group">
                                                             <label>Username</label>
-                                                            <input type="text" class="form-control" name="username" id="username">
+                                                            <input type="text" class="form-control" name="username" id="username" required>
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-12">
                                                         <div class="form-group">
                                                             <label>Password</label>
-                                                            <input type="password" class="form-control" name="password" id="password">
+                                                            <input type="password" class="form-control" name="password" id="password" required>
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-12">
@@ -82,7 +91,7 @@
                                                         </div>
                                                 </div>
                                                 <div class="new-account mt-3">
-                                                            <p style="color:black;">Belum Punya Akun ?  <a style="color:black;" class="text-primary" href="register.php" >Daftar Disini</a></p>
+                                                            <p style="color:black;">Belum Punya Akun ?  <a style="color:black;" class="text-primary" href="http://localhost/simodis/register.php" >Daftar Disini</a></p>
                                                         </div>
                                             </div>
                                         </div>

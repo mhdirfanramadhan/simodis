@@ -1,18 +1,3 @@
-<?php 
-include_once('db_connect.php');
-$database = new database();
-if(isset($_POST['register']))
-{
-    $username = $_POST['username'];
-    $password = password_hash($_POST['password'],PASSWORD_DEFAULT);
-    $nama = $_POST['nama'];
-    if($database->register($username,$password,$nama))
-    {
-      header('location:login/login.php');
-    }
-}
- 
-?>
 <!DOCTYPE html>
 <!--
 	App by FreeHTML5.co
@@ -77,7 +62,7 @@ if(isset($_POST['register']))
                                     <div class="col-xl-12">
                                         <div class="auth-form">
                                             <h4 class="text-center mb-4" style="margin-top:-50px";>Register</h4>
-                                            <form method="post" action="">
+                                            <form method="post" action="template-login/after-regist.php">
                                                 <div class="row">
                                                     <div class="col-lg-3">
                                                 </div>
