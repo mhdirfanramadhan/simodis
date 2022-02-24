@@ -10,7 +10,6 @@
  <?php
  session_start();
 
- // cek apakah yang mengakses halaman ini sudah login
  if($_SESSION['level']==""){
     echo "<script> 
     alert('Silahkan Login Dahulu');
@@ -20,7 +19,7 @@
  }
 
  ?>
- <h1>Dashboard Dinas Kabupaten / kota</h1>
+ <center><h1>Dashboard Dinas Kabupaten / kota</h1></center>
 
 
  <a href="logout.php">LOGOUT</a>
