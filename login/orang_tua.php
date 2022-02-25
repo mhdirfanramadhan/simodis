@@ -10,23 +10,19 @@
  <?php
  session_start();
 
- // cek apakah yang mengakses halaman ini sudah login
  if($_SESSION['level']==""){
     echo "<script> 
     alert('Silahkan Login Dahulu');
     document.location.href = 'http://localhost/simodis/login/index.php';
-</script>
+    </script>
 ";
  }
 
  ?>
- <h1>Dashboard Orang tua</h1>
 
-
+ <center><h1>Dashboard Orang tua</h1></center>
  <a href="logout.php">LOGOUT</a>
-
  <br/>
  <br/>
-
 </body>
 </html>

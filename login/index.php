@@ -8,13 +8,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>SIMODIS APP</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
-    <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
-    <!-- CSS Files -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="assets/css/light-bootstrap-dashboard.css?v=2.0.0 " rel="stylesheet" />
-    <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="assets/css/demo.css" rel="stylesheet" />
     <script src="assets/js/core/jquery.3.2.1.min.js" type="text/javascript"></script>
     <script src="assets/datatables/jquery.dataTables.min.js"></script>
@@ -101,7 +98,6 @@
                         </div>
                     </div>
                 </form></center>
-
             </div>
         </div>
         <div id='ajax-wait'>
@@ -135,10 +131,9 @@
         });
     }
     </script>
-    
 </body>
-<!--   Core JS Files   -->
 
+<!--   Core JS Files   -->
 <script src="assets/js/core/popper.min.js" type="text/javascript"></script>
 <script src="assets/js/core/bootstrap.min.js" type="text/javascript"></script>
 <!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
