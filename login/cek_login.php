@@ -31,7 +31,7 @@ if($cek > 0){
 }else if($data['level']=="ortu"){
     $_SESSION['username'] = $username;
     $_SESSION['level'] = "ortu";
-    header("location:orang_tua.php");
+    header("location:welcome-ortu.php");
 
  }else{
 
