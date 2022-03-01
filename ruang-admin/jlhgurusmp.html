@@ -19,11 +19,11 @@
   <div id="wrapper">
     <!-- Sidebar -->
     <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard-dinasprov.html">
         <div class="sidebar-brand-icon">
           <img src="img/logo/logo-simodis.png">
         </div>
-        <div class="sidebar-brand-text mx-3">simodis</div>
+        <div class="sidebar-brand-text mx-3">Simodis</div>
       </a>
       <hr class="sidebar-divider my-0">
       <li class="nav-item">
@@ -269,10 +269,10 @@
         <!-- Container Fluid-->
         <div class="container-fluid" id="container-wrapper">
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Jumlah Guru SMP/Sederajat</h1>
+            <h1 class="h3 mb-0 text-gray-800">SMP/Sederajat</h1>
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="./">Dashboard</a></li>
-              <li class="breadcrumb-item">Total Guru Keseluruhan 1500</li>
+              <li class="breadcrumb-item"><a href="dashboard-dinasprov.html">Dashboard</a></li>
+              <li class="breadcrumb-item" aria-current="page">Jumlah Guru</li>
               <li class="breadcrumb-item active" aria-current="page">SMP/Sederajat</li>
             </ol>
           </div>
@@ -280,165 +280,59 @@
           <!-- Row -->
           <div class="row">
             <div class="col-lg-6">
-              <!-- Modal basic -->
+              <!-- Popover basic -->
               <div class="card mb-4">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                   <h6 class="m-0 font-weight-bold text-primary">Jumlah Guru SMP</h6>
                 </div>
                 <div class="card-body">
-                  <p>150 Guru.</p>
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
-                    id="#myBtn">
-                    KLIK
-                  </button>
-                </div>
-              </div>
-              <!-- modal vertically centered -->
-              <!-- Modal with scrolling long content -->
-              <div class="card mb-4">
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Jumlah Guru Sederajat.</h6>
-                </div>
-                <div class="card-body">
-                  <p>150 Guru.</p>
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong"
-                    id="#modalLong">KLIK</button>
+                  <p>150 Guru</p>
+                  <a href="jumlahgurusmp.html" tabindex="0" class="btn btn-primary" role="button" data-toggle="" data-trigger="focus"
+                  title=""
+                  data-content="">KLIK</a>
                 </div>
               </div>
             </div>
-          </div>
-          <!-- Row -->
+            <div class="col-lg-6">
+              <!-- Dismiss on next click -->
+              <div class="card mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">Jumlah Guru Sederajat</h6>
+                </div>
+                <div class="card-body">
+                  <p>150 Guru</p>
+                  <a href="jumlahgurusedrj3.html" tabindex="0" class="btn btn-primary" role="button" data-toggle="" data-trigger="focus"
+                    title=""
+                    data-content="">KLIK</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-12">
+              <!-- Four directions -->
+              <div class="card mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary"></h6>
+                </div>
+                <div class="card-body">
+                  
+                  
+             
 
           <!-- Documentation Link -->
           <div class="row">
             <div class="col-lg-12 text-center">
-              <p>@Simodis<a href="http://localhost/templatedev/ruangadmin/modals.html"
-                  target="_blank">For PT.Laras Adhi Praya </a></p>
+              <p>@Simodis For <a href="https://getbootstrap.com/docs/4.3/components/popovers/"
+                  target="_blank">
+                  PT.laras adhi praya</a></p>
             </div>
           </div>
 
-
-          <!-- Modal -->
-          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <p>You Content</p>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Modal Long -->
-          <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog"
-            aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLongTitle">Modal Long</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <h5 class="font-weight-bold">Title</h5>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ac orci phasellus egestas tellus rutrum tellus. Suspendisse sed nisi lacus
-                    sed. Erat pellentesque adipiscing commodo elit at imperdiet dui. Eget dolor morbi non arcu risus
-                    quis varius quam. Elit ullamcorper dignissim cras tincidunt. At risus viverra adipiscing at in
-                    tellus integer feugiat. Dictum non consectetur a erat nam at lectus urna. Est velit egestas dui id.
-                    Sed id semper risus in hendrerit. Malesuada fames ac turpis egestas maecenas pharetra convallis
-                    posuere. Pretium vulputate sapien nec sagittis aliquam. In hendrerit gravida rutrum quisque non.
-                    Neque ornare aenean euismod elementum nisi quis eleifend quam adipiscing. Lacus luctus accumsan
-                    tortor posuere. Urna molestie at elementum eu facilisis. Neque egestas congue quisque egestas diam.
-                    Turpis egestas integer eget aliquet nibh praesent. Egestas dui id ornare arcu odio ut.</p>
-                  <h5 class="font-weight-bold">Title</h5>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Lacinia quis vel eros donec. Nec tincidunt praesent semper feugiat nibh sed
-                    pulvinar proin gravida. Urna cursus eget nunc scelerisque viverra mauris in. Risus sed vulputate
-                    odio ut enim blandit volutpat maecenas. Etiam sit amet nisl purus in mollis nunc. Aliquet bibendum
-                    enim facilisis gravida neque convallis a. Aliquam id diam maecenas ultricies mi eget mauris. Et
-                    malesuada fames ac turpis egestas sed. Venenatis cras sed felis eget.</p>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Modal Scrollable -->
-          <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog"
-            aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-scrollable" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalScrollableTitle">Modal scrollable title</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <h5 class="font-weight-bold">Title</h5>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ac orci phasellus egestas tellus rutrum tellus. Suspendisse sed nisi lacus
-                    sed. Erat pellentesque adipiscing commodo elit at imperdiet dui. Eget dolor morbi non arcu risus
-                    quis varius quam. Elit ullamcorper dignissim cras tincidunt. At risus viverra adipiscing at in
-                    tellus integer feugiat. Dictum non consectetur a erat nam at lectus urna. Est velit egestas dui id.
-                    Sed id semper risus in hendrerit. Malesuada fames ac turpis egestas maecenas pharetra convallis
-                    posuere. Pretium vulputate sapien nec sagittis aliquam. In hendrerit gravida rutrum quisque non.
-                    Neque ornare aenean euismod elementum nisi quis eleifend quam adipiscing. Lacus luctus accumsan
-                    tortor posuere. Urna molestie at elementum eu facilisis. Neque egestas congue quisque egestas diam.
-                    Turpis egestas integer eget aliquet nibh praesent. Egestas dui id ornare arcu odio ut.</p>
-                  <h5 class="font-weight-bold">Title</h5>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Lacinia quis vel eros donec. Nec tincidunt praesent semper feugiat nibh sed
-                    pulvinar proin gravida. Urna cursus eget nunc scelerisque viverra mauris in. Risus sed vulputate
-                    odio ut enim blandit volutpat maecenas. Etiam sit amet nisl purus in mollis nunc. Aliquet bibendum
-                    enim facilisis gravida neque convallis a. Aliquam id diam maecenas ultricies mi eget mauris. Et
-                    malesuada fames ac turpis egestas sed. Venenatis cras sed felis eget.</p>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Modal Center -->
-          <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalCenterTitle">Modal Vertically Centered</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  Your Content
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-              </div>
-            </div>
-          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Row-->
 
           <!-- Modal Logout -->
           <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout"
@@ -446,7 +340,7 @@
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabelLogout">Ohh No!</h5>
+                  <h5 class="modal-title" id="exampleModalLabelLogout">):</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
@@ -470,12 +364,11 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>copyright &copy; <script> document.write(new Date().getFullYear()); </script> - developed by <b><a href="#"
+            <span>copyright &copy; <script> document.write(new Date().getFullYear()); </script> - developed by <b><a href="https://indrijunanda.gitlab.io/"
                   target="_blank">PT.Laras adhi praya</a></b> </span>
           </div>
         </div>
       </footer>
-
     </div>
   </div>
   <a class="scroll-to-top rounded" href="#page-top">
@@ -485,6 +378,7 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
   <script src="js/ruang-admin.min.js"></script>
+
 </body>
 
 </html>
