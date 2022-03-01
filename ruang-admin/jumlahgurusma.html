@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="img/logo/logo-simodis.png" rel="icon">
-  <title>Simodis - Absensi</title>
+  <title>Simodis - JumlahGuruSma</title>
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="css/ruang-admin.min.css" rel="stylesheet">
@@ -25,13 +25,13 @@
           <img src="img/logo/logo-simodis.png">
         </div>
         <div class="sidebar-brand-text mx-3">Simodis</div>
-    </a>
-    <hr class="sidebar-divider my-0">
-    <li class="nav-item">
-      <a class="nav-link" href="dashboard-dinasprov.html">
+      </a>
+      <hr class="sidebar-divider my-0">
+      <li class="nav-item">
+        <a class="nav-link" href="dashboard-dinasprov.html">
         <i class="fas fa-fw fa-tachometer-alt"></i>
-        <span>Dashboard</span></a>
-    </li>
+          <span>Dashboard</span></a>
+      </li>
       <hr class="sidebar-divider">
       <div class="sidebar-heading">
         Features
@@ -49,7 +49,7 @@
             <a class="collapse-item" href="nilaisma.html">SMK/SMA/Sederajat</a>
             <a class="collapse-item" href="nilaismp.html">SMP/Sederajat</a>
             <a class="collapse-item" href="nilaisd.html">SD/Sederajat</a>
-            <a class="collapse-item" href="nilaitk.html">TK/Sederajat</a>
+            <a class="collapse-item" href="nilaitk.html">TK/Paud</a>
           </div>
         </div>
       </li>
@@ -62,10 +62,10 @@
         <div id="collapseForm" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Pilih</h6>
-            <a class="collapse-item" href="#">SMK/SMA/Sederajat</a>
+            <a class="collapse-item" href="jlhsiswasma.html">SMK/SMA/Sederajat</a>
             <a class="collapse-item" href="jlhsiswasmp.html">SMP/Sederajat</a>
             <a class="collapse-item" href="jlhsiswasd.html">SD/Sederajat</a>
-            <a class="collapse-item" href="jlhmuridtk.html">TK/Sederajat</a>
+            <a class="collapse-item" href="jlhmuridtk.html">TK/Paud</a>
           </div>
         </div>
       </li>
@@ -86,7 +86,9 @@
         </div>
       </li>
     </ul>
+    
       <hr class="sidebar-divider">
+
     </ul>
     <!-- Sidebar -->
     <div id="content-wrapper" class="d-flex flex-column">
@@ -145,131 +147,201 @@
         <!-- Container Fluid-->
         <div class="container-fluid" id="container-wrapper">
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">SMA/SMK/Sederajat</h1>
+            <h1 class="h3 mb-0 text-gray-800">Jumlah Guru SMA</h1>
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="dashboard-dinasprov.html">Dashboard</a></li>
-              <li class="breadcrumb-item">Jumlah Siswa</li>
-              <li class="breadcrumb-item active" aria-current="page">SMA/SMK/Sederajat</li>
+              <li class="breadcrumb-item">SMK/SMA/Sederajat</li>
+              <li class="breadcrumb-item active" aria-current="page">Jumlah Guru SMA</li>
             </ol>
           </div>
 
           <!-- Row -->
-         
           <div class="row">
-            <div class="col-lg-6">
-              <!-- Modal basic -->
+            <!-- Datatables -->
+            <div class="col-lg-12">
               <div class="card mb-4">
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Jumlah Siswa SMK aktif</h6>
-                </div>
-                <div class="card-body">
-                  <p>850 Murid.</p>
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
-                    id="#myBtn">
-                    KLIK
-                  </button>
-                </div>
-              </div>
-              <!-- modal vertically centered -->
-              <div class="card mb-4">
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Jumlah Siswa SMA aktif</h6>
-                </div>
-                    <div class="card-body">
-                  <p>850 Murid.</p>
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"
-                    id="#modalCenter">KLIK</button>
-                </div>
-                
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <!-- Modal with scrolling long content -->
-              <div class="card mb-4">
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Jumlah Siswa Sederajat aktif</h6>
-                </div>
-                <div class="card-body">
-                  <p>850 Murid</p>
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong"
-                    id="#modalLong">KLIK</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-6">
-              <!-- Modal basic -->
-              <div class="card mb-4">
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Jumlah Siswa SMK non aktif</h6>
-                </div>
-                <div class="card-body">
-                  <p>150 Murid.</p>
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
-                    id="#myBtn">
-                    KLIK
-                  </button>
-                </div>
-              </div>
-              <!-- modal vertically centered -->
-              <div class="card mb-4">
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Jumlah Siswa SMA non aktif</h6>
-                </div>
-                    <div class="card-body">
-                  <p>150 Murid.</p>
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"
-                    id="#modalCenter">KLIK</button>
-                </div>
-                
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <!-- Modal with scrolling long content -->
-              <div class="card mb-4">
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Jumlah Siswa Sederajat non aktif</h6>
-                </div>
-                <div class="card-body">
-                  <p>150 Guru.</p>
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong"
-                    id="#modalLong">KLIK</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-6">
-                  <!-- Modal basic -->
-              <div class="card mb-4">
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Jumlah Siswa aktif Keseluruhan</h6>
-                </div>
-                <div class="card-body">
-                 <font color="green"><p>8500 Murid.</p></font><br>
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
-                    id="#myBtn">
-                    KLIK
-                  </button>
-                </div>
-              </div>
-              <!-- Modal basic -->
-              <div class="card mb-4">
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Jumlah Siswa non aktif Keseluruhan</h6>
-                </div>
-                <div class="card-body">
-                  <font color="red"><p>1500 Murid.</p></font><br>
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
-                    id="#myBtn">
-                    KLIK
-                  </button>
-                </div>
-              </div>
-          <!--Row-->
 
-          
+                <div class="table-responsive p-3">
+                  <table class="table align-items-center table-flush" id="dataTable">
+                    <thead class="thead-light">
+                      <tr>
+                        <th>Nama Sekolah</th>
+                        <th>Jumlah PNS</th>
+                        <th>Jumlah honor</th>
+                        <th>Tingkat administrasi</th>
+                      </tr>
+                    </thead>
+                    
+                    <tbody>
+                      <tr>
+                        <td>SMA Swasta Plus Adzikia</td>
+                        <td>7 guru</td>
+                        <td>7 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>SMA Swasta Santho Nicholas</td>
+                        <td>7 guru</td>
+                        <td>7 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>SMA UPMI</td>
+                        <td>7 guru</td>
+                        <td>7 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>SMA Afifiyah</td>
+                        <td>7 guru</td>
+                        <td>7 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>SMA Al-Ulum</td>
+                        <td>7 guru</td>
+                        <td>7 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>SMA Budi Mumi 3</td>
+                        <td>7 guru</td>
+                        <td>8 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>SMA Dharmawarngsa</td>
+                        <td>8 guru</td>
+                        <td>7 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>SMA Gajah mada</td>
+                        <td>7 guru</td>
+                        <td>8 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>SMA karya bhakti</td>
+                        <td>8 guru</td>
+                        <td>7 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>SMK bina taruna</td>
+                        <td>7 guru</td>
+                        <td>8 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>SMK Dharma bakti</td>
+                        <td>8 guru</td>
+                        <td>7 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>SMK Nurcahaya</td>
+                        <td>7 guru</td>
+                        <td>7 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>SMK Swadaya</td>
+                        <td>7 guru</td>
+                        <td>7 guru</td>
+                        <td>2 guru</td>
+                        <tr>
+                            <td>SMK Tritech informatika</td>
+                            <td>8 guru</td>
+                            <td>8 guru</td>
+                            <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>SMK bina media</td>
+                        <td>7 guru</td>
+                        <td>8 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>SMK bina sasta</td>
+                        <td>8 guru</td>
+                        <td>7 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>SMK markus</td>
+                        <td>7 guru</td>
+                        <td>8 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>SMK Lestari</td>
+                        <td>8 guru</td>
+                        <td>8 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>MA Aisyiyah</td>
+                        <td>7 guru</td>
+                        <td>8 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>MA al kautsar al akbar</td>
+                        <td>8 guru</td>
+                        <td>7 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>MA al manar</td>
+                        <td>7 guru</td>
+                        <td>8 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>MA al washliyah</td>
+                        <td>8 guru</td>
+                        <td>7 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>MA al furqoon</td>
+                        <td>7 guru</td>
+                        <td>8 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>MA iain</td>
+                        <td>7 guru</td>
+                        <td>8 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>MAN 1</td>
+                        <td>7 guru</td>
+                        <td>8 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>MAN 2</td>
+                        <td>7 guru</td>
+                        <td>8 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>MA Teladan</td>
+                        <td>7 guru</td>
+                        <td>8 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          <!--Row-->
 
 
           <!-- Modal Logout -->
