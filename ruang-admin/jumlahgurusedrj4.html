@@ -9,10 +9,11 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="img/logo/logo-simodis.png" rel="icon">
-  <title></title>
+  <title>Simodis - JumlahGurusederajat</title>
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="css/ruang-admin.min.css" rel="stylesheet">
+  <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 </head>
 
 <body id="page-top">
@@ -24,18 +25,18 @@
           <img src="img/logo/logo-simodis.png">
         </div>
         <div class="sidebar-brand-text mx-3">Simodis</div>
-    </a>
-    <hr class="sidebar-divider my-0">
-    <li class="nav-item">
-      <a class="nav-link" href="dashboard-dinasprov.html">
+      </a>
+      <hr class="sidebar-divider my-0">
+      <li class="nav-item">
+        <a class="nav-link" href="dashboard-dinasprov.html">
         <i class="fas fa-fw fa-tachometer-alt"></i>
-        <span>Dashboard</span></a>
-    </li>
+          <span>Dashboard</span></a>
+      </li>
       <hr class="sidebar-divider">
       <div class="sidebar-heading">
         Features
       </div>
-      
+    
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrap"
           aria-expanded="true" aria-controls="collapseBootstrap">
@@ -46,9 +47,9 @@
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Pilih</h6>
             <a class="collapse-item" href="nilaisma.html">SMK/SMA/Sederajat</a>
-            <a class="collapse-item" href="#">SMP/Sederajat</a>
+            <a class="collapse-item" href="nilaismp.html">SMP/Sederajat</a>
             <a class="collapse-item" href="nilaisd.html">SD/Sederajat</a>
-            <a class="collapse-item" href="nilaitk.html">TK/Sederajat</a>
+            <a class="collapse-item" href="nilaitk.html">TK/Paud</a>
           </div>
         </div>
       </li>
@@ -64,7 +65,7 @@
             <a class="collapse-item" href="jlhsiswasma.html">SMK/SMA/Sederajat</a>
             <a class="collapse-item" href="jlhsiswasmp.html">SMP/Sederajat</a>
             <a class="collapse-item" href="jlhsiswasd.html">SD/Sederajat</a>
-            <a class="collapse-item" href="jlhmuridtk.html">TK/Sederajat</a>
+            <a class="collapse-item" href="jlhmuridtk.html">TK/Paud</a>
           </div>
         </div>
       </li>
@@ -85,6 +86,10 @@
         </div>
       </li>
     </ul>
+    
+      <hr class="sidebar-divider">
+
+    </ul>
     <!-- Sidebar -->
     <div id="content-wrapper" class="d-flex flex-column">
       <div id="content">
@@ -103,7 +108,7 @@
                 aria-labelledby="searchDropdown">
                 <form class="navbar-search">
                   <div class="input-group">
-                    <input type="text" class="form-control bg-light border-1 small" placeholder="WApa yang anda cari?"
+                    <input type="text" class="form-control bg-light border-1 small" placeholder="Apa yang anda cari?"
                       aria-label="Search" aria-describedby="basic-addon2" style="border-color: #3f51b5;">
                     <div class="input-group-append">
                       <button class="btn btn-primary" type="button">
@@ -114,7 +119,7 @@
                 </form>
               </div>
             </li>
-
+            
             
             <div class="topbar-divider d-none d-sm-block"></div>
             <li class="nav-item dropdown no-arrow">
@@ -128,6 +133,7 @@
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                   Profile
                 </a>
+              
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="javascript:void(0);" data-toggle="modal" data-target="#logoutModal">
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -141,91 +147,148 @@
         <!-- Container Fluid-->
         <div class="container-fluid" id="container-wrapper">
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">SMP/Sederajat</h1>
+            <h1 class="h3 mb-0 text-gray-800">Jumlah Guru Sederajat</h1>
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="dashboard-dinasprov.html">Dashboard</a></li>
-              <li class="breadcrumb-item">Jumlah Sekolah</li>
-              <li class="breadcrumb-item active" aria-current="page">SMP/Sederajat</li>
+              <li class="breadcrumb-item">SD/Sederajat</li>
+              <li class="breadcrumb-item active" aria-current="page">Jumlah Guru Sederajat</li>
             </ol>
           </div>
 
+          <!-- Row -->
           <div class="row">
-            <div class="col-lg-12 mb-4">
-              <!-- Simple Tables -->
-              <div class="card">
-                <div class="table-responsive">
-                  <table class="table align-items-center table-flush">
+            <!-- Datatables -->
+            <div class="col-lg-12">
+              <div class="card mb-4">
+
+                <div class="table-responsive p-3">
+                  <table class="table align-items-center table-flush" id="dataTable">
                     <thead class="thead-light">
                       <tr>
-                        <th>No</th>
-                        <th>Mata Pelajaran</th>
-                        <th>Kelas</th>
-                        <th>Jurusan</th>
-                        <th>Guru Mapel</th>
-                        <th>Tahun Akademik</th>
-                        <th>Semester</th>
-                        <th>Action</th>
+                        <th>Nama Sekolah</th>
+                        <th>Jumlah PNS</th>
+                        <th>Jumlah honor</th>
+                        <th>Tingkat administrasi</th>
                       </tr>
                     </thead>
+                    
                     <tbody>
                       <tr>
-                        <td>1</td>
-                        <td><a href="#">Matematika</a></td>
-                        <td>XI-01</td>
-                        <td>RPL</td>
-                        <td><span class="badge badge-success">Fatimah Dewi</span></td>
-                        <td>2021/2022</td>
-                        <td>Genap</td>
-                        <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
+                        <td>SD Zahira</td>
+                        <td>7 guru</td>
+                        <td>7 guru</td>
+                        <td>2 guru</td>
                       </tr>
                       <tr>
-                        <td>2</td>
-                        <td><a href="#">B. Indonesia</a></td>
-                        <td>XI-01</td>
-                        <td>RPL</td>
-                        <td><span class="badge badge-success">Andin</span></td>
-                        <td>2021/2022</td>
-                        <td>Genap</td>
-                        <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
+                        <td>SD Swasta Sentosa </td>
+                        <td>7 guru</td>
+                        <td>7 guru</td>
+                        <td>2 guru</td>
                       </tr>
                       <tr>
-                        <td>3</td>
-                        <td><a href="#">B. Indonesia</a></td>
-                        <td>XI-01</td>
-                        <td>RPL</td>
-                        <td><span class="badge badge-success">Andin</span></td>
-                        <td>2021/2022</td>
-                        <td>Genap</td>
-                        <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
+                        <td>SD 060957</td>
+                        <td>7 guru</td>
+                        <td>7 guru</td>
+                        <td>2 guru</td>
                       </tr>
                       <tr>
-                        <td>4</td>
-                        <td><a href="#">Kewirausahaan</a></td>
-                        <td>XI-01</td>
-                        <td>RPL</td>
-                        <td><span class="badge badge-success">Keddy</span></td>
-                        <td>2021/2022</td>
-                        <td>Genap</td>
-                        <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
+                        <td>SD 060958</td>
+                        <td>7 guru</td>
+                        <td>7 guru</td>
+                        <td>2 guru</td>
                       </tr>
                       <tr>
-                        <td>5</td>
-                        <td><a href="#">Pendidikan Agama Islam</a></td>
-                        <td>XI-01</td>
-                        <td>RPL</td>
-                        <td><span class="badge badge-success">Lufita</span></td>
-                        <td>2021/2022</td>
-                        <td>Genap</td>
-                        <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
+                        <td>SD 060967</td>
+                        <td>7 guru</td>
+                        <td>7 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>SD Swasta karya bhakti</td>
+                        <td>7 guru</td>
+                        <td>8 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>SD Swasta AL-Falah</td>
+                        <td>8 guru</td>
+                        <td>7 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>SD Swasta pertiwi</td>
+                        <td>7 guru</td>
+                        <td>8 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>SD Swasta Arsyadiah</td>
+                        <td>8 guru</td>
+                        <td>7 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>MAS Al-manar</td>
+                        <td>7 guru</td>
+                        <td>8 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>MIS Al-Kautsar</td>
+                        <td>8 guru</td>
+                        <td>7 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>MTSS Nurul Huda</td>
+                        <td>7 guru</td>
+                        <td>7 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>MIN Glugur Darat 2</td>
+                        <td>7 guru</td>
+                        <td>7 guru</td>
+                        <td>2 guru</td>
+                        <tr>
+                            <td>MTSS Aisyiyah</td>
+                            <td>8 guru</td>
+                            <td>8 guru</td>
+                            <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>MIS jabal noor</td>
+                        <td>7 guru</td>
+                        <td>8 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>MTSS AR-Ridha</td>
+                        <td>8 guru</td>
+                        <td>7 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>MTSS insan cita</td>
+                        <td>7 guru</td>
+                        <td>8 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>MIN 3</td>
+                        <td>8 guru</td>
+                        <td>8 guru</td>
+                        <td>2 guru</td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
-                <div class="card-footer"></div>
               </div>
             </div>
+            
           </div>
           <!--Row-->
+
 
           <!-- Modal Logout -->
           <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout"
@@ -239,7 +302,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <p>Anda Yakin ingin  logout?</p>
+                  <p>Anda Yakin ingin logout?</p>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
@@ -252,6 +315,7 @@
         </div>
         <!---Container Fluid-->
       </div>
+
       <!-- Footer -->
       
       <!-- Footer -->
@@ -267,6 +331,17 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
   <script src="js/ruang-admin.min.js"></script>
+  <!-- Page level plugins -->
+  <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script>
+    $(document).ready(function () {
+      $('#dataTable').DataTable(); // ID From dataTable 
+      $('#dataTableHover').DataTable(); // ID From dataTable with Hover
+    });
+  </script>
 
 </body>
 
