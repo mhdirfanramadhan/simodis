@@ -1,36 +1,107 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
-<head>
+  <head>
   <script src="https://kit.fontawesome.com/3cd968700c.js" crossorigin="anonymous"></script>
-  <meta charset="utf-8">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="img/logo/logo-simodis.png" rel="icon">
-  <title></title>
+  <title>Simodis - Profile</title>
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="css/ruang-admin.min.css" rel="stylesheet">
-</head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <style>
+      html,body,h1,h2,h3,h4,h5 {}
+      body {
+        background-color: #e8e8e8;
+        background-position: absolute;    
+        background-size: cover;          
+        margin:0;
+      }
 
-<body id="page-top">
+      h3 {
+          text-align: center;
+      }
+      
+      .kartu {
+        width: 800px;
+        margin: 0 auto;
+        margin-top: 70px;
+            box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,.03);
+    transition: all .3s;
+           background-color: #D9860A;
+    border: solid 8px #B04E03;
+      } 
+      .kartu:hover {
+        background-color: #DF9D3B;
+        border: solid 10px #FE6F01;
+        border-top-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+    border-top-right-radius: 80px;
+    border-bottom-left-radius: 80px;
+      }
+      .foto {
+            padding: 50px;
+    margin-left: 1px;
+    margin-top: 10px;
+      }
+      tbody {
+    font-size: 20px;
+    font-weight: 300;
+    color:white;
+}
+.biodata {
+    margin-top: 10px;
+}
+
+.btn2 {
+    margin: 10px;
+    border-radius: 0.6em;
+    color: #e74c3c;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 1.2em 2.8em;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+  }
+
+.third {
+    color: #fff;
+    box-shadow: 0 0 40px 40px #e8900c inset, 0 0 0 0 #daa70b;
+    transition: all 10ms ease-in-out;
+  }
+
+  .third:hover {
+    box-shadow: 0 0 10px 0 #fe9718 inset, 0 0 10px 4px #f7a643;
+  }
+    </style>
+  </head>
+  <body>
+  <body id="page-top">
   <div id="wrapper">
     <!-- Sidebar -->
     <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard-dinasprov.html">
         <div class="sidebar-brand-icon">
           <img src="img/logo/logo-simodis.png">
         </div>
         <div class="sidebar-brand-text mx-3">Simodis</div>
-    </a>
-    <hr class="sidebar-divider my-0">
-    <li class="nav-item">
-      <a class="nav-link" href="dashboard-dinasprov.html">
+      </a>
+      <hr class="sidebar-divider my-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="dashboard-dinasprov.html">
         <i class="fas fa-fw fa-tachometer-alt"></i>
-        <span>Dashboard</span></a>
-    </li>
+          <span>Dashboard</span></a>
+      </li>
       <hr class="sidebar-divider">
       <div class="sidebar-heading">
         Features
@@ -46,7 +117,7 @@
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Pilih</h6>
             <a class="collapse-item" href="nilaisma.html">SMK/SMA/Sederajat</a>
-            <a class="collapse-item" href="#">SMP/Sederajat</a>
+            <a class="collapse-item" href="nilaismp.html">SMP/Sederajat</a>
             <a class="collapse-item" href="nilaisd.html">SD/Sederajat</a>
             <a class="collapse-item" href="nilaitk.html">TK/Sederajat</a>
           </div>
@@ -85,7 +156,7 @@
         </div>
       </li>
     </ul>
-    <!-- Sidebar -->
+
     <div id="content-wrapper" class="d-flex flex-column">
       <div id="content">
         <!-- TopBar -->
@@ -103,7 +174,7 @@
                 aria-labelledby="searchDropdown">
                 <form class="navbar-search">
                   <div class="input-group">
-                    <input type="text" class="form-control bg-light border-1 small" placeholder="WApa yang anda cari?"
+                    <input type="text" class="form-control bg-light border-1 small" placeholder="Apa yang anda cari?"
                       aria-label="Search" aria-describedby="basic-addon2" style="border-color: #3f51b5;">
                     <div class="input-group-append">
                       <button class="btn btn-primary" type="button">
@@ -114,19 +185,20 @@
                 </form>
               </div>
             </li>
-
             
+            <li class="nav-item dropdown no-arrow mx-1">
+            
+            </li>
+
             <div class="topbar-divider d-none d-sm-block"></div>
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 <img class="img-profile rounded-circle" src="img/boy.png" style="max-width: 60px">
-                <span class="ml-2 d-none d-lg-inline text-white small">Admindinasprov</span>
+                <span class="ml-2 d-none d-lg-inline text-white small">admindinasprov</span>
               </a>
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="profil-dashboarddinas.php">
-                  <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Profile
+                <a class="" href="">
                 </a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="javascript:void(0);" data-toggle="modal" data-target="#logoutModal">
@@ -137,98 +209,8 @@
             </li>
           </ul>
         </nav>
-        <!-- Topbar -->
-        <!-- Container Fluid-->
-        <div class="container-fluid" id="container-wrapper">
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">SMP/Sederajat</h1>
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="dashboard-dinasprov.html">Dashboard</a></li>
-              <li class="breadcrumb-item">Jumlah Sekolah</li>
-              <li class="breadcrumb-item active" aria-current="page">SMP/Sederajat</li>
-            </ol>
-          </div>
 
-          <div class="row">
-            <div class="col-lg-12 mb-4">
-              <!-- Simple Tables -->
-              <div class="card">
-                <div class="table-responsive">
-                  <table class="table align-items-center table-flush">
-                    <thead class="thead-light">
-                      <tr>
-                        <th>No</th>
-                        <th>Mata Pelajaran</th>
-                        <th>Kelas</th>
-                        <th>Jurusan</th>
-                        <th>Guru Mapel</th>
-                        <th>Tahun Akademik</th>
-                        <th>Semester</th>
-                        <th>Action</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td><a href="#">Matematika</a></td>
-                        <td>XI-01</td>
-                        <td>RPL</td>
-                        <td><span class="badge badge-success">Fatimah Dewi</span></td>
-                        <td>2021/2022</td>
-                        <td>Genap</td>
-                        <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td><a href="#">B. Indonesia</a></td>
-                        <td>XI-01</td>
-                        <td>RPL</td>
-                        <td><span class="badge badge-success">Andin</span></td>
-                        <td>2021/2022</td>
-                        <td>Genap</td>
-                        <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                        <td><a href="#">B. Indonesia</a></td>
-                        <td>XI-01</td>
-                        <td>RPL</td>
-                        <td><span class="badge badge-success">Andin</span></td>
-                        <td>2021/2022</td>
-                        <td>Genap</td>
-                        <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
-                      </tr>
-                      <tr>
-                        <td>4</td>
-                        <td><a href="#">Kewirausahaan</a></td>
-                        <td>XI-01</td>
-                        <td>RPL</td>
-                        <td><span class="badge badge-success">Keddy</span></td>
-                        <td>2021/2022</td>
-                        <td>Genap</td>
-                        <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
-                      </tr>
-                      <tr>
-                        <td>5</td>
-                        <td><a href="#">Pendidikan Agama Islam</a></td>
-                        <td>XI-01</td>
-                        <td>RPL</td>
-                        <td><span class="badge badge-success">Lufita</span></td>
-                        <td>2021/2022</td>
-                        <td>Genap</td>
-                        <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="card-footer"></div>
-              </div>
-            </div>
-          </div>
-          <!--Row-->
-
-          <!-- Modal Logout -->
-          <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout"
+        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout"
             aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
@@ -239,7 +221,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <p>Anda Yakin ingin  logout?</p>
+                  <p>Anda Yakin ingin logout?</p>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
@@ -248,18 +230,100 @@
               </div>
             </div>
           </div>
-
-        </div>
-        <!---Container Fluid-->
+        <!-- Topbar -->
+  
+        <h3 class="text-center text-success mt-3">Profil Akun</h3></a>  
+        <a href="edit-profil-dinasprov.php" class="btn2 third">Edit Profil</a>           
+        <!-- Isi Biodata Paling Keren di HTML disini -->
+<div class="container">
+  <div class="card kartu">
+    <div class="row">
+      <div class="col-md-4">
+      <center><div class="foto">
+        <img src="img/logo/new_logo.png" class="img-thumbnail" alt="" width="400" height="180">
+      </div></center>
       </div>
-      <!-- Footer -->
-      
-      <!-- Footer -->
+      <div class="col-md-8 kertas-biodata">
+        <div class="biodata">
+        <table width="100%" border="0">
+    <tbody><tr>
+        <td valign="top">
+        <table border="0" width="100%" style="padding-left: 2px; padding-right: 13px;">
+          <tbody>
+              <p> Hallo! , Admin</p>
+            <tr>
+              <td width="25%" valign="top" class="textt" style="font-family: Cambria;">Username</td>
+                <td width="2%">:</td>
+                <td style="color: #e9a7f9; font-weight:bold" >admin</td>
+            </tr>
+          <tr>
+              <td class="textt" style="font-family: Cambria;">Password</td>
+                <td>:</td>
+                <td style="font-family: Courier New;">*******</td>
+            </tr>
+          <tr>
+              <td class="textt" style="font-family: Cambria;">Nama</td>
+                <td>:</td>
+                <td style="font-family: Courier New;">Farid Ali Gibran</td>
+            </tr>
+          <tr>
+              <td class="textt" style="font-family: Cambria;">NPSN</td>
+                <td>:</td>
+                <td style="font-family: Courier New;">102388279</td>
+            </tr>
+          <tr>
+              <td class="textt" style="font-family: Cambria;">Tempat Lahir</td>
+                <td>:</td>
+                <td style="font-family: Courier New;">Rantau</td>
+            </tr>
+          <tr>
+              <td valign="top" class="textt" style="font-family: Cambria;">Tanggal Lahir</td>
+                <td valign="top">:</td>
+                <td style="font-family: Courier New;">11/10/2005</td>
+            </tr>
+            <tr>
+              <td valign="top" class="textt" style="font-family: Cambria;">Jenis Kelamin</td>
+                <td valign="top">:</td>
+                <td style="font-family: Courier New;">Pria</td>
+            </tr>
+            <tr>
+              <td valign="top" class="textt" style="font-family: Cambria;">Alamat</td>
+                <td valign="top">:</td>
+                <td style="font-family: Courier New;">Sumatera Utara , Medan , Tj. Mulia Hilir Kawat 6 , NO 40</td>
+            </tr>
+            <tr>
+              <td valign="top" class="textt" style="font-family: Cambria;">Agama</td>
+                <td valign="top">:</td>
+                <td style="font-family: Courier New;">Islam</td>
+            </tr>
+            <tr>
+              <td valign="top" class="textt" style="font-family: Cambria;">Email</td>
+                <td valign="top">:</td>
+                <td style="font-family: Courier New;" >akunml12ku@gmail.com</td>
+            </tr>
+            <tr>
+              <td valign="top" class="textt" style="font-family: Cambria;">Telephone</td>
+                <td valign="top">:</td>
+                <td style="font-family: Courier New;">smktritech@sch.id</td>
+            </tr>
+            <tr>
+              <td valign="top" class="textt" style="font-family: Cambria;">Kepegawaian</td>
+                <td valign="top">:</td>
+                <td style="font-family: Courier New;">NON PNS</td>
+            </tr>
+            
+        </tbody></table>
+        </td>
+        
+    </tr>
+    </tbody></table>
+  </div>
+      </div>
     </div>
   </div>
-
-  <!-- Scroll to top -->
-  <a class="scroll-to-top rounded" href="#page-top">
+</div>
+<!-- Scroll to top -->
+<a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
   </a>
 
@@ -267,7 +331,8 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
   <script src="js/ruang-admin.min.js"></script>
-
-</body>
-
+  <script src="vendor/chart.js/Chart.min.js"></script>
+  <script src="js/demo/chart-area-demo.js"></script>  
+    <script src="js/bootstrap.min.js"></script>
+  </body>
 </html>
