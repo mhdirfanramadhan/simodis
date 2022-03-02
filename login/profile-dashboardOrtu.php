@@ -86,6 +86,17 @@
     </style>
   </head>
   <body>
+  <?php
+ session_start();
+ if($_SESSION['level']==""){
+    echo "<script> 
+    document.location.href = 'http://localhost/simodis/login/index.php';
+    </script>
+";
+ }
+ include "koneksi.php";
+
+ ?>
   <body id="page-top">
   <div id="wrapper">
     <!-- Sidebar -->
@@ -110,10 +121,11 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="orang_tua.php" data-target="#collapseForm" aria-expanded="true"
           aria-controls="collapseForm">
-            <i class="fab fa-fw fa-wpforms"></i>
-          <span>Identitas Sekolah</span>
+          <i class="fa-solid fa-school"></i>
+          <span>SEKOLAH</span>
         </a>
       </li>
+      
 
     
       <hr class="sidebar-divider">
@@ -128,26 +140,6 @@
             <i class="fa fa-bars"></i>
           </button>
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item dropdown no-arrow">
-              <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-search fa-fw"></i>
-              </a>
-              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                aria-labelledby="searchDropdown">
-                <form class="navbar-search">
-                  <div class="input-group">
-                    <input type="text" class="form-control bg-light border-1 small" placeholder="What do you want to look for?"
-                      aria-label="Search" aria-describedby="basic-addon2" style="border-color: #3f51b5;">
-                    <div class="input-group-append">
-                      <button class="btn btn-primary" type="button">
-                        <i class="fas fa-search fa-sm"></i>
-                      </button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </li>
             
             <li class="nav-item dropdown no-arrow mx-1">
             
@@ -158,7 +150,7 @@
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 <img class="img-profile rounded-circle" src="img/boy.png" style="max-width: 60px">
-                <span class="ml-2 d-none d-lg-inline text-white small">User</span>
+                <?php echo $_SESSION['level']; ?></b></p>
               </a>
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                 <a class="dropdown-item" href="profile-dashboardOrtu.php">
@@ -223,66 +215,69 @@
         <td valign="top">
         <table border="0" width="100%" style="padding-left: 2px; padding-right: 13px;">
           <tbody>
-              <p> Hallo! , Admin</p>
+              <p> Hallo! , <?php echo $_SESSION['level']; ?></b></p></p>
             <tr>
               <td width="25%" valign="top" class="textt" style="font-family: Cambria;">Username</td>
                 <td width="2%">:</td>
-                <td style="color: #e9a7f9; font-weight:bold" >admin</td>
+                <td style="color: #e9a7f9; font-weight:bold" ><?php echo $_SESSION['level']; ?></td>
             </tr>
-          <tr>
-              <td class="textt" style="font-family: Cambria;">Password</td>
-                <td>:</td>
-                <td style="font-family: Courier New;">*******</td>
-            </tr>
+            <?php 
+            $sql_ortu="select * from pengguna where username='". $_SESSION['username']."'";
+            $query_ortu=mysqli_query($koneksi, $sql_ortu);
+            $row_ortu=mysqli_fetch_assoc($query_ortu);
+            ?>
+
           <tr>
               <td class="textt" style="font-family: Cambria;">Nama</td>
                 <td>:</td>
-                <td style="font-family: Courier New;">M Irfan Ramadhan</td>
+                <td style="font-family: Courier New;"><?php echo $row_ortu['nama'] ?></td>
             </tr>
+
+            
           <tr>
               <td class="textt" style="font-family: Cambria;">NPSN</td>
                 <td>:</td>
-                <td style="font-family: Courier New;">102388279</td>
+                <td style="font-family: Courier New;"><?php echo $row_ortu['npsn'] ?></td>
             </tr>
           <tr>
               <td class="textt" style="font-family: Cambria;">Tempat Lahir</td>
                 <td>:</td>
-                <td style="font-family: Courier New;">Rantau</td>
+                <td style="font-family: Courier New;"><?php echo $row_ortu['tempat_lahir'] ?></td>
             </tr>
           <tr>
               <td valign="top" class="textt" style="font-family: Cambria;">Tanggal Lahir</td>
                 <td valign="top">:</td>
-                <td style="font-family: Courier New;">11/10/2005</td>
+                <td style="font-family: Courier New;"><?php echo $row_ortu['tanggal_lahir'] ?></td>
             </tr>
             <tr>
               <td valign="top" class="textt" style="font-family: Cambria;">Jenis Kelamin</td>
                 <td valign="top">:</td>
-                <td style="font-family: Courier New;">Pria</td>
+                <td style="font-family: Courier New;"><?php echo $row_ortu['jenis_kelamin'] ?></td>
             </tr>
             <tr>
               <td valign="top" class="textt" style="font-family: Cambria;">Alamat</td>
                 <td valign="top">:</td>
-                <td style="font-family: Courier New;">Sumatera Utara , Medan , Tj. Mulia Hilir Kawat 6 , NO 40</td>
+                <td style="font-family: Courier New;"><?php echo $row_ortu['alamat'] ?></td>
             </tr>
             <tr>
               <td valign="top" class="textt" style="font-family: Cambria;">Agama</td>
                 <td valign="top">:</td>
-                <td style="font-family: Courier New;">Islam</td>
+                <td style="font-family: Courier New;"><?php echo $row_ortu['agama'] ?></td>
             </tr>
             <tr>
               <td valign="top" class="textt" style="font-family: Cambria;">Email</td>
                 <td valign="top">:</td>
-                <td style="font-family: Courier New;" >akunml12ku@gmail.com</td>
+                <td style="font-family: Courier New;" ><?php echo $row_ortu['email'] ?></td>
             </tr>
             <tr>
               <td valign="top" class="textt" style="font-family: Cambria;">Telephone</td>
                 <td valign="top">:</td>
-                <td style="font-family: Courier New;">smktritech@sch.id</td>
+                <td style="font-family: Courier New;"><?php echo $row_ortu['telephone'] ?></td>
             </tr>
             <tr>
               <td valign="top" class="textt" style="font-family: Cambria;">Kepegawaian</td>
                 <td valign="top">:</td>
-                <td style="font-family: Courier New;">NON PNS</td>
+                <td style="font-family: Courier New;"><?php echo $row_ortu['kepegawaian'] ?></td>
             </tr>
             
         </tbody></table>

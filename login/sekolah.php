@@ -163,11 +163,11 @@ background: rgba(25, 73, 243, 0.95);
           Features
         </div>
       
-        <li class="nav-item">
+        <li class="nav-item active">
           <a class="nav-link collapsed" href="orang_tua.php" data-target="#collapseForm" aria-expanded="true"
             aria-controls="collapseForm">
-              <i class="fab fa-fw fa-wpforms"></i>
-            <span>Identitas Sekolah</span>
+            <i class="fa-solid fa-school"></i>
+            <span>SEKOLAH</span>
           </a>
         </li>
   
@@ -184,26 +184,6 @@ background: rgba(25, 73, 243, 0.95);
             <i class="fa fa-bars"></i>
           </button>
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item dropdown no-arrow">
-              <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-search fa-fw"></i>
-              </a>
-              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                aria-labelledby="searchDropdown">
-                <form class="navbar-search">
-                  <div class="input-group">
-                    <input type="text" class="form-control bg-light border-1 small" placeholder="What do you want to look for?"
-                      aria-label="Search" aria-describedby="basic-addon2" style="border-color: #3f51b5;">
-                    <div class="input-group-append">
-                      <button class="btn btn-primary" type="button">
-                        <i class="fas fa-search fa-sm"></i>
-                      </button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </li>
             
             <li class="nav-item dropdown no-arrow mx-1">
             
@@ -257,10 +237,11 @@ background: rgba(25, 73, 243, 0.95);
         <!-- Topbar -->
         <a href="edit-profile-sekolah.php">Edit Profil Sekolah</a>
         <h3 class="text-center text-success mt-3">Informasi Sekolah</h3></a>
+        
 
         <div class="button">
             <ul class="left" active>
-              <a href="sekolah.html">Informasi Sekolah</a>
+              <a href="sekolah.php">Informasi Sekolah</a>
             </ul>
             
             <ul class="right">
@@ -272,6 +253,15 @@ background: rgba(25, 73, 243, 0.95);
                 <a href="informasi-murid.php">Informasi Murid</a>
             </ul>
         </div>
+        <table rules="rows">
+        <tr>
+        <th></th>
+        </tr>
+        <tr>
+
+         </tr>
+
+         </table>
         <!-- Isi Biodata Paling Keren di HTML disini -->
 <div class="container">
   <div class="card kartu">
@@ -341,7 +331,7 @@ background: rgba(25, 73, 243, 0.95);
             <tr>
               <td valign="top" class="textt" style="font-family: Cambria;">Email</td>
                 <td valign="top">:</td>
-                <td style="font-family: Courier New;">smktritech@sch.id</td>
+                <td style="font-family: Courier New;">smktritech@scsssssssssssh.id</td>
             </tr>
             <tr>
               <td valign="top" class="textt" style="font-family: Cambria;">Kep. Sekolah</td>

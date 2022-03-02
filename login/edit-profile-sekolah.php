@@ -113,6 +113,12 @@
             <span>Identitas Sekolah</span>
           </a>
         </li>
+        <li class="nav-item active">
+        <a class="nav-link" href="import.php">
+          <i class="fa-solid fa-file-import"></i>
+          <span>Import</span>
+        </a>
+      </li>
   
       
         <hr class="sidebar-divider">
@@ -127,26 +133,6 @@
             <i class="fa fa-bars"></i>
           </button>
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item dropdown no-arrow">
-              <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-search fa-fw"></i>
-              </a>
-              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                aria-labelledby="searchDropdown">
-                <form class="navbar-search">
-                  <div class="input-group">
-                    <input type="text" class="form-control bg-light border-1 small" placeholder="What do you want to look for?"
-                      aria-label="Search" aria-describedby="basic-addon2" style="border-color: #3f51b5;">
-                    <div class="input-group-append">
-                      <button class="btn btn-primary" type="button">
-                        <i class="fas fa-search fa-sm"></i>
-                      </button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </li>
             
             <li class="nav-item dropdown no-arrow mx-1">
             
@@ -205,7 +191,7 @@
           </div>
         <!-- Topbar -->
         <h3 class="text-center text-success mt-3">Edit Data Sekolah</h3></a>  
-        <a href="sekolah.html" class="btn2 third"> < Kembali</a>           
+        <a href="sekolah.php" class="btn2 third"> < Kembali</a>           
         <!-- Isi Biodata Paling Keren di HTML disini -->
         <form action="identitas-sekolah.php"  method="post">
                                                 <div class="row">

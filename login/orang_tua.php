@@ -69,11 +69,11 @@ input[type=text]:focus {
         Features
       </div>
     
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link collapsed" href="orang_tua.php" data-target="#collapseForm" aria-expanded="true"
           aria-controls="collapseForm">
-            <i class="fab fa-fw fa-wpforms"></i>
-          <span>Identitas Sekolah</span>
+          <i class="fa-solid fa-school"></i>
+          <span>SEKOLAH</span>
         </a>
       </li>
 
@@ -90,34 +90,14 @@ input[type=text]:focus {
             <i class="fa fa-bars"></i>
           </button>
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item dropdown no-arrow">
-              <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-search fa-fw"></i>
-              </a>
-              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                aria-labelledby="searchDropdown">
-                <form class="navbar-search">
-                  <div class="input-group">
-                    <input type="text" class="form-control bg-light border-1 small" placeholder="What do you want to look for?"
-                      aria-label="Search" aria-describedby="basic-addon2" style="border-color: #3f51b5;">
-                    <div class="input-group-append">
-                      <button class="btn btn-primary" type="button">
-                        <i class="fas fa-search fa-sm"></i>
-                      </button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </li>
             
-            
+          
             <div class="topbar-divider d-none d-sm-block"></div>
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 <img class="img-profile rounded-circle" src="img/boy.png" style="max-width: 60px">
-                <span class="ml-2 d-none d-lg-inline text-white small">User</span>
+                <?php echo $_SESSION['level']; ?></b></p>
               </a>
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                 <a class="dropdown-item" href="profile-dashboardOrtu.php">
@@ -151,13 +131,33 @@ input[type=text]:focus {
                 <div class="table-responsive p-3">
                   <table class="table align-items-center table-flush" id="dataTable">
                     <center><div class="">
-                    <h3>Cari Sekolah </h3>
-                    <input type="text" name="search" placeholder="Search..">
-                      <a href="sekolah.html"><button class="btn btn-primary" type="button">
-                        <h8>Cari</h8>
-                      </button></a>
+                    <h3>Pilih Sekolah</h3>
+                    <form method="POST" action="">
+	               <select id="inputState" class="form-control" name="makan" style="background-color: #F39C12; border-radius: 15px" onChange="document.location.href=this.options[this.selectedIndex].value; ">
+	                    	<option value="">Pilih</option>
+	                     	<option value="sekolah.php?sekolah">TRITECH INFORMATIKA</option>
+	                    	<option value="select.php?halaman2">SMA NEGRI 1</option>
+             	</select>
+              </form>
+ 
+<?php
+	
+	if (isset($_GET["halaman1"])) { header ("location:sekolah.html");}
+		
+	elseif(isset($_GET["halaman2"])){ header ("location:halaman2.php");}
+	
+ ?>           
+                                                        
                     </div></center>
-                    <h1>---------------------------------------------------------</h1>
+                    <table rules="rows">
+                    <tr>
+                    <th></th>
+                   </tr>
+                   <tr>
+
+                   </tr>
+
+                   </table>
                     <center><div class="col-lg-6 mb-4">
                       <div class="card bg-warning text-white">
                         <div class="card-body">
@@ -185,7 +185,15 @@ input[type=text]:focus {
                       </div>
                     </div>
                   </div></center>
-                  <h1>---------------------------------------------------------</h1>
+                  <table rules="rows">
+    <tr>
+        <th></th>
+    </tr>
+    <tr>
+
+    </tr>
+
+</table>
                   </table>
               </div>
             </div>

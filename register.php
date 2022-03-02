@@ -180,11 +180,23 @@
                                                                     <option value="Non PNS">Non PNS</option>
                                                                 </select>
                                                             </div>
+                                                            <div class="col-lg-4">
+                                                                <label style="color:grey; padding:8px">Daftar Sebagai</label>
+                                                            </div>
+                                                            <div class="col-lg-8">
+                                                                <select id="inputState" class="form-control" name="status_kepegawaian" style="background-color: #F39C12; border-radius: 15px" required>
+                                                                    <option>Select..</option>
+                                                                    <option value="PNS">Orang Tua</option>
+                                                                    <option value="Non PNS">Dinas Provinsi</option>
+                                                                    <option value="Non PNS">Dinas Kabupaten/Kota</option>
+                                                                </select>
+                                                            </div>
                                                             <div class="col-lg-12 mt-2">
                                                              <input type="file" name="gambar" id="image" onchange="showImage(this);" class="custom-file-input" required>
                                                              <label class="custom-file-label">Upload Foto Diri</label>
                                                             </div>
                                                         </div> 
+                                                        
                                     
                                                         <div class="new-account mt-3">
                                                             <p style="color:black;">Already Have an Account?  <a style="color:black;" class="text-primary" href="login.php" >Sign in</a></p>
