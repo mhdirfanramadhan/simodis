@@ -37,16 +37,13 @@ input[type=text]:focus {
 </head>
 <body>
 
- <?php
+<?php
  session_start();
-
- if($_SESSION['level']==""){
-    echo "<script> 
-    document.location.href = 'http://localhost/simodis/login/index.php';
-    </script>
-";
- }
-
+ if($_SESSION['level']=="")
+    echo "<script>document.location.href = 'http://localhost/simodis/login/index.php';</script>";
+    
+ include "../koneksi.php";
+$username = $_SESSION['username'];
  ?>
 
 <div id="wrapper">
@@ -81,6 +78,11 @@ input[type=text]:focus {
       <hr class="sidebar-divider">
 
     </ul>
+    <?php 
+            $sql_ortu="select * from pengguna where username='". $_SESSION['username']."'";
+            $query_ortu=mysqli_query($koneksi, $sql_ortu);
+            $row_ortu=mysqli_fetch_assoc($query_ortu);
+        ?>
     <!-- Sidebar -->
     <div id="content-wrapper" class="d-flex flex-column">
       <div id="content">
@@ -96,8 +98,8 @@ input[type=text]:focus {
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                <img class="img-profile rounded-circle" src="img/boy.png" style="max-width: 60px">
-                <?php echo $_SESSION['level']; ?></b></p>
+                <img src="../assets/img/<?php echo $row_ortu['gambar']; ?>" class="img-profile rounded-circle" style="max-width: 60px">
+                <?php echo $_SESSION['username']; ?></b></p>
               </a>
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                 <a class="dropdown-item" href="profile-dashboardOrtu.php">
