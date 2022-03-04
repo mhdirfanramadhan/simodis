@@ -9,17 +9,18 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="img/logo/logo-simodis.png" rel="icon">
-  <title></title>
+  <title>Simodis - JumlahSekolahSma</title>
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="css/ruang-admin.min.css" rel="stylesheet">
+  <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 </head>
 
 <body id="page-top">
   <div id="wrapper">
     <!-- Sidebar -->
     <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard-dinasprov.html">
         <div class="sidebar-brand-icon">
           <img src="img/logo/logo-simodis.png">
         </div>
@@ -28,14 +29,14 @@
       <hr class="sidebar-divider my-0">
       <li class="nav-item">
         <a class="nav-link" href="dashboard-dinasprov.html">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
+        <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>
       <hr class="sidebar-divider">
       <div class="sidebar-heading">
         Features
       </div>
-      
+    
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrap"
           aria-expanded="true" aria-controls="collapseBootstrap">
@@ -48,7 +49,7 @@
             <a class="collapse-item" href="#">SMK/SMA/Sederajat</a>
             <a class="collapse-item" href="nilaismp.html">SMP/Sederajat</a>
             <a class="collapse-item" href="nilaisd.html">SD/Sederajat</a>
-            <a class="collapse-item" href="nilaitk.html">TK/Sederajat</a>
+            <a class="collapse-item" href="nilaitk.html">TK/Paud</a>
           </div>
         </div>
       </li>
@@ -64,7 +65,7 @@
             <a class="collapse-item" href="jlhsiswasma.html">SMK/SMA/Sederajat</a>
             <a class="collapse-item" href="jlhsiswasmp.html">SMP/Sederajat</a>
             <a class="collapse-item" href="jlhsiswasd.html">SD/Sederajat</a>
-            <a class="collapse-item" href="jlhmuridtk.html">TK/Sederajat</a>
+            <a class="collapse-item" href="jlhmuridtk.html">TK/Paud</a>
           </div>
         </div>
       </li>
@@ -84,6 +85,10 @@
           </div>
         </div>
       </li>
+    </ul>
+    
+      <hr class="sidebar-divider">
+
     </ul>
     <!-- Sidebar -->
     <div id="content-wrapper" class="d-flex flex-column">
@@ -114,7 +119,7 @@
                 </form>
               </div>
             </li>
-
+            
             
             <div class="topbar-divider d-none d-sm-block"></div>
             <li class="nav-item dropdown no-arrow">
@@ -128,6 +133,7 @@
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                   Profile
                 </a>
+              
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="javascript:void(0);" data-toggle="modal" data-target="#logoutModal">
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -143,89 +149,93 @@
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-800">SMK/SMA/Sederajat</h1>
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="./">Dashboard</a></li>
+              <li class="breadcrumb-item"><a href="dashboard-dinasprov.html">Dashboard</a></li>
               <li class="breadcrumb-item">Jumlah Sekolah</li>
-              <li class="breadcrumb-item active" aria-current="page">SMA/SMK/Sederajat</li>
+              <li class="breadcrumb-item active" aria-current="page">SMK/SMA/Sederajat</li>
             </ol>
           </div>
 
+          <!-- Row -->
           <div class="row">
-            <div class="col-lg-12 mb-4">
-              <!-- Simple Tables -->
-              <div class="card">
-                <div class="table-responsive">
-                  <table class="table align-items-center table-flush">
+            <!-- Datatables -->
+            <div class="col-lg-12">
+              <div class="card mb-4">
+
+                <div class="table-responsive p-3">
+                  <table class="table align-items-center table-flush" id="">
                     <thead class="thead-light">
                       <tr>
-                        <th>No</th>
-                        <th>Mata Pelajaran</th>
-                        <th>Kelas</th>
-                        <th>Jurusan</th>
-                        <th>Guru Mapel</th>
-                        <th>Tahun Akademik</th>
-                        <th>Semester</th>
-                        <th>Action</th>
+                        <th>SMA</th>
+                        <th>SMK</th>
+                        <th></th>
+                        <th>Sederajat</th>
                       </tr>
                     </thead>
+                    
                     <tbody>
                       <tr>
-                        <td>1</td>
-                        <td><a href="#">Matematika</a></td>
-                        <td>XI-01</td>
-                        <td>RPL</td>
-                        <td><span class="badge badge-success">Fatimah Dewi</span></td>
-                        <td>2021/2022</td>
-                        <td>Genap</td>
-                        <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
+                        <td>SMA Swasta Plus Adzikia</td>
+                        <td>SMK Bina Taruna</td>
+                        <td></td>
+                        <td>MA Aisyiyah</td>
                       </tr>
                       <tr>
-                        <td>2</td>
-                        <td><a href="#">B. Indonesia</a></td>
-                        <td>XI-01</td>
-                        <td>RPL</td>
-                        <td><span class="badge badge-success">Andin</span></td>
-                        <td>2021/2022</td>
-                        <td>Genap</td>
-                        <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
+                        <td>SMA Swasta Santho Nicholas</td>
+                        <td>SMK Dharma bakti</td>
+                        <td></td>
+                        <td>MA AL kautsar AL Akbar</td>
                       </tr>
                       <tr>
-                        <td>3</td>
-                        <td><a href="#">B. Indonesia</a></td>
-                        <td>XI-01</td>
-                        <td>RPL</td>
-                        <td><span class="badge badge-success">Andin</span></td>
-                        <td>2021/2022</td>
-                        <td>Genap</td>
-                        <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
+                        <td>SMA UPMI</td>
+                        <td>SMK Nurcahaya</td>
+                        <td></td>
+                        <td>MA AL Manar</td>
                       </tr>
                       <tr>
-                        <td>4</td>
-                        <td><a href="#">Kewirausahaan</a></td>
-                        <td>XI-01</td>
-                        <td>RPL</td>
-                        <td><span class="badge badge-success">Keddy</span></td>
-                        <td>2021/2022</td>
-                        <td>Genap</td>
-                        <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
+                        <td>SMA Afifiyah</td>
+                        <td>SMK Swadaya</td>
+                        <td></td>
+                        <td>MA AL washliyah</td>
                       </tr>
                       <tr>
-                        <td>5</td>
-                        <td><a href="#">Pendidikan Agama Islam</a></td>
-                        <td>XI-01</td>
-                        <td>RPL</td>
-                        <td><span class="badge badge-success">Lufita</span></td>
-                        <td>2021/2022</td>
-                        <td>Genap</td>
-                        <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
+                        <td>SMA Al-Ulum</td>
+                        <td>SMK Tritech informatika</td>
+                        <td></td>
+                        <td>MA AL Furqoon</td>
+                      </tr>
+                      <tr>
+                        <td>SMA Budi Mumi 3</td>
+                        <td>SMK Bina Media</td>
+                        <td></td>
+                        <td>MA IAIN</td>
+                      </tr>
+                      <tr>
+                        <td>SMA Dharmawarngsa</td>
+                        <td>SMK Bina Sastra</td>
+                        <td></td>
+                        <td>MAN 1</td>
+                      </tr>
+                      <tr>
+                        <td>SMA Gajah mada</td>
+                        <td>SMK Markus</td>
+                        <td></td>
+                        <td>MAN 2</td>
+                      </tr>
+                      <tr>
+                        <td>SMA karya bhakti</td>
+                        <td>SMK Lestari</td>
+                        <td></td>
+                        <td>MA Teladan</td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
-                <div class="card-footer"></div>
               </div>
             </div>
+            
           </div>
           <!--Row-->
+
 
           <!-- Modal Logout -->
           <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout"
@@ -239,7 +249,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <p>Anda Yakin ingin  logout?</p>
+                  <p>Anda Yakin ingin logout?</p>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
@@ -252,6 +262,7 @@
         </div>
         <!---Container Fluid-->
       </div>
+
       <!-- Footer -->
       
       <!-- Footer -->
@@ -267,6 +278,17 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
   <script src="js/ruang-admin.min.js"></script>
+  <!-- Page level plugins -->
+  <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script>
+    $(document).ready(function () {
+      $('#dataTable').DataTable(); // ID From dataTable 
+      $('#dataTableHover').DataTable(); // ID From dataTable with Hover
+    });
+  </script>
 
 </body>
 
