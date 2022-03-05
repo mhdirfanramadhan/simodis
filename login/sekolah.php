@@ -141,8 +141,16 @@ background: rgba(25, 73, 243, 0.95);
     </style>
     <body class="w3-light-grey">
   </head>
-  <body>
+
   <body id="page-top">
+  <?php
+ session_start();
+ if($_SESSION['level']=="")
+    echo "<script>document.location.href = 'http://localhost/simodis/login/index.php';</script>";
+    
+ include "../koneksi.php";
+$username = $_SESSION['username'];
+ ?>
   <div id="wrapper">
     <!-- Sidebar -->
     <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
@@ -175,6 +183,16 @@ background: rgba(25, 73, 243, 0.95);
         <hr class="sidebar-divider">
   
       </ul>
+      <?php 
+            $sql_ortu="select * from pengguna where username='". $_SESSION['username']."'";
+            $query_ortu=mysqli_query($koneksi, $sql_ortu);
+            $row_ortu=mysqli_fetch_assoc($query_ortu);
+        ?>
+      <?php 
+            $sql_sekolah='select * from sekolah where id_sekolah="'.$row_ortu["username"].'"';
+            $query_sekolah=mysqli_query($koneksi, $sql_sekolah);
+            $row_sekolah=mysqli_fetch_assoc($query_sekolah);
+        ?>
     <!-- Sidebar -->
     <div id="content-wrapper" class="d-flex flex-column">
       <div id="content">
@@ -291,7 +309,7 @@ background: rgba(25, 73, 243, 0.95);
           <tr>
               <td class="textt" style="font-family: Cambria;">Nama Sekolah</td>
                 <td>:</td>
-                <td style="font-family: Courier New;">TRITECH INFORMATIKA</td>
+                <td style="font-family: Courier New;"><?php echo $row_sekolah['nama_sekolah'] ?></td>
             </tr>
           <tr>
               <td class="textt" style="font-family: Cambria;">Alamat</td>
