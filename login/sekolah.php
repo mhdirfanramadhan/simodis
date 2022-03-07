@@ -314,47 +314,47 @@ $username = $_SESSION['username'];
           <tr>
               <td class="textt" style="font-family: Cambria;">Alamat</td>
                 <td>:</td>
-                <td style="font-family: Courier New;">Medan</td>
+                <td style="font-family: Courier New;"><?php echo $row_sekolah['alamat'] ?></td>
             </tr>
           <tr>
               <td class="textt" style="font-family: Cambria;">Kelurahan</td>
                 <td>:</td>
-                <td style="font-family: Courier New;">Medan Deli</td>
+                <td style="font-family: Courier New;"><?php echo $row_sekolah['kelurahan'] ?></td>
             </tr>
           <tr>
               <td valign="top" class="textt" style="font-family: Cambria;">Kecamatan</td>
                 <td valign="top">:</td>
-                <td style="font-family: Courier New;">Medan</td>
+                <td style="font-family: Courier New;"><?php echo $row_sekolah['kecamatan'] ?></td>
             </tr>
             <tr>
               <td valign="top" class="textt" style="font-family: Cambria;">Kabupaten</td>
                 <td valign="top">:</td>
-                <td style="font-family: Courier New;">Medan kota</td>
+                <td style="font-family: Courier New;"><?php echo $row_sekolah['kabupaten'] ?></td>
             </tr>
             <tr>
               <td valign="top" class="textt" style="font-family: Cambria;">Provinsi</td>
                 <td valign="top">:</td>
-                <td style="font-family: Courier New;">Sumatera Utara</td>
+                <td style="font-family: Courier New;"><?php echo $row_sekolah['provinsi'] ?></td>
             </tr>
             <tr>
               <td valign="top" class="textt" style="font-family: Cambria;">Kode Pos</td>
                 <td valign="top">:</td>
-                <td style="font-family: Courier New;">-</td>
+                <td style="font-family: Courier New;"><?php echo $row_sekolah['kode_pos'] ?></td>
             </tr>
             <tr>
               <td valign="top" class="textt" style="font-family: Cambria;">Telephone</td>
                 <td valign="top">:</td>
-                <td style="font-family: Courier New;" >-</td>
+                <td style="font-family: Courier New;" ><?php echo $row_sekolah['telephone'] ?></td>
             </tr>
             <tr>
               <td valign="top" class="textt" style="font-family: Cambria;">Email</td>
                 <td valign="top">:</td>
-                <td style="font-family: Courier New;">smktritech@scsssssssssssh.id</td>
+                <td style="font-family: Courier New;"><?php echo $row_sekolah['email'] ?></td>
             </tr>
             <tr>
               <td valign="top" class="textt" style="font-family: Cambria;">Kep. Sekolah</td>
-                <td valign="top">:</td>
-                <td style="font-family: Courier New;">-</td>
+                <td valign="top"></td>
+                <td style="font-family: Courier New;"><?php echo $row_sekolah['kepala_sekolah'] ?></td>
             </tr>
             
         </tbody></table>
