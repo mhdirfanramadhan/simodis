@@ -188,8 +188,8 @@ $username = $_SESSION['username'];
             $query_ortu=mysqli_query($koneksi, $sql_ortu);
             $row_ortu=mysqli_fetch_assoc($query_ortu);
         ?>
-      <?php 
-            $sql_sekolah='select * from sekolah where id_sekolah="'.$row_ortu["username"].'"';
+        <?php 
+            $sql_sekolah="select * from sekolah where id_sekolah='". $_SESSION['username']."'";
             $query_sekolah=mysqli_query($koneksi, $sql_sekolah);
             $row_sekolah=mysqli_fetch_assoc($query_sekolah);
         ?>
@@ -211,8 +211,8 @@ $username = $_SESSION['username'];
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                <img class="img-profile rounded-circle" src="img/boy.png" style="max-width: 60px">
-                <span class="ml-2 d-none d-lg-inline text-white small">User</span>
+                <img src="../assets/img/<?php echo $row_ortu['gambar']; ?>" class="img-profile rounded-circle" style="max-width: 60px">
+                <?php echo $_SESSION['username']; ?></b></p>
               </a>
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                 <a class="dropdown-item" href="profile-dashboardOrtu.php">
@@ -296,11 +296,12 @@ $username = $_SESSION['username'];
         <td valign="top">
         <table border="0" width="100%" style="padding-left: 2px; padding-right: 13px;">
           <tbody>
-            <tr>
-              <td width="25%" valign="top" class="textt" style="font-family: Cambria;">NPSN</td>
-                <td width="2%">:</td>
-                <td style="color: #e9a7f9; font-weight:bold" >412898749</td>
+          <tr>
+              <td class="textt" style="font-family: Cambria;">NPSN</td>
+                <td>:</td>
+                <td style="font-family: Courier New;"><?php echo $row_sekolah['id_sekolah'] ?></td>
             </tr>
+          <tr>
           <tr>
               <td class="textt" style="font-family: Cambria;">NSS</td>
                 <td>:</td>
