@@ -136,7 +136,7 @@ $username = $_SESSION['username'];
                     <h3>Pilih Sekolah</h3>
                     <form method="POST" action="">
 	               <select id="inputState" class="form-control" name="makan" style="background-color: #F39C12; border-radius: 15px" onChange="document.location.href=this.options[this.selectedIndex].value; ">
-	                    	<option value="">Pilih</option>
+	                    	<option value="">Pilih Sekolah</option>
 	                     	<option value="sekolah.php?sekolah">TRITECH INFORMATIKA</option>
 	                    	<option value="select.php?halaman2">SMA NEGRI 1</option>
              	</select>

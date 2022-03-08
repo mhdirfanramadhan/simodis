@@ -50,14 +50,17 @@ html,body,h1,h2,h3,h4,h5 {}
   }
 </style>
 <body id="page-top">
-  <?php
-      $username=$_GET['username'];
-      include '../koneksi.php';
-
-      $sql_ortu="select * from pengguna where username='$username'";
+<?php
+ session_start();
+ if($_SESSION['level']=="")
+    echo "<script>document.location.href = 'http://localhost/simodis/login/index.php';</script>";
+    
+ include "../koneksi.php";
+$username = $_SESSION['username'];
+      $sql_ortu="select * from pengguna where username='". $_SESSION['username']."'";
       $sql_query=mysqli_query($koneksi,$sql_ortu);
       $row_ortu=mysqli_fetch_assoc($sql_query);
-    ?>
+ ?>
   <div id="wrapper">
     <!-- Sidebar -->
     <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
@@ -109,7 +112,7 @@ html,body,h1,h2,h3,h4,h5 {}
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 <img src="../assets/img/<?php echo $row_ortu['gambar']; ?>" class="img-profile rounded-circle" style="max-width: 60px">
-                <span class="ml-2 d-none d-lg-inline text-white small">User</span>
+                <?php echo $_SESSION['username']; ?></b></p>
               </a>
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                 <a class="dropdown-item" href="profile-dashboardOrtu.php">
@@ -199,14 +202,7 @@ html,body,h1,h2,h3,h4,h5 {}
                                                                 <input type="text" class="form-control" name="nama" value='<?php echo $row_ortu["nama"]; ?>' placeholder="Nama Lengkap Anda" style="background-color: #F39C12; border-radius: 15px" required>
                                                             </div>
                                                         </div>   
-                                                        <div class="row">
-                                                            <div class="col-lg-4">
-                                                            <label style="color:grey; padding:8px">NPSN</label>
-                                                            </div>
-                                                            <div class="col-lg-8">
-                                                                <input type="text" class="form-control" name="npsn" value='<?php echo $row_ortu["npsn"]; ?>'placeholder="NPSN Lengkap Anda" style="background-color: #F39C12; border-radius: 15px" required>
-                                                            </div>
-                                                        </div>
+                                                       
                                                         <div class="row">
                                                             <div class="col-lg-4">
                                                             <label style="color:grey; padding:8px">Tempat Lahir </label>
@@ -361,7 +357,7 @@ html,body,h1,h2,h3,h4,h5 {}
       $gambar = fail($_GET['username']);
       if($gambar == "404") $gambar = $_POST['gambarLama']; //gambar lama
       //$level = $_POST["level"];
-      $sql_update="UPDATE `pengguna` SET `nama`='$nama',`npsn`='$npsn',`tempat_lahir`='$tempat_lahir',`tanggal_lahir`='$tanggal_lahir',`jenis_kelamin`='$jenis_kelamin',`alamat`='$alamat',`agama`='$agama',`email`='$email',`telephone`='$telephone',`kepegawaian`='$kepegawaian',`gambar`='$gambar' WHERE username='$username'";
+      $sql_update="UPDATE `pengguna` SET `nama`='$nama',`tempat_lahir`='$tempat_lahir',`tanggal_lahir`='$tanggal_lahir',`jenis_kelamin`='$jenis_kelamin',`alamat`='$alamat',`agama`='$agama',`email`='$email',`telephone`='$telephone',`kepegawaian`='$kepegawaian',`gambar`='$gambar' WHERE username='$username'";
       
       if (mysqli_query($koneksi, $sql_update))
       echo "<script> alert('Profil Berhasil diperbarui');window.location.href='profile-dashboardOrtu.php'</script>";

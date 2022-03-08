@@ -85,14 +85,7 @@ include "koneksi.php";
                                                                 <input type="password" class="form-control" name="password" placeholder="Password" style="background-color: #F39C12; border-radius: 15px" required>
                                                             </div>
                                                         </div>
-                                                        <div class="row">
-                                                            <div class="col-lg-4">
-                                                            <label style="color:grey; padding:8px">NPSN</label>
-                                                            </div>
-                                                            <div class="col-lg-8">
-                                                                <input type="text" class="form-control" name="npsn" placeholder="NPSN Lengkap Anda" style="background-color: #F39C12; border-radius: 15px" required>
-                                                            </div>
-                                                        </div>
+                                                        
                                                         <div class="row">
                                                             <div class="col-lg-4">
                                                             <label style="color:grey; padding:8px">Nama Lengkap</label>
@@ -257,7 +250,6 @@ if (isset($_POST['daftar'])){
     $username = $_POST["username"];
     $password = $_POST["password"];
     $nama = $_POST["nama"];
-    $npsn = $_POST["npsn"];
     $tempat_lahir = $_POST["tempat_lahir"];
     $tanggal_lahir = $_POST["tanggal_lahir"];
     $jenis_kelamin = $_POST["jenis_kelamin"];
@@ -271,7 +263,7 @@ if (isset($_POST['daftar'])){
 
 
     $query_sql = "INSERT INTO pengguna
-                                        VALUES ('','$nama', '$username', '$password','$npsn','$tempat_lahir','$tanggal_lahir','$jenis_kelamin','$alamat','$agama','$email','$telephone','$kepegawaian','$gambar','$level')";
+                                        VALUES ('','$nama', '$username', '$password','$tempat_lahir','$tanggal_lahir','$jenis_kelamin','$alamat','$agama','$email','$telephone','$kepegawaian','$gambar','$level')";
     if (mysqli_query($koneksi, $query_sql)) {
         echo "<script>alert('Akun Anda berhasil terdaftar');window.location.href='login/index.php'</script>";
     } else {

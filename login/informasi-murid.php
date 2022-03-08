@@ -201,7 +201,7 @@ background: rgba(25, 73, 243, 0.95);
                         <th>Nis</th>
                         <th>Nama Siswa</th>
                         <th>Tahun Ajaran</th>
-                        <th>Biaya SPP</th>
+                        <th>Class</th>
                       </tr>
                     </thead>
                     
@@ -213,7 +213,7 @@ background: rgba(25, 73, 243, 0.95);
                         <td>012421</td>
                         <td>Syaifudin</td>
                         <td>2021/2020</td>
-                        <td>250k</td>
+                        <td>Eksekutif</td>
                       </tr>
 
                       <tr>
@@ -223,7 +223,7 @@ background: rgba(25, 73, 243, 0.95);
                         <td>012421</td>
                         <td>Farrel</td>
                         <td>2021/2020</td>
-                        <td>250k</td>
+                        <td>Eksekutif</td>
                       </tr>
                       <tr>
                         <td>3</td>
@@ -232,7 +232,7 @@ background: rgba(25, 73, 243, 0.95);
                         <td>1104122</td>
                         <td>Irfan Ramadhan</td>
                         <td>2021/2020</td>
-                        <td>250k</td>
+                        <td>Eksekutif</td>
                       </tr>
                       <tr>
                         <td>4</td>
@@ -241,7 +241,7 @@ background: rgba(25, 73, 243, 0.95);
                         <td>3201941</td>
                         <td>Daffa Giovany</td>
                         <td>2021/2020</td>
-                        <td>250k</td>
+                        <td>Eksekutif</td>
                       </tr>
                       <tr>
                         <td>5</td>
@@ -250,7 +250,7 @@ background: rgba(25, 73, 243, 0.95);
                         <td>5320953</td>
                         <td>Ramadhan Nasution</td>
                         <td>2021/2020</td>
-                        <td>250k</td>
+                        <td>Eksekutif</td>
                       </tr>
                       <tr>
                         <td>6</td>
@@ -259,7 +259,7 @@ background: rgba(25, 73, 243, 0.95);
                         <td>4214215</td>
                         <td>Ajis Pratama</td>
                         <td>2021/2020</td>
-                        <td>250k</td>
+                        <td>Eksekutif</td>
                       </tr>
 
                       <tr>
@@ -269,7 +269,7 @@ background: rgba(25, 73, 243, 0.95);
                         <td>46234</td>
                         <td>Sepyan Permana</td>
                         <td>2021/2020</td>
-                        <td>250k</td>
+                        <td>Regular</td>
                       </tr>
 
                       <tr>
@@ -279,7 +279,7 @@ background: rgba(25, 73, 243, 0.95);
                         <td>54234</td>
                         <td>Andika Siregar</td>
                         <td>2021/2020</td>
-                        <td>250k</td>
+                        <td>Regular</td>
                       </tr>
 
                       <tr>
@@ -289,7 +289,7 @@ background: rgba(25, 73, 243, 0.95);
                         <td>4214215</td>
                         <td>Selvia Agustin</td>
                         <td>2021/2020</td>
-                        <td>250k</td>
+                        <td>Eksekutif</td>
                       </tr>
 
                       <tr>
@@ -299,7 +299,7 @@ background: rgba(25, 73, 243, 0.95);
                         <td>4323423</td>
                         <td>Riza</td>
                         <td>2021/2020</td>
-                        <td>250k</td>
+                        <td>Regular</td>
                       </tr>
 
 
