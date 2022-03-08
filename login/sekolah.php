@@ -29,7 +29,7 @@
       .kartu {
         width: 800px;
         margin: 0 auto;
-        margin-top: 70px;
+        margin-top: 30px;
             box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,.03);
     transition: all .3s;
            background-color: #D9860A;
@@ -63,7 +63,7 @@
 }
 
 .btn2 {
-    margin: 10px;
+    margin: 1px;
     border-radius: 0.6em;
     color: #e74c3c;
     font-size: 1rem;
@@ -101,7 +101,7 @@
   .right{
     float: right;
     display: block;
-    margin: 40px;
+    margin: 35px;
   }
   .right2{
     position: absolute;
@@ -119,7 +119,7 @@ top: 215px;
 width: 412px;
 height: 51px;
 left: 545px;
-top: 800px;
+top: 760px;
 
 background: rgba(25, 73, 243, 0.95);
 }
@@ -150,7 +150,16 @@ background: rgba(25, 73, 243, 0.95);
     
  include "../koneksi.php";
 $username = $_SESSION['username'];
+$sql_pengguna ="select * from pengguna where username='". $_SESSION['username']."'";
+$query_pengguna=mysqli_query($koneksi, $sql_pengguna);
+$row_pengguna=mysqli_fetch_assoc($query_pengguna);
+$username = $row_pengguna['username'];
  ?>
+ <?php 
+            $sql_sekolah="select * from sekolah";
+            $query_sekolah=mysqli_query($koneksi, $sql_sekolah);
+            $row_sekolah=mysqli_fetch_assoc($query_sekolah);
+?>
   <div id="wrapper">
     <!-- Sidebar -->
     <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
@@ -188,11 +197,7 @@ $username = $_SESSION['username'];
             $query_ortu=mysqli_query($koneksi, $sql_ortu);
             $row_ortu=mysqli_fetch_assoc($query_ortu);
         ?>
-        <?php 
-            $sql_sekolah="select * from sekolah where id_sekolah='". $_SESSION['username']."'";
-            $query_sekolah=mysqli_query($koneksi, $sql_sekolah);
-            $row_sekolah=mysqli_fetch_assoc($query_sekolah);
-        ?>
+        
     <!-- Sidebar -->
     <div id="content-wrapper" class="d-flex flex-column">
       <div id="content">
@@ -253,7 +258,21 @@ $username = $_SESSION['username'];
             </div>
           </div>
         <!-- Topbar -->
+        <table rules="rows">
+        <tr>
+        <th></th>
+        </tr>
+        <tr>
+
+         </tr>
         <a href="edit-profile-sekolah.php">Edit Profil Sekolah</a>
+        <table rules="rows">
+        <tr>
+        <th></th>
+        </tr>
+        <tr>
+
+         </tr>
         <h3 class="text-center text-success mt-3">Informasi Sekolah</h3></a>
         
 
@@ -280,13 +299,13 @@ $username = $_SESSION['username'];
          </tr>
 
          </table>
-        <!-- Isi Biodata Paling Keren di HTML disini -->
+        <!-- DATA -->
 <div class="container">
   <div class="card kartu">
     <div class="row">
       <div class="col-md-4">
       <center><div class="foto">
-        <img src="img/screenshot/tritech2.jpg" class="img-thumbnail" alt="" width="500" height="180">
+      <img src="../assets/img/<?php echo $row_sekolah['gambar']; ?>" class="img-thumbnail" alt="" width="500" height="180">
       </div></center>
       </div>
       <div class="col-md-8 kertas-biodata">
@@ -296,16 +315,12 @@ $username = $_SESSION['username'];
         <td valign="top">
         <table border="0" width="100%" style="padding-left: 2px; padding-right: 13px;">
           <tbody>
-          <tr>
-              <td class="textt" style="font-family: Cambria;">NPSN</td>
-                <td>:</td>
-                <td style="font-family: Courier New;"><?php echo $row_sekolah['id_sekolah'] ?></td>
-            </tr>
+          
           <tr>
           <tr>
               <td class="textt" style="font-family: Cambria;">NSS</td>
                 <td>:</td>
-                <td style="font-family: Courier New;">42104021</td>
+                <td style="font-family: Courier New;"><?php echo $row_sekolah['nss'] ?></td>
             </tr>
           <tr>
               <td class="textt" style="font-family: Cambria;">Nama Sekolah</td>
@@ -317,25 +332,46 @@ $username = $_SESSION['username'];
                 <td>:</td>
                 <td style="font-family: Courier New;"><?php echo $row_sekolah['alamat'] ?></td>
             </tr>
-          <tr>
-              <td class="textt" style="font-family: Cambria;">Kelurahan</td>
-                <td>:</td>
-                <td style="font-family: Courier New;"><?php echo $row_sekolah['kelurahan'] ?></td>
-            </tr>
-          <tr>
+            <tr>
               <td valign="top" class="textt" style="font-family: Cambria;">Kecamatan</td>
                 <td valign="top">:</td>
-                <td style="font-family: Courier New;"><?php echo $row_sekolah['kecamatan'] ?></td>
+                <?php 
+                $sql_camat='select * from kecamatan where id_kecamatan="'.$row_sekolah["kecamatan"].'"';
+                $query_camat=mysqli_query($koneksi,$sql_camat);
+                $row_camat=mysqli_fetch_assoc($query_camat);
+                ?>
+                <td style="font-family: Courier New;"><?php echo $row_camat['nama_kecamatan'] ?></td>
             </tr>
+            <tr>
+              <td valign="top" class="textt" style="font-family: Cambria;">Kelurahan</td>
+                <td valign="top">:</td>
+                <?php 
+                $sql_lurah='select * from kelurahan where id_kelurahan="'.$row_sekolah["kelurahan"].'"';
+                $query_lurah=mysqli_query($koneksi,$sql_lurah);
+                $row_lurah=mysqli_fetch_assoc($query_lurah);
+                ?>
+                <td style="font-family: Courier New;"><?php echo $row_lurah['nama_kelurahan'] ?></td>
+            </tr>
+          
             <tr>
               <td valign="top" class="textt" style="font-family: Cambria;">Kabupaten</td>
                 <td valign="top">:</td>
-                <td style="font-family: Courier New;"><?php echo $row_sekolah['kabupaten'] ?></td>
+                <?php 
+                $sql_kab='select * from kabupaten where id_kabupaten="'.$row_sekolah["kabupaten"].'"';
+                $query_kab=mysqli_query($koneksi,$sql_kab);
+                $row_kab=mysqli_fetch_assoc($query_kab);
+                ?>
+                <td style="font-family: Courier New;"><?php echo $row_kab['nama_kabupaten'] ?></td>
             </tr>
             <tr>
               <td valign="top" class="textt" style="font-family: Cambria;">Provinsi</td>
                 <td valign="top">:</td>
-                <td style="font-family: Courier New;"><?php echo $row_sekolah['provinsi'] ?></td>
+                <?php 
+                $sql_prov='select * from provinsi where id_provinsi="'.$row_sekolah["provinsi"].'"';
+                $query_prov=mysqli_query($koneksi,$sql_prov);
+                $row_prov=mysqli_fetch_assoc($query_prov);
+                ?>
+                <td style="font-family: Courier New;"><?php echo $row_prov['nama_provinsi'] ?></td>
             </tr>
             <tr>
               <td valign="top" class="textt" style="font-family: Cambria;">Kode Pos</td>
@@ -367,7 +403,22 @@ $username = $_SESSION['username'];
     </div>
   </div>
 </div>
+
 <a href="orang_tua.php" class="btn2 fourth">Kembali</a>
+<table rules="rows">
+        <tr>
+        <th></th>
+        </tr>
+        <tr>
+
+         </tr>
+         <table rules="rows">
+        <tr>
+        <th></th>
+        </tr>
+        <tr>
+
+         </tr>
     <script src="js/bootstrap.min.js"></script>
     <!-- Scroll to top -->
   <a class="scroll-to-top rounded" href="#page-top">

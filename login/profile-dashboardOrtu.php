@@ -224,12 +224,7 @@ $username = $_SESSION['username'];
                 <td style="font-family: Courier New;"><?php echo $row_ortu['nama'] ?></td>
             </tr>
 
-            
-          <tr>
-              <td class="textt" style="font-family: Cambria;">NPSN</td>
-                <td>:</td>
-                <td style="font-family: Courier New;"><?php echo $row_ortu['npsn'] ?></td>
-            </tr>
+          
           <tr>
               <td class="textt" style="font-family: Cambria;">Tempat Lahir</td>
                 <td>:</td>
