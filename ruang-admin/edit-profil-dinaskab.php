@@ -91,7 +91,7 @@ html,body,h1,h2,h3,h4,h5 {}
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseForm" aria-expanded="true"
           aria-controls="collapseForm">
           <i class="fa-solid fa-list-ul"></i>
-          <span>Jumlah Siswa(KotaMedan)</span>
+          <span>Jlh Siswa(KotaMedan)</span>
         </a>
         <div id="collapseForm" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
@@ -107,7 +107,7 @@ html,body,h1,h2,h3,h4,h5 {}
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePage" aria-expanded="true"
           aria-controls="collapsePage">
           <i class="fa-solid fa-list-ul"></i>
-          <span>Jumlah Guru(KotaMedan)</span>
+          <span>Jlh Guru(KotaMedan)</span>
         </a>
         <div id="collapsePage" class="collapse" aria-labelledby="headingPage" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
@@ -227,7 +227,7 @@ html,body,h1,h2,h3,h4,h5 {}
                                     <div class="col-xl-12">
                                         <div class="auth-form">
                                             <h4 class="text-center mb-4" style="margin-top:-50px";>Edit Profile</h4>
-                                            <a href="profil-dashboarddinas.php" class="btn2 third"> < Kembali</a> 
+                                            <a href="profil-dashboarddinaskab.php" class="btn2 third"> < Kembali</a> 
                                             <form action="profil-dashboarddinas.php"  method="post">
                                                 <div class="row">
                                                     <div class="col-lg-3">

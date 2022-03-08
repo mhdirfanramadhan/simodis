@@ -75,7 +75,7 @@ html,body,h1,h2,h3,h4,h5 {}
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrap"
           aria-expanded="true" aria-controls="collapseBootstrap">
           <i class="fa-solid fa-list-ul"></i>
-          <span>Jlh sekolah(kotaMedan)</span>
+          <span>Jumlah sekolah</span>
         </a>
         <div id="collapseBootstrap" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
@@ -91,7 +91,7 @@ html,body,h1,h2,h3,h4,h5 {}
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseForm" aria-expanded="true"
           aria-controls="collapseForm">
           <i class="fa-solid fa-list-ul"></i>
-          <span>Jumlah Siswa(KotaMedan)</span>
+          <span>Jumlah Siswa</span>
         </a>
         <div id="collapseForm" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
@@ -107,7 +107,7 @@ html,body,h1,h2,h3,h4,h5 {}
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePage" aria-expanded="true"
           aria-controls="collapsePage">
           <i class="fa-solid fa-list-ul"></i>
-          <span>Jumlah Guru(KotaMedan)</span>
+          <span>Jumlah Guru</span>
         </a>
         <div id="collapsePage" class="collapse" aria-labelledby="headingPage" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">

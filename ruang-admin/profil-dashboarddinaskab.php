@@ -127,7 +127,7 @@
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseForm" aria-expanded="true"
           aria-controls="collapseForm">
           <i class="fa-solid fa-list-ul"></i>
-          <span>Jumlah Siswa(KotaMedan)</span>
+          <span>Jlh Siswa(KotaMedan)</span>
         </a>
         <div id="collapseForm" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
@@ -143,7 +143,7 @@
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePage" aria-expanded="true"
           aria-controls="collapsePage">
           <i class="fa-solid fa-list-ul"></i>
-          <span>Jumlah Guru(KotaMedan)</span>
+          <span>Jlh Guru(KotaMedan)</span>
         </a>
         <div id="collapsePage" class="collapse" aria-labelledby="headingPage" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
@@ -154,6 +154,11 @@
             <a class="collapse-item" href="jlhgurutk.html">TK/Sederajat</a>
           </div>
         </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="">
+          <i class="fa-solid fa-file-import"></i>
+          <span>Import</span></a>
       </li>
     </ul>
 
@@ -233,7 +238,7 @@
         <!-- Topbar -->
   
         <h3 class="text-center text-success mt-3">Profil Akun</h3></a>  
-        <a href="edit-profil-dinaskabkota.php" class="btn2 third">Edit Profil</a>           
+        <a href="edit-profil-dinaskab.php" class="btn2 third">Edit Profil</a>           
         <!-- Isi Biodata Paling Keren di HTML disini -->
 <div class="container">
   <div class="card kartu">
