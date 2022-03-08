@@ -62,7 +62,7 @@ html,body,h1,h2,h3,h4,h5 {}
       </a>
       <hr class="sidebar-divider my-0">
       <li class="nav-item active">
-        <a class="nav-link" href="dashboard-dinasprov.html">
+        <a class="nav-link" href="dashboard-dinaskabkota.html">
         <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>
@@ -75,7 +75,7 @@ html,body,h1,h2,h3,h4,h5 {}
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrap"
           aria-expanded="true" aria-controls="collapseBootstrap">
           <i class="fa-solid fa-list-ul"></i>
-          <span>Jumlah sekolah</span>
+          <span>Jlh sekolah(kotaMedan)</span>
         </a>
         <div id="collapseBootstrap" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
@@ -91,7 +91,7 @@ html,body,h1,h2,h3,h4,h5 {}
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseForm" aria-expanded="true"
           aria-controls="collapseForm">
           <i class="fa-solid fa-list-ul"></i>
-          <span>Jumlah Siswa</span>
+          <span>Jlh Siswa(KotaMedan)</span>
         </a>
         <div id="collapseForm" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
@@ -107,7 +107,7 @@ html,body,h1,h2,h3,h4,h5 {}
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePage" aria-expanded="true"
           aria-controls="collapsePage">
           <i class="fa-solid fa-list-ul"></i>
-          <span>Jumlah Guru</span>
+          <span>Jlh Guru(KotaMedan)</span>
         </a>
         <div id="collapsePage" class="collapse" aria-labelledby="headingPage" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
@@ -120,7 +120,7 @@ html,body,h1,h2,h3,h4,h5 {}
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="">
+        <a class="nav-link" href="importprov.php">
           <i class="fa-solid fa-file-import"></i>
           <span>Import</span></a>
       </li>
@@ -164,7 +164,7 @@ html,body,h1,h2,h3,h4,h5 {}
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 <img class="img-profile rounded-circle" src="img/boy.png" style="max-width: 60px">
-                <span class="ml-2 d-none d-lg-inline text-white small">admindinasprov</span>
+                <span class="ml-2 d-none d-lg-inline text-white small">Admindinaskab</span>
               </a>
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                 <a class="" href="">
@@ -227,7 +227,7 @@ html,body,h1,h2,h3,h4,h5 {}
                                     <div class="col-xl-12">
                                         <div class="auth-form">
                                             <h4 class="text-center mb-4" style="margin-top:-50px";>Edit Profile</h4>
-                                            <a href="profil-dashboarddinas.php" class="btn2 third"> < Kembali</a> 
+                                            <a href="profil-dashboarddinaskab.php" class="btn2 third"> < Kembali</a> 
                                             <form action="profil-dashboarddinas.php"  method="post">
                                                 <div class="row">
                                                     <div class="col-lg-3">

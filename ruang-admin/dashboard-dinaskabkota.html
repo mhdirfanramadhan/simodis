@@ -19,17 +19,17 @@
   <div id="wrapper">
     <!-- Sidebar -->
     <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard-dinaskabkota.html">
         <div class="sidebar-brand-icon">
           <img src="img/logo/logo-simodis.png">
         </div>
         <div class="sidebar-brand-text mx-3">Simodis</div>
       </a>
       <hr class="sidebar-divider my-0">
-      <li class="nav-item active">
-        <a class="nav-link" href="index.html">
-          <i class="fa-solid fa-house"></i>
-          <span>Beranda</span></a>
+      <li class="nav-item">
+        <a class="nav-link" href="dashboard-dinaskabkota.html">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Dashboard</span></a>
       </li>
       <hr class="sidebar-divider">
       <div class="sidebar-heading">
@@ -37,46 +37,57 @@
       </div>
       
       <li class="nav-item">
-        <a class="nav-link collapsed" href="identitas-sekolah.php" data-target="#collapseForm" aria-expanded="true"
-          aria-controls="collapseForm">
-          <i class="fab fa-fw fa-wpforms"></i>
-          <span>Identitas Sekolah</span>
-        </a>
-      </li>
-      <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrap"
           aria-expanded="true" aria-controls="collapseBootstrap">
-          <i class="fa-solid fa-money-check"></i>
-          <span>SPP Sekolah</span>
+          <i class="fa-solid fa-list-ul"></i>
+          <span>Jlh sekolah(KotaMedan)</span>
         </a>
         <div id="collapseBootstrap" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="murid.html">Murid</a>
-            <a class="collapse-item" href="wali-kelas.html">Wali Kelas</a>
-            <a class="collapse-item" href="Guru.html">Guru</a>
+            <h6 class="collapse-header">Pilih</h6>
+            <a class="collapse-item" href="sklhsmakab.html">SMK/SMA/Sederajat</a>
+            <a class="collapse-item" href="sklhsmpkab.html">SMP/Sederajat</a>
+            <a class="collapse-item" href="sklhsdkab.html">SD/Sederajat</a>
+            <a class="collapse-item" href="sklhtkkab.html">TK/Sederajat</a>
           </div>
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link collapsed" href="absensi-siswa.html" data-target="#collapseTable" aria-expanded="true"
-          aria-controls="collapseTable">
-          <i class="fas fa-fw fa-table"></i>
-          <span>Absensi Siswa</span>
-        </a>  
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseForm" aria-expanded="true"
+          aria-controls="collapseForm">
+          <i class="fa-solid fa-list-ul"></i>
+          <span>Jlh Siswa(KotaMedan)</span>
+        </a>
+        <div id="collapseForm" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Pilih</h6>
+            <a class="collapse-item" href="siswasmakab.html">SMK/SMA/Sederajat</a>
+            <a class="collapse-item" href="siswasmpkab.html">SMP/Sederajat</a>
+            <a class="collapse-item" href="siswasdkab.html">SD/Sederajat</a>
+            <a class="collapse-item" href="siswatkkab.html">TK/Sederajat</a>
+          </div>
+        </div>
       </li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePage" aria-expanded="true"
           aria-controls="collapsePage">
-          <i class="fas fa-fw fa-columns"></i>
-          <span>Nilai Evaluasi</span>
+          <i class="fa-solid fa-list-ul"></i>
+          <span>Jlh Guru(KotaMedan)</span>
         </a>
         <div id="collapsePage" class="collapse" aria-labelledby="headingPage" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="nilaiUTS.html">UTS</a>
-            <a class="collapse-item" href="nilaiUAS.html">UAS</a>
-
+            <h6 class="collapse-header">Pilih</h6>
+            <a class="collapse-item" href="gurusmakab.html">SMK/SMA/Sederajat</a>
+            <a class="collapse-item" href="gurusmpkab.html">SMP/Sederajat</a>
+            <a class="collapse-item" href="gurusdkab.html">SD/Sederajat</a>
+            <a class="collapse-item" href="gurutkkab.html">TK/Sederajat</a>
           </div>
         </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="importkab.php">
+          <i class="fa-solid fa-file-import"></i>
+          <span>Import</span></a>
       </li>
     </ul>
     <!-- Sidebar -->
@@ -97,7 +108,7 @@
                 aria-labelledby="searchDropdown">
                 <form class="navbar-search">
                   <div class="input-group">
-                    <input type="text" class="form-control bg-light border-1 small" placeholder="What do you want to look for?"
+                    <input type="text" class="form-control bg-light border-1 small" placeholder="Apa yang anda cari?"
                       aria-label="Search" aria-describedby="basic-addon2" style="border-color: #3f51b5;">
                     <div class="input-group-append">
                       <button class="btn btn-primary" type="button">
@@ -115,16 +126,16 @@
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 <img class="img-profile rounded-circle" src="img/boy.png" style="max-width: 60px">
-                <span class="ml-2 d-none d-lg-inline text-white small">User</span>
+                <span class="ml-2 d-none d-lg-inline text-white small">Admindinaskab</span>
               </a>
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="profile-dashboardOrtu.php">
+                <a class="dropdown-item" href="profil-dashboarddinaskab.php">
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                   Profile
                 </a>
                
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="" data-toggle="modal" data-target="#logoutModal">
+                <a class="dropdown-item" href="simodis/login/index.php" data-toggle="modal" data-target="#logoutModal">
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                   Logout
                 </a>
@@ -137,10 +148,10 @@
         <!-- Container Fluid-->
         <div class="container-fluid" id="container-wrapper">
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Dashboard Orang Tua</h1>
+            <h1 class="h3 mb-0 text-gray-800">Dashboard Dinas Kab</h1>
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="./">Beranda</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+              <li class="breadcrumb-item"><a href="">Dashboard Dinas Kab</a></li>
+              <li class="" aria-current=""></li>
             </ol>
           </div>
 
@@ -152,126 +163,101 @@
             <div class="col-xl-4 col-lg-5">
               <div class="card mb-4">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Tahun</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">Jumlah Siswa</h6>
                   <div class="dropdown no-arrow">
                     <a class="dropdown-toggle btn btn-primary btn-sm" href="#" role="button" id="dropdownMenuLink"
                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      2022 <i class="fas fa-chevron-down"></i>
+                      Detail <i class=""></i>
                     </a>
-                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                      aria-labelledby="dropdownMenuLink">
-                      <div class="dropdown-header">Tahun</div>
-                      <a class="dropdown-item" href="#">2024</a>
-                      <a class="dropdown-item" href="#">2023</a>
-                      <a class="dropdown-item active" href="#">2022</a>
-                      <a class="dropdown-item" href="#">2021</a>
+                    <div class=""
+                      aria-labelledby="">
+                      <div class="dropdown-header"></div>
+                      <a class="" href="#"></a>
+                      <a class="" href="#"></a>
+                      <a class="" href="#"></a>
+                      <a class="" href="#"></a>
                     </div>
                   </div>
                 </div>
                 <div class="card-body">
                   <div class="mb-3">
-                    <div class="small text-gray-500">Kehadiran
-                      <div class="small float-right"><b>90%</b></div>
-                    </div>
-                    <div class="progress" style="height: 12px;">
-                      <div class="progress-bar bg-warning" role="progressbar" style="width: 80%" aria-valuenow="80"
-                        aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                  <div class="mb-3">
-                    <div class="small text-gray-500">Kegiatan Ekstakulikuler
-                      <div class="small float-right"><b>80%</b></div>
-                    </div>
-                    <div class="progress" style="height: 12px;">
-                      <div class="progress-bar bg-success" role="progressbar" style="width: 70%" aria-valuenow="70"
-                        aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="small text-gray-500">Keseluruhan Siswa 
+                      <div class="small float-right"><b>10.000 </b></div>
+                      <div class="progress" style="height: 12px;">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 80%" aria-valuenow="80"
+                          aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
                     </div>
                   </div>
-                  <div class="mb-3">
-                    <div class="small text-gray-500">Kegiatan Pramuka
-                      <div class="small float-right"><b>100%</b></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-5">
+              <div class="card mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">Jumlah Sekolah</h6>
+                  <div class="dropdown no-arrow">
+                    <a class="dropdown-toggle btn btn-primary btn-sm" href="#" role="button" id="dropdownMenuLink"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Detail <i class=""></i>
+                    </a>
+                    <div class=""
+                      aria-labelledby="">
+                      <div class="dropdown-header"></div>
+                      <a class="" href="#"></a>
+                      <a class="" href="#"></a>
+                      <a class="" href="#"></a>
+                      <a class="" href="#"></a>
                     </div>
-                    <div class="progress" style="height: 12px;">
-                      <div class="progress-bar bg-danger" role="progressbar" style="width: 55%" aria-valuenow="55"
-                        aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="mb-3">
+                    <div class="small text-gray-500">Keseluruhan Sekolah 
+                      <div class="small float-right"><b>90 </b></div>
+                      <div class="progress" style="height: 12px;">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 55%" aria-valuenow="55"
+                          aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-5">
+              <div class="card mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">Jumlah Guru</h6>
+                  <div class="dropdown no-arrow">
+                    <a class="dropdown-toggle btn btn-primary btn-sm" href="#" role="button" id="dropdownMenuLink"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Detail <i class=""></i>
+                    </a>
+                    <div class=""
+                      aria-labelledby="">
+                      <div class="dropdown-header"></div>
+                      <a class="" href="#"></a>
+                      <a class="" href="#"></a>
+                      <a class="" href="#"></a>
+                      <a class="" href="#"></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="mb-3">
+                    <div class="small text-gray-500">Keseluruhan Guru 
+                      <div class="small float-right"><b>1500 </b></div>
+                      <div class="progress" style="height: 12px;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 70%" aria-valuenow="70"
+                          aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             <!-- Invoice Example -->
-            <div class="col-xl-8 col-lg-7 mb-4">
-              <div class="card">
-                <div class="table-responsive">
-                  <table class="table align-items-center table-flush">
-                    <thead class="thead-light">
-                      <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                        <h6 class="m-0 font-weight-bold text-primary">Kelas</h6>
-                        <div class="dropdown no-arrow">
-                          <a class="dropdown-toggle btn btn-primary btn-sm" href="#" role="button" id="dropdownMenuLink"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            XI RPL 1 <i class="fas fa-chevron-down"></i>
-                          </a>
-                          <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                            aria-labelledby="dropdownMenuLink">
-                            <div class="dropdown-header">Tahun</div>
-                            <a class="dropdown-item" href="#">2024</a>
-                            <a class="dropdown-item" href="#">2023</a>
-                            <a class="dropdown-item active" href="#">2022</a>
-                            <a class="dropdown-item" href="#">2021</a>
-                          </div>
-                        </div>
-                      </div>
-                      <tr>
-                        <th>Mapel</th>
-                        <th>Nama Guru</th>
-                        <th>Kelas</th>
-                        <th>Status</th>
-                        <th>Action</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td><a href="absensi-siswa.html">Matematika</a></td>
-                        <td>Fatimah Dewi</td>
-                        <td>XI RPL 1</td>
-                        <td><span class="badge badge-success">Aktif</span></td>
-                        <td><a href="absensi-siswa.html" class="btn btn-sm btn-primary">Detail</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="absensi-siswa.html">B. Inggris</a></td>
-                        <td>Eko</td>
-                        <td>XI RPL 1</td>
-                        <td><span class="badge badge-success">Aktif</span></td>
-                        <td><a href="absensi-siswa.html" class="btn btn-sm btn-primary">Detail</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="absensi-siswa.html">B. Indonesia</a></td>
-                        <td>Rivat Mahesa</td>
-                        <td>XI RPL 1</td>
-                        <td><span class="badge badge-success">Aktif</span></td>
-                        <td><a href="absensi-siswa.html" class="btn btn-sm btn-primary">Detail</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="absensi-siswa.html">PPKN</a></td>
-                        <td>Indri Junanda</td>
-                        <td>XI RPL 1</td>
-                        <td><span class="badge badge-success">Aktif</span></td>
-                        <td><a href="absensi-siswa.html" class="btn btn-sm btn-primary">Detail</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="absensi-siswa.html">Kewirausahaan</a></td>
-                        <td>Udin</td>
-                        <td>XI RPL 1</td>
-                        <td><span class="badge badge-success">Aktif</span></td>
-                        <td><a href="absensi-siswa.html" class="btn btn-sm btn-primary">Detail</a></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="card-footer"></div>
-              </div>
-            </div>
+           
             
           <!-- Modal Logout -->
           <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout"

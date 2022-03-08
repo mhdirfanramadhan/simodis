@@ -90,7 +90,7 @@
   <div id="wrapper">
     <!-- Sidebar -->
     <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard-dinasprov.html">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard-dinaskabkota.html">
         <div class="sidebar-brand-icon">
           <img src="img/logo/logo-simodis.png">
         </div>
@@ -98,7 +98,7 @@
       </a>
       <hr class="sidebar-divider my-0">
       <li class="nav-item active">
-        <a class="nav-link" href="dashboard-dinasprov.html">
+        <a class="nav-link" href="dashboard-dinaskabkota.html">
         <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>
@@ -154,6 +154,11 @@
             <a class="collapse-item" href="jlhgurutk.html">TK/Sederajat</a>
           </div>
         </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="">
+          <i class="fa-solid fa-file-import"></i>
+          <span>Import</span></a>
       </li>
     </ul>
 
