@@ -88,14 +88,11 @@
   <body>
   <?php
  session_start();
- if($_SESSION['level']==""){
-    echo "<script> 
-    document.location.href = 'http://localhost/simodis/login/index.php';
-    </script>
-";
- }
- include "koneksi.php";
-
+ if($_SESSION['level']=="")
+    echo "<script>document.location.href = 'http://localhost/simodis/login/index.php';</script>";
+    
+ include "../koneksi.php";
+$username = $_SESSION['username'];
  ?>
   <body id="page-top">
   <div id="wrapper">
@@ -131,6 +128,11 @@
       <hr class="sidebar-divider">
 
     </ul>
+    <?php 
+            $sql_ortu="select * from pengguna where username='". $_SESSION['username']."'";
+            $query_ortu=mysqli_query($koneksi, $sql_ortu);
+            $row_ortu=mysqli_fetch_assoc($query_ortu);
+        ?>
 
     <div id="content-wrapper" class="d-flex flex-column">
       <div id="content">
@@ -149,21 +151,13 @@
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                <img class="img-profile rounded-circle" src="img/boy.png" style="max-width: 60px">
-                <?php echo $_SESSION['level']; ?></b></p>
+                <img src="../assets/img/<?php echo $row_ortu['gambar']; ?>" class="img-profile rounded-circle" style="max-width: 60px">
+                <?php echo $_SESSION['username']; ?></b></p>
               </a>
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                 <a class="dropdown-item" href="profile-dashboardOrtu.php">
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                   Profile
-                </a>
-                <a class="dropdown-item" href="#">
-                  <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Settings
-                </a>
-                <a class="dropdown-item" href="#">
-                  <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Activity Log
                 </a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="javascript:void(0);" data-toggle="modal" data-target="#logoutModal">
@@ -190,7 +184,7 @@
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
-                  <a href="http://localhost/simodis/" class="btn btn-primary">Logout</a>
+                  <a href="http://localhost/simodis/login/index.php" class="btn btn-primary">Logout</a>
                 </div>
               </div>
             </div>
@@ -198,14 +192,15 @@
         <!-- Topbar -->
   
         <h3 class="text-center text-success mt-3">Profil Akun</h3></a>  
-        <a href="edit-profile.php" class="btn2 third">Edit Profil</a>           
+        <a href="edit-profile.php?username=<?php echo $username; ?>" class="btn2 third">Edit Profil</a>           
         <!-- Isi Biodata Paling Keren di HTML disini -->
+        
 <div class="container">
   <div class="card kartu">
     <div class="row">
       <div class="col-md-4">
       <center><div class="foto">
-        <img src="img/madara.jpg" class="img-thumbnail" alt="" width="400" height="180">
+        <img src="../assets/img/<?php echo $row_ortu['gambar']; ?>" class="img-thumbnail" alt="" width="400" height="180">
       </div></center>
       </div>
       <div class="col-md-8 kertas-biodata">
@@ -215,17 +210,13 @@
         <td valign="top">
         <table border="0" width="100%" style="padding-left: 2px; padding-right: 13px;">
           <tbody>
-              <p> Hallo! , <?php echo $_SESSION['level']; ?></b></p></p>
+              <p> Hallo! , <?php echo $_SESSION['username']; ?></b></p></p>
             <tr>
               <td width="25%" valign="top" class="textt" style="font-family: Cambria;">Username</td>
                 <td width="2%">:</td>
-                <td style="color: #e9a7f9; font-weight:bold" ><?php echo $_SESSION['level']; ?></td>
+                <td style="color: #e9a7f9; font-weight:bold" ><?php echo $_SESSION['username']; ?></td>
             </tr>
-            <?php 
-            $sql_ortu="select * from pengguna where username='". $_SESSION['username']."'";
-            $query_ortu=mysqli_query($koneksi, $sql_ortu);
-            $row_ortu=mysqli_fetch_assoc($query_ortu);
-            ?>
+            
 
           <tr>
               <td class="textt" style="font-family: Cambria;">Nama</td>
@@ -252,7 +243,12 @@
             <tr>
               <td valign="top" class="textt" style="font-family: Cambria;">Jenis Kelamin</td>
                 <td valign="top">:</td>
-                <td style="font-family: Courier New;"><?php echo $row_ortu['jenis_kelamin'] ?></td>
+                <?php 
+                $sql_jk='select * from jenis_kelamin where id_jk="'.$row_ortu["jenis_kelamin"].'"';
+                $query_jk=mysqli_query($koneksi,$sql_jk);
+                $row_jk=mysqli_fetch_assoc($query_jk);
+                ?>
+                <td style="font-family: Courier New;"><?php echo $row_jk['nama_kelamin'] ?></td>
             </tr>
             <tr>
               <td valign="top" class="textt" style="font-family: Cambria;">Alamat</td>
@@ -262,7 +258,12 @@
             <tr>
               <td valign="top" class="textt" style="font-family: Cambria;">Agama</td>
                 <td valign="top">:</td>
-                <td style="font-family: Courier New;"><?php echo $row_ortu['agama'] ?></td>
+                <?php 
+                $sql_agama='select * from agama where id_agama="'.$row_ortu["agama"].'"';
+                $query_agama=mysqli_query($koneksi,$sql_agama);
+                $row_agama=mysqli_fetch_assoc($query_agama);
+                ?>
+                <td style="font-family: Courier New;"><?php echo $row_agama['nama_agama'] ?></td>
             </tr>
             <tr>
               <td valign="top" class="textt" style="font-family: Cambria;">Email</td>
@@ -277,7 +278,12 @@
             <tr>
               <td valign="top" class="textt" style="font-family: Cambria;">Kepegawaian</td>
                 <td valign="top">:</td>
-                <td style="font-family: Courier New;"><?php echo $row_ortu['kepegawaian'] ?></td>
+                <?php 
+                $sql_pegawai='select * from kepegawaian where id_pegawai="'.$row_ortu["kepegawaian"].'"';
+                $query_pegawai=mysqli_query($koneksi,$sql_pegawai);
+                $row_pegawai=mysqli_fetch_assoc($query_pegawai);
+                ?>
+                <td style="font-family: Courier New;"><?php echo $row_pegawai['nama_pegawai'] ?></td>
             </tr>
             
         </tbody></table>

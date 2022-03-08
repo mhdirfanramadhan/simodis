@@ -2,7 +2,7 @@
 session_start();
 
 
-include 'koneksi.php';
+include '../koneksi.php';
 
 $username = $_POST['username'];
 $password = $_POST['password'];
@@ -17,20 +17,20 @@ if($cek > 0){
 
  $data = mysqli_fetch_assoc($login);
 
- if($data['level']=="admin_dinProv"){
+ if($data['level']=="1"){
   $_SESSION['username'] = $username;
-  $_SESSION['level'] = "admin_dinProv";
+  $_SESSION['level'] = "1";
   header("location:dinas_provinsi.php");
 
 
- }else if($data['level']=="dinas_kabKota"){
+ }else if($data['level']=="2"){
   $_SESSION['username'] = $username;
-  $_SESSION['level'] = "dinas_kabKota";
+  $_SESSION['level'] = "2";
   header("location:dinas_kab_kota.php");
 
-}else if($data['level']=="ortu"){
+}else if($data['level']=="3"){
     $_SESSION['username'] = $username;
-    $_SESSION['level'] = "ortu";
+    $_SESSION['level'] = "3";
     header("location:welcome-ortu.php");
 
  }else{

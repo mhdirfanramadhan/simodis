@@ -141,8 +141,16 @@ background: rgba(25, 73, 243, 0.95);
     </style>
     <body class="w3-light-grey">
   </head>
-  <body>
+
   <body id="page-top">
+  <?php
+ session_start();
+ if($_SESSION['level']=="")
+    echo "<script>document.location.href = 'http://localhost/simodis/login/index.php';</script>";
+    
+ include "../koneksi.php";
+$username = $_SESSION['username'];
+ ?>
   <div id="wrapper">
     <!-- Sidebar -->
     <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
@@ -175,6 +183,16 @@ background: rgba(25, 73, 243, 0.95);
         <hr class="sidebar-divider">
   
       </ul>
+      <?php 
+            $sql_ortu="select * from pengguna where username='". $_SESSION['username']."'";
+            $query_ortu=mysqli_query($koneksi, $sql_ortu);
+            $row_ortu=mysqli_fetch_assoc($query_ortu);
+        ?>
+        <?php 
+            $sql_sekolah="select * from sekolah where id_sekolah='". $_SESSION['username']."'";
+            $query_sekolah=mysqli_query($koneksi, $sql_sekolah);
+            $row_sekolah=mysqli_fetch_assoc($query_sekolah);
+        ?>
     <!-- Sidebar -->
     <div id="content-wrapper" class="d-flex flex-column">
       <div id="content">
@@ -193,8 +211,8 @@ background: rgba(25, 73, 243, 0.95);
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                <img class="img-profile rounded-circle" src="img/boy.png" style="max-width: 60px">
-                <span class="ml-2 d-none d-lg-inline text-white small">User</span>
+                <img src="../assets/img/<?php echo $row_ortu['gambar']; ?>" class="img-profile rounded-circle" style="max-width: 60px">
+                <?php echo $_SESSION['username']; ?></b></p>
               </a>
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                 <a class="dropdown-item" href="profile-dashboardOrtu.php">
@@ -278,11 +296,12 @@ background: rgba(25, 73, 243, 0.95);
         <td valign="top">
         <table border="0" width="100%" style="padding-left: 2px; padding-right: 13px;">
           <tbody>
-            <tr>
-              <td width="25%" valign="top" class="textt" style="font-family: Cambria;">NPSN</td>
-                <td width="2%">:</td>
-                <td style="color: #e9a7f9; font-weight:bold" >412898749</td>
+          <tr>
+              <td class="textt" style="font-family: Cambria;">NPSN</td>
+                <td>:</td>
+                <td style="font-family: Courier New;"><?php echo $row_sekolah['id_sekolah'] ?></td>
             </tr>
+          <tr>
           <tr>
               <td class="textt" style="font-family: Cambria;">NSS</td>
                 <td>:</td>
@@ -291,52 +310,52 @@ background: rgba(25, 73, 243, 0.95);
           <tr>
               <td class="textt" style="font-family: Cambria;">Nama Sekolah</td>
                 <td>:</td>
-                <td style="font-family: Courier New;">TRITECH INFORMATIKA</td>
+                <td style="font-family: Courier New;"><?php echo $row_sekolah['nama_sekolah'] ?></td>
             </tr>
           <tr>
               <td class="textt" style="font-family: Cambria;">Alamat</td>
                 <td>:</td>
-                <td style="font-family: Courier New;">Medan</td>
+                <td style="font-family: Courier New;"><?php echo $row_sekolah['alamat'] ?></td>
             </tr>
           <tr>
               <td class="textt" style="font-family: Cambria;">Kelurahan</td>
                 <td>:</td>
-                <td style="font-family: Courier New;">Medan Deli</td>
+                <td style="font-family: Courier New;"><?php echo $row_sekolah['kelurahan'] ?></td>
             </tr>
           <tr>
               <td valign="top" class="textt" style="font-family: Cambria;">Kecamatan</td>
                 <td valign="top">:</td>
-                <td style="font-family: Courier New;">Medan</td>
+                <td style="font-family: Courier New;"><?php echo $row_sekolah['kecamatan'] ?></td>
             </tr>
             <tr>
               <td valign="top" class="textt" style="font-family: Cambria;">Kabupaten</td>
                 <td valign="top">:</td>
-                <td style="font-family: Courier New;">Medan kota</td>
+                <td style="font-family: Courier New;"><?php echo $row_sekolah['kabupaten'] ?></td>
             </tr>
             <tr>
               <td valign="top" class="textt" style="font-family: Cambria;">Provinsi</td>
                 <td valign="top">:</td>
-                <td style="font-family: Courier New;">Sumatera Utara</td>
+                <td style="font-family: Courier New;"><?php echo $row_sekolah['provinsi'] ?></td>
             </tr>
             <tr>
               <td valign="top" class="textt" style="font-family: Cambria;">Kode Pos</td>
                 <td valign="top">:</td>
-                <td style="font-family: Courier New;">-</td>
+                <td style="font-family: Courier New;"><?php echo $row_sekolah['kode_pos'] ?></td>
             </tr>
             <tr>
               <td valign="top" class="textt" style="font-family: Cambria;">Telephone</td>
                 <td valign="top">:</td>
-                <td style="font-family: Courier New;" >-</td>
+                <td style="font-family: Courier New;" ><?php echo $row_sekolah['telephone'] ?></td>
             </tr>
             <tr>
               <td valign="top" class="textt" style="font-family: Cambria;">Email</td>
                 <td valign="top">:</td>
-                <td style="font-family: Courier New;">smktritech@scsssssssssssh.id</td>
+                <td style="font-family: Courier New;"><?php echo $row_sekolah['email'] ?></td>
             </tr>
             <tr>
               <td valign="top" class="textt" style="font-family: Cambria;">Kep. Sekolah</td>
-                <td valign="top">:</td>
-                <td style="font-family: Courier New;">-</td>
+                <td valign="top"></td>
+                <td style="font-family: Courier New;"><?php echo $row_sekolah['kepala_sekolah'] ?></td>
             </tr>
             
         </tbody></table>

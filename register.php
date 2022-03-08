@@ -1,9 +1,8 @@
+<?php
+include "koneksi.php";
+?>
+
 <!DOCTYPE html>
-<!--
-	App by FreeHTML5.co
-	Twitter: http://twitter.com/fh5co
-	URL: http://freehtml5.co
--->
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -24,8 +23,7 @@
 	<meta name="twitter:url" content="" />
 	<meta name="twitter:card" content="" />
 
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css2/bootstrap.css">
+		<link rel="stylesheet" href="css2/bootstrap.css">
 	<!-- Owl Carousel  -->
 	<link rel="stylesheet" href="css2/owl.carousel.css">
 	<link rel="stylesheet" href="css2/owl.theme.default.min.css">
@@ -37,6 +35,7 @@
 	<link rel="stylesheet" href="assets/css/registrasi.css">
 </head>
 <body>
+
     <div id="page-wrap">
 
 
@@ -62,27 +61,36 @@
                                     <div class="col-xl-12">
                                         <div class="auth-form">
                                             <h4 class="text-center mb-4" style="margin-top:-50px";>Register</h4>
-                                            <form method="post" action="login/after-regist.php">
+                                            <form method="POST" action="" enctype="multipart/form-data">
                                                 <div class="row">
                                                     <div class="col-lg-3">
                                                 </div>
 
                                                 <div class="col-lg-9">
                                                     <div class="form-group">
-                                                        <div class="row">
+                                                    <div class="row">
                                                             <div class="col-lg-4">
-                                                            <label style="color:grey; padding:8px ">Username</label>
+                                                            <label style="color:grey; padding:8px">Username</label>
                                                             </div>
                                                             <div class="col-lg-8">
-                                                                <input type="text" class="form-control" name="username" placeholder="Username" style="background-color: #F39C12; border-radius: 15px" requried>
+                                                                <input type="text" class="form-control" name="username" placeholder="Username" style="background-color: #F39C12; border-radius: 15px" required>
                                                             </div>
                                                         </div>
+                                                
                                                         <div class="row">
                                                             <div class="col-lg-4">
                                                             <label style="color:grey; padding:8px">Password</label>
                                                             </div>
                                                             <div class="col-lg-8">
                                                                 <input type="password" class="form-control" name="password" placeholder="Password" style="background-color: #F39C12; border-radius: 15px" required>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-lg-4">
+                                                            <label style="color:grey; padding:8px">NPSN</label>
+                                                            </div>
+                                                            <div class="col-lg-8">
+                                                                <input type="text" class="form-control" name="npsn" placeholder="NPSN Lengkap Anda" style="background-color: #F39C12; border-radius: 15px" required>
                                                             </div>
                                                         </div>
                                                         <div class="row">
@@ -94,21 +102,16 @@
                                                             </div>
                                                         </div>   
                                                         <div class="row">
-                                                            <div class="col-lg-4">
-                                                            <label style="color:grey; padding:8px">NPSN</label>
-                                                            </div>
-                                                            <div class="col-lg-8">
-                                                                <input type="text" class="form-control" name="npsn"  placeholder="NPSN Lengkap Anda" style="background-color: #F39C12; border-radius: 15px" required>
-                                                            </div>
-                                                        </div>
+                                                        
+                                                        </div> 
                                                         <div class="row">
                                                             <div class="col-lg-4">
-                                                            <label style="color:grey; padding:8px">Tempat Lahir </label>
+                                                            <label style="color:grey; padding:8px">Tempat Lahir</label>
                                                             </div>
                                                             <div class="col-lg-8">
-                                                                <input type="text" class="form-control" name="tempat_lahir" placeholder="Masukkan tempat lahir Anda" style="background-color: #F39C12; border-radius: 15px" required>
+                                                                <input type="text" class="form-control" name="tempat_lahir" placeholder="Tempat Lahir" style="background-color: #F39C12; border-radius: 15px" required>
                                                             </div>
-                                                        </div> 
+                                                        </div>
                                                         <div class="row">
                                                             <div class="col-lg-4">
                                                             <label style="color:grey; padding:8px">Tanggal Lahir</label>
@@ -122,8 +125,13 @@
                                                             <label style="color:grey; padding:8px">Jenis Kelamin</label>
                                                             </div>
                                                             <div class="col-lg-8">
-                                                                <input type="radio" name="id_jk" value="1" required><label style="color:black; padding:4px">Pria</label></input>
-                                                                <input type="radio" name="id_jk" value="2" required><label style="color:black; padding:4px">Wanita</label></input>
+                                                                <?php
+                                                                $sql_jk='select * from jenis_kelamin';
+                                                                        $query_jk=mysqli_query($koneksi,$sql_jk);
+                                                                        while ($row_jenis_kelamin=mysqli_fetch_assoc($query_jk)){
+                                                                            echo '<input type="radio" name="jenis_kelamin" value="'.$row_jenis_kelamin['id_jk'].'" required><label style="color:black; padding:4px">'.$row_jenis_kelamin['nama_kelamin'].'</label></input>';
+                                                                        }
+                                                                ?>
                                                             </div>
                                                         </div>
                                                         <div class="row">
@@ -139,15 +147,15 @@
                                                                 <label style="color:grey; padding:8px">Agama</label>
                                                             </div>
                                                             <div class="col-lg-8">
-                                                                <select id="inputState" class="form-control" name="id_agama" style="background-color: #F39C12; border-radius: 15px" required>
+                                                                <select id="inputState" class="form-control" name="agama" style="background-color: #F39C12; border-radius: 15px" required>
                                                                     <option value="" required>Silahkan dipilih</option> 
-                                                                                                                                                                                                                            <option value="1">Islam</option> 
-                                                                                                                                                    <option value="2">Kristen Protestan</option> 
-                                                                                                                                                    <option value="3">Kristen Katolik</option> 
-                                                                                                                                                    <option value="4">Hindu</option> 
-                                                                                                                                                    <option value="5">Buddha</option> 
-                                                                                                                                                    <option value="6">Konghucu</option> 
-                                                                          
+                                                                    <?php
+                                                                        $sql_agama='select * from agama';
+                                                                        $query_agama=mysqli_query($koneksi,$sql_agama);
+                                                                        while ($row_agama=mysqli_fetch_assoc($query_agama)){
+                                                                            echo '<option value="'.$row_agama['id_agama'].'">'.$row_agama['nama_agama'].'</option>';
+                                                                        }
+                                                                    ?>           
                                                                 </select>
                                                             </div>
                                                         </div> 
@@ -155,7 +163,8 @@
                                                             <div class="col-lg-4">
                                                                 <label style="color:grey; padding:8px">Email</label>
                                                             </div>
-                                                            <div class="col-lg-8">
+                                                            <div class="col-lg-8"><!-- Bootstrap  -->
+
                                                                 <input type="email" class="form-control" name="email" placeholder="Masukkan email Anda" style="background-color: #F39C12; border-radius: 15px" required>
                                                             </div>
                                                         </div> 
@@ -165,7 +174,7 @@
                                                                 <label style="color:grey; padding:8px">No Handphone</label>
                                                             </div>
                                                             <div class="col-lg-8">
-                                                                <input type="tel" class="form-control" name="no_hp" placeholder="Masukkan No Handphone Anda" style="background-color: #F39C12; border-radius: 15px" required>
+                                                                <input type="tel" class="form-control" name="telephone" placeholder="Masukkan No Handphone Anda" style="background-color: #F39C12; border-radius: 15px" required>
                                                             </div>
                                                         </div> 
 
@@ -174,21 +183,30 @@
                                                                 <label style="color:grey; padding:8px">Status Kepegawaian</label>
                                                             </div>
                                                             <div class="col-lg-8">
-                                                                <select id="inputState" class="form-control" name="status_kepegawaian" style="background-color: #F39C12; border-radius: 15px" required>
+                                                                <select id="inputState" class="form-control" name="kepegawaian" style="background-color: #F39C12; border-radius: 15px" required>
                                                                     <option>Pilih Status Kepegawaian</option>
-                                                                    <option value="PNS">PNS</option>
-                                                                    <option value="Non PNS">Non PNS</option>
+                                                                    <?php
+                                                                        $sql_pegawai='select * from kepegawaian';
+                                                                        $query_pegawai=mysqli_query($koneksi,$sql_pegawai);
+                                                                        while ($row_pegawai=mysqli_fetch_assoc($query_pegawai)){
+                                                                            echo '<option value="'.$row_pegawai['id_pegawai'].'">'.$row_pegawai['nama_pegawai'].'</option>';
+                                                                        }
+                                                                    ?>     
                                                                 </select>
                                                             </div>
                                                             <div class="col-lg-4">
                                                                 <label style="color:grey; padding:8px">Daftar Sebagai</label>
                                                             </div>
                                                             <div class="col-lg-8">
-                                                                <select id="inputState" class="form-control" name="status_kepegawaian" style="background-color: #F39C12; border-radius: 15px" required>
+                                                                <select id="inputState" class="form-control" name="level" style="background-color: #F39C12; border-radius: 15px" required>
                                                                     <option>Select..</option>
-                                                                    <option value="PNS">Orang Tua</option>
-                                                                    <option value="Non PNS">Dinas Provinsi</option>
-                                                                    <option value="Non PNS">Dinas Kabupaten/Kota</option>
+                                                                    <?php
+                                                                        $sql_level='select * from level';
+                                                                        $query_level=mysqli_query($koneksi,$sql_level);
+                                                                        while ($row_level=mysqli_fetch_assoc($query_level)){
+                                                                            echo '<option value="'.$row_level['id_level'].'">'.$row_level['nama_level'].'</option>';
+                                                                        }
+                                                                    ?>    
                                                                 </select>
                                                             </div>
                                                             <div class="col-lg-12 mt-2">
@@ -225,3 +243,39 @@
     <script src="js/main.js"></script>
 </body>
 </html>
+<?php
+if (isset($_POST['daftar'])){
+    function fail($username){
+        $nama=$_FILES['gambar']['name'];
+        $ext = explode('.', $nama);
+
+        $nama=$username.".".$ext[sizeof($ext)-1];
+        $temp=$_FILES['gambar']['tmp_name'];
+        if (move_uploaded_file($temp,'assets/img/'.$nama)){}
+        return $nama;
+    }
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+    $nama = $_POST["nama"];
+    $npsn = $_POST["npsn"];
+    $tempat_lahir = $_POST["tempat_lahir"];
+    $tanggal_lahir = $_POST["tanggal_lahir"];
+    $jenis_kelamin = $_POST["jenis_kelamin"];
+    $alamat = $_POST["alamat"];
+    $agama = $_POST["agama"];
+    $email = $_POST["email"];
+    $telephone = $_POST["telephone"];
+    $kepegawaian = $_POST["kepegawaian"];
+    $gambar = fail($username);
+    $level = $_POST["level"];
+
+
+    $query_sql = "INSERT INTO pengguna
+                                        VALUES ('','$nama', '$username', '$password','$npsn','$tempat_lahir','$tanggal_lahir','$jenis_kelamin','$alamat','$agama','$email','$telephone','$kepegawaian','$gambar','$level')";
+    if (mysqli_query($koneksi, $query_sql)) {
+        echo "<script>alert('Akun Anda berhasil terdaftar');window.location.href='login/index.php'</script>";
+    } else {
+        echo "<script>alert('Pendaftaran Gagal : " . mysqli_error($koneksi)."'</script>";
+    }
+}
+?>
