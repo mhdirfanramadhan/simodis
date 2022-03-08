@@ -9,34 +9,33 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="img/logo/logo-simodis.png" rel="icon">
-  <title>Simodis - Absensi</title>
+  <title>Simodis - Beranda</title>
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="css/ruang-admin.min.css" rel="stylesheet">
-  <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 </head>
 
 <body id="page-top">
   <div id="wrapper">
     <!-- Sidebar -->
     <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard-dinasprov.html">
         <div class="sidebar-brand-icon">
           <img src="img/logo/logo-simodis.png">
         </div>
         <div class="sidebar-brand-text mx-3">Simodis</div>
-    </a>
-    <hr class="sidebar-divider my-0">
-    <li class="nav-item">
-      <a class="nav-link" href="dashboard-dinasprov.html">
-        <i class="fas fa-fw fa-tachometer-alt"></i>
-        <span>Dashboard</span></a>
-    </li>
+      </a>
+      <hr class="sidebar-divider my-0">
+      <li class="nav-item">
+        <a class="nav-link" href="dashboard-dinasprov.html">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>Dashboard</span></a>
+      </li>
       <hr class="sidebar-divider">
       <div class="sidebar-heading">
         Features
       </div>
-    
+      
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrap"
           aria-expanded="true" aria-controls="collapseBootstrap">
@@ -85,7 +84,11 @@
           </div>
         </div>
       </li>
-    </ul>
+      <li class="nav-item">
+        <a class="nav-link" href="">
+          <i class="fa-solid fa-file-import"></i>
+          <span>Import</span></a>
+      </li>
       <hr class="sidebar-divider">
     </ul>
     <!-- Sidebar -->
@@ -106,7 +109,7 @@
                 aria-labelledby="searchDropdown">
                 <form class="navbar-search">
                   <div class="input-group">
-                    <input type="text" class="form-control bg-light border-1 small" placeholder="What do you want to look for?"
+                    <input type="text" class="form-control bg-light border-1 small" placeholder="Apa yang anda cari?"
                       aria-label="Search" aria-describedby="basic-addon2" style="border-color: #3f51b5;">
                     <div class="input-group-append">
                       <button class="btn btn-primary" type="button">
@@ -118,7 +121,7 @@
               </div>
             </li>
             
-            
+
             <div class="topbar-divider d-none d-sm-block"></div>
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
@@ -127,13 +130,13 @@
                 <span class="ml-2 d-none d-lg-inline text-white small">Admindinasprov</span>
               </a>
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="profile-dashboardOrtu.php">
+                <a class="dropdown-item" href="profil-dashboarddinas.php">
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                   Profile
                 </a>
-              
+               
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="javascript:void(0);" data-toggle="modal" data-target="#logoutModal">
+                <a class="dropdown-item" href="simodis/login/index.php" data-toggle="modal" data-target="#logoutModal">
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                   Logout
                 </a>
@@ -142,6 +145,7 @@
           </ul>
         </nav>
         <!-- Topbar -->
+
         <!-- Container Fluid-->
         <div class="container-fluid" id="container-wrapper">
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
@@ -153,97 +157,91 @@
             </ol>
           </div>
 
-          <!-- Row -->
-          <div class="row">
-            <div class="col-lg-6">
-              <!-- Modal basic -->
-              <div class="card mb-4">
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Jumlah Siswa SD aktif</h6>
-                </div>
-                <div class="card-body">
-                  <p>850 Siswa.</p>
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
-                    id="#myBtn">
-                    KLIK
-                  </button>
-                </div>
-              </div>
-              <!-- modal vertically centered -->
-              <div class="card mb-4">
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Jumlah Siswa SD non aktif</h6>
-                </div>
-                    <div class="card-body">
-                  <p>150 Siswa.</p>
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"
-                    id="#modalCenter">KLIK</button>
-                </div>
-                
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <!-- Modal with scrolling long content -->
-              <div class="card mb-4">
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Jumlah Siswa aktif Keseluruhan</h6>
-                </div>
-                <div class="card-body">
-                  <font color="green"><p>8500 Siswa</p></font><br>
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong"
-                    id="#modalLong">KLIK</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-6">
-              <!-- Modal basic -->
-              <div class="card mb-4">
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Jumlah Siswa non aktif Keseluruhan</h6>
-                </div>
-                <div class="card-body">
-                  <font color="red"><p>1500 Siswa.</p></font><br>
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
-                    id="#myBtn">
-                    KLIK
-                  </button>
-                </div>
-              </div>
-              <!-- modal vertically centered -->
-              <div class="card mb-4">
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Jumlah Siswa Sederjat aktif</h6>
-                </div>
-                    <div class="card-body">
-                  <p>850 Siswa.</p>
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"
-                    id="#modalCenter">KLIK</button>
-                </div>
-                
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <!-- Modal with scrolling long content -->
-              <div class="card mb-4">
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Jumlah Siswa Sederajat non aktif</h6>
-                </div>
-                <div class="card-body">
-                  <p>150 Siswa.</p>
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong"
-                    id="#modalLong">KLIK</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-6">
-          <!--Row-->
+          <div class="row mb-3">
+            
 
-
+            
+            <!-- Pie Chart -->
+            <div class="col-xl-4 col-lg-5">
+              <div class="card mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                 <Center> <h6 class="m-0 font-weight-bold text-primary">Jumlah Siswa Aktif</h6></Center>
+                  <div class="dropdown no-arrow">
+                    <div class=""
+                      aria-labelledby="">
+                      <div class="dropdown-header"></div>
+                      <a class="" href="#"></a>
+                      <a class="" href="#"></a>
+                      <a class="" href="#"></a>
+                      <a class="" href="#"></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="mb-3">
+                    <font color="red"> <div class="small text-gray-500">8.500 Siswa</font>
+                      <div class="small float-right"><b></b></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-5">
+              <div class="card mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                 <center><h6 class="m-0 font-weight-bold text-primary">Jumlah Keseluruhan Siswa </h6></center> 
+                  <div class="dropdown no-arrow">
+                    
+                    <div class=""
+                      aria-labelledby="">
+                      <div class="dropdown-header"></div>
+                      <a class="" href="#"></a>
+                      <a class="" href="#"></a>
+                      <a class="" href="#"></a>
+                      <a class="" href="#"></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="mb-3">
+                  <font color="red"> <div class="small text-gray-500">10.000 Siswa</font>
+                      <div class="small float-right"><b> </b></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-5">
+              <div class="card mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">Jumlah Siswa Non Aktif</h6>
+                  <div class="dropdown no-arrow">
+                    
+                    <div class=""
+                      aria-labelledby="">
+                      <div class="dropdown-header"></div>
+                      <a class="" href="#"></a>
+                      <a class="" href="#"></a>
+                      <a class="" href="#"></a>
+                      <a class="" href="#"></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="mb-3">
+                    <font color="red"><div class="small text-gray-500">1.500 Siswa</font> 
+                      <div class="small float-right"><b> </b></div>
+                    
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Invoice Example -->
+          
           <!-- Modal Logout -->
+          
+           
           <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout"
             aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -255,7 +253,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <p>Anda Yakin ingin logout?</p>
+                  <p>Apakah anda yakin ingin Logout?</p>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
@@ -268,10 +266,91 @@
         </div>
         <!---Container Fluid-->
       </div>
-
-      <!-- Footer -->
       
       <!-- Footer -->
+      <!-- Row -->
+      <div class="row">
+        <!-- Datatables -->
+        <div class="col-lg-12">
+          <div class="card mb-4">
+
+            <div class="table-responsive p-3">
+              <table class="table align-items-center table-flush" id="">
+                <thead class="thead-light">
+                  <tr>
+                    <th>TK</th>
+                    <th>PAUD</th>
+                    <th></th>
+                    <th>Sederajat</th>
+                  </tr>
+                </thead>
+                
+                <tbody>
+                  <tr>
+                    <td>TK Aisyiyah 19</td>
+                    <td>PAUD Anyelir</td>
+                    <td></td>
+                    <td>KB monrning dew presschool</td>
+                  </tr>
+                  <tr>
+                    <td>TK AL-Muslimah</td>
+                    <td>PAUD Cempaka</td>
+                    <td></td>
+                    <td>KB Yobel Bersinar</td>
+                  </tr>
+                  <tr>
+                    <td>TK Amaliyah</td>
+                    <td>PAUD Sekar Mayang</td>
+                    <td></td>
+                    <td>RA/BA/TA AL-Mukhlisin</td>
+                  </tr>
+                  <tr>
+                    <td>TK Islam addini</td>
+                    <td>PAUD Cherry</td>
+                    <td></td>
+                    <td>RA/BA/TA Anugerah</td>
+                  </tr>
+                  <tr>
+                    <td>TK Pelangi</td>
+                    <td>PAUD Rizky Ananda</td>
+                    <td></td>
+                    <td>RA/BA/TA Nurhayati</td>
+                  </tr>
+                  <tr>
+                    <td>TK Swasta ananda</td>
+                    <td>PAUD Kinanti</td>
+                    <td></td>
+                    <td>RA/BA/TA Nurul amri</td>
+                  </tr>
+                  <tr>
+                    <td>TK Swasta cinta kasih</td>
+                    <td>PAUD khairin kids</td>
+                    <td></td>
+                    <td>RB/BA/TA an-nur</td>
+                  </tr>
+                  <tr>
+                    <td>TK Ummi fatimah</td>
+                    <td>PAUD indrakasih</td>
+                    <td></td>
+                    <td>RA BA Fatimah</td>
+                  </tr>
+                  <tr>
+                    <td>TK Swasta ummi aida</td>
+                    <td>PAUD karya bakti</td>
+                    <td></td>
+                    <td>RA/BA/TA Hamdaniyah</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <!--Row-->
+      
+      <!-- Footer -->
+      
     </div>
   </div>
 
@@ -284,18 +363,8 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
   <script src="js/ruang-admin.min.js"></script>
-  <!-- Page level plugins -->
-  <script src="vendor/datatables/jquery.dataTables.min.js"></script>
-  <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
-
-  <!-- Page level custom scripts -->
-  <script>
-    $(document).ready(function () {
-      $('#dataTable').DataTable(); // ID From dataTable 
-      $('#dataTableHover').DataTable(); // ID From dataTable with Hover
-    });
-  </script>
-
+  <script src="vendor/chart.js/Chart.min.js"></script>
+  <script src="js/demo/chart-area-demo.js"></script>  
 </body>
 
 </html>
