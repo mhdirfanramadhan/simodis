@@ -61,7 +61,7 @@
         <div id="collapseForm" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Pilih</h6>
-            <a class="collapse-item" href="jlhsiswasma.html">SMK/SMA/Sederajat</a>
+            <a class="collapse-item" href="#">SMK/SMA/Sederajat</a>
             <a class="collapse-item" href="jlhsiswasmp.html">SMP/Sederajat</a>
             <a class="collapse-item" href="jlhsiswasd.html">SD/Sederajat</a>
             <a class="collapse-item" href="jlhmuridtk.html">TK/Sederajat</a>
@@ -85,7 +85,7 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="importprov.php">
+        <a class="nav-link" href="importkab.php">
           <i class="fa-solid fa-file-import"></i>
           <span>Import</span></a>
       </li>
@@ -130,7 +130,7 @@
                 <span class="ml-2 d-none d-lg-inline text-white small">Admindinasprov</span>
               </a>
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="profil-dashboarddinas.php">
+                <a class="dropdown-item" href="profil-dashboarddinaskab.php">
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                   Profile
                 </a>
@@ -149,10 +149,11 @@
         <!-- Container Fluid-->
         <div class="container-fluid" id="container-wrapper">
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Dashboard Dinas Prov</h1>
+            <h1 class="h3 mb-0 text-gray-800">SMK/SMA/Sederajat</h1>
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="">Dashboard Dinas Provinsi</a></li>
-              <li class="" aria-current=""></li>
+              <li class="breadcrumb-item"><a href="dashboard-dinasprov.html">Dashboard</a></li>
+              <li class="breadcrumb-item">Jumlah Siswa</li>
+              <li class="breadcrumb-item active" aria-current="page">SMK/SMA/Sederajat</li>
             </ol>
           </div>
 
@@ -164,12 +165,8 @@
             <div class="col-xl-4 col-lg-5">
               <div class="card mb-4">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Jumlah Siswa</h6>
+                 <Center> <h6 class="m-0 font-weight-bold text-primary">Jumlah Siswa Aktif</h6></Center>
                   <div class="dropdown no-arrow">
-                    <a class="dropdown-toggle btn btn-primary btn-sm" href="#" role="button" id="dropdownMenuLink"
-                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Detail <i class=""></i>
-                    </a>
                     <div class=""
                       aria-labelledby="">
                       <div class="dropdown-header"></div>
@@ -182,12 +179,8 @@
                 </div>
                 <div class="card-body">
                   <div class="mb-3">
-                    <div class="small text-gray-500">Keseluruhan Siswa 
-                      <div class="small float-right"><b>10.000 </b></div>
-                      <div class="progress" style="height: 12px;">
-                        <div class="progress-bar bg-warning" role="progressbar" style="width: 80%" aria-valuenow="80"
-                          aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
+                    <font color="red"> <div class="small text-gray-500">8.500 Siswa</font>
+                      <div class="small float-right"><b></b></div>
                     </div>
                   </div>
                 </div>
@@ -196,12 +189,9 @@
             <div class="col-xl-4 col-lg-5">
               <div class="card mb-4">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Jumlah Sekolah</h6>
+                 <center><h6 class="m-0 font-weight-bold text-primary">Jumlah Keseluruhan Siswa </h6></center> 
                   <div class="dropdown no-arrow">
-                    <a class="dropdown-toggle btn btn-primary btn-sm" href="#" role="button" id="dropdownMenuLink"
-                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Detail <i class=""></i>
-                    </a>
+                    
                     <div class=""
                       aria-labelledby="">
                       <div class="dropdown-header"></div>
@@ -214,12 +204,8 @@
                 </div>
                 <div class="card-body">
                   <div class="mb-3">
-                    <div class="small text-gray-500">Keseluruhan Sekolah 
-                      <div class="small float-right"><b>90 </b></div>
-                      <div class="progress" style="height: 12px;">
-                        <div class="progress-bar bg-danger" role="progressbar" style="width: 55%" aria-valuenow="55"
-                          aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
+                  <font color="red"> <div class="small text-gray-500">10.000 Siswa</font>
+                      <div class="small float-right"><b> </b></div>
                     </div>
                   </div>
                 </div>
@@ -228,12 +214,9 @@
             <div class="col-xl-4 col-lg-5">
               <div class="card mb-4">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Jumlah Guru</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">Jumlah Siswa Non Aktif</h6>
                   <div class="dropdown no-arrow">
-                    <a class="dropdown-toggle btn btn-primary btn-sm" href="#" role="button" id="dropdownMenuLink"
-                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Detail <i class=""></i>
-                    </a>
+                    
                     <div class=""
                       aria-labelledby="">
                       <div class="dropdown-header"></div>
@@ -246,21 +229,19 @@
                 </div>
                 <div class="card-body">
                   <div class="mb-3">
-                    <div class="small text-gray-500">Keseluruhan Guru 
-                      <div class="small float-right"><b>1500 </b></div>
-                      <div class="progress" style="height: 12px;">
-                        <div class="progress-bar bg-success" role="progressbar" style="width: 70%" aria-valuenow="70"
-                          aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
+                    <font color="red"><div class="small text-gray-500">1.500 Siswa</font> 
+                      <div class="small float-right"><b> </b></div>
+                    
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             <!-- Invoice Example -->
-           
-            
+          
           <!-- Modal Logout -->
+          
+           
           <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout"
             aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -285,9 +266,91 @@
         </div>
         <!---Container Fluid-->
       </div>
-      <!-- Footer -->
       
       <!-- Footer -->
+      <!-- Row -->
+      <div class="row">
+        <!-- Datatables -->
+        <div class="col-lg-12">
+          <div class="card mb-4">
+
+            <div class="table-responsive p-3">
+              <table class="table align-items-center table-flush" id="">
+                <thead class="thead-light">
+                  <tr>
+                    <th>SMA</th>
+                    <th>SMK</th>
+                    <th></th>
+                    <th>Sederajat</th>
+                  </tr>
+                </thead>
+                
+                <tbody>
+                  <tr>
+                    <td>SMA Swasta Plus Adzikia</td>
+                    <td>SMK Bina Taruna</td>
+                    <td></td>
+                    <td>MA Aisyiyah</td>
+                  </tr>
+                  <tr>
+                    <td>SMA Swasta Santho Nicholas</td>
+                    <td>SMK Dharma bakti</td>
+                    <td></td>
+                    <td>MA AL kautsar AL Akbar</td>
+                  </tr>
+                  <tr>
+                    <td>SMA UPMI</td>
+                    <td>SMK Nurcahaya</td>
+                    <td></td>
+                    <td>MA AL Manar</td>
+                  </tr>
+                  <tr>
+                    <td>SMA Afifiyah</td>
+                    <td>SMK Swadaya</td>
+                    <td></td>
+                    <td>MA AL washliyah</td>
+                  </tr>
+                  <tr>
+                    <td>SMA Al-Ulum</td>
+                    <td>SMK Tritech informatika</td>
+                    <td></td>
+                    <td>MA AL Furqoon</td>
+                  </tr>
+                  <tr>
+                    <td>SMA Budi Mumi 3</td>
+                    <td>SMK Bina Media</td>
+                    <td></td>
+                    <td>MA IAIN</td>
+                  </tr>
+                  <tr>
+                    <td>SMA Dharmawarngsa</td>
+                    <td>SMK Bina Sastra</td>
+                    <td></td>
+                    <td>MAN 1</td>
+                  </tr>
+                  <tr>
+                    <td>SMA Gajah mada</td>
+                    <td>SMK Markus</td>
+                    <td></td>
+                    <td>MAN 2</td>
+                  </tr>
+                  <tr>
+                    <td>SMA karya bhakti</td>
+                    <td>SMK Lestari</td>
+                    <td></td>
+                    <td>MA Teladan</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <!--Row-->
+      
+      <!-- Footer -->
+      
     </div>
   </div>
 

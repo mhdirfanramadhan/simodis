@@ -1,42 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
+  <head>
   <script src="https://kit.fontawesome.com/3cd968700c.js" crossorigin="anonymous"></script>
-  <meta charset="utf-8">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="img/logo/logo-simodis.png" rel="icon">
-  <title>Simodis - Beranda</title>
+  <title>Simodis - import</title>
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="css/ruang-admin.min.css" rel="stylesheet">
-</head>
-
-<body id="page-top">
+    <style>
+.container_{margin:10px;padding:5px;border:solid 1px #eee;}
+  .image_upload > input{display:none;}
+  input[type=text]{width:220px;height:auto;}
+    </style>
+    <body class="w3-light-grey">
+  </head>
+  <body>
+  <body id="page-top">
   <div id="wrapper">
     <!-- Sidebar -->
     <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
-        <div class="sidebar-brand-icon">
-          <img src="img/logo/logo-simodis.png">
-        </div>
-        <div class="sidebar-brand-text mx-3">Simodis</div>
-      </a>
-      <hr class="sidebar-divider my-0">
-      <li class="nav-item">
-        <a class="nav-link" href="dashboard-dinasprov.html">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
+          <div class="sidebar-brand-icon">
+            <img src="img/logo/logo-simodis.png">
+          </div>
+          <div class="sidebar-brand-text mx-3">Simodis</div>
+        </a>
+        <hr class="sidebar-divider my-0">
+        <li class="nav-item">
+          <a class="nav-link" href="dashboard-dinasprov.html">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Dashboard</span></a>
-      </li>
-      <hr class="sidebar-divider">
-      <div class="sidebar-heading">
-        Features
-      </div>
+            <span>Dashboard</span></a>
+        </li>
+        <hr class="sidebar-divider">
+        <div class="sidebar-heading">
+          Features
+        </div>
       
-      <li class="nav-item">
+        <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrap"
           aria-expanded="true" aria-controls="collapseBootstrap">
           <i class="fa-solid fa-list-ul"></i>
@@ -85,12 +91,15 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="importprov.php">
+        <a class="nav-link" href="#">
           <i class="fa-solid fa-file-import"></i>
           <span>Import</span></a>
       </li>
-      <hr class="sidebar-divider">
-    </ul>
+  
+      
+        <hr class="sidebar-divider">
+  
+      </ul>
     <!-- Sidebar -->
     <div id="content-wrapper" class="d-flex flex-column">
       <div id="content">
@@ -109,7 +118,7 @@
                 aria-labelledby="searchDropdown">
                 <form class="navbar-search">
                   <div class="input-group">
-                    <input type="text" class="form-control bg-light border-1 small" placeholder="Apa yang anda cari?"
+                    <input type="text" class="form-control bg-light border-1 small" placeholder="What do you want to look for?"
                       aria-label="Search" aria-describedby="basic-addon2" style="border-color: #3f51b5;">
                     <div class="input-group-append">
                       <button class="btn btn-primary" type="button">
@@ -121,6 +130,9 @@
               </div>
             </li>
             
+            <li class="nav-item dropdown no-arrow mx-1">
+            
+            </li>
 
             <div class="topbar-divider d-none d-sm-block"></div>
             <li class="nav-item dropdown no-arrow">
@@ -134,134 +146,20 @@
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                   Profile
                 </a>
-               
+              
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="simodis/login/index.php" data-toggle="modal" data-target="#logoutModal">
+                <a class="dropdown-item" href="javascript:void(0);" data-toggle="modal" data-target="#logoutModal">
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                   Logout
                 </a>
               </div>
-            </li>
+             </li>
+            </div>
           </ul>
         </nav>
-        <!-- Topbar -->
 
-        <!-- Container Fluid-->
-        <div class="container-fluid" id="container-wrapper">
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Dashboard Dinas Prov</h1>
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="">Dashboard Dinas Provinsi</a></li>
-              <li class="" aria-current=""></li>
-            </ol>
-          </div>
-
-          <div class="row mb-3">
-            
-
-            
-            <!-- Pie Chart -->
-            <div class="col-xl-4 col-lg-5">
-              <div class="card mb-4">
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Jumlah Siswa</h6>
-                  <div class="dropdown no-arrow">
-                    <a class="dropdown-toggle btn btn-primary btn-sm" href="#" role="button" id="dropdownMenuLink"
-                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Detail <i class=""></i>
-                    </a>
-                    <div class=""
-                      aria-labelledby="">
-                      <div class="dropdown-header"></div>
-                      <a class="" href="#"></a>
-                      <a class="" href="#"></a>
-                      <a class="" href="#"></a>
-                      <a class="" href="#"></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <div class="mb-3">
-                    <div class="small text-gray-500">Keseluruhan Siswa 
-                      <div class="small float-right"><b>10.000 </b></div>
-                      <div class="progress" style="height: 12px;">
-                        <div class="progress-bar bg-warning" role="progressbar" style="width: 80%" aria-valuenow="80"
-                          aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-5">
-              <div class="card mb-4">
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Jumlah Sekolah</h6>
-                  <div class="dropdown no-arrow">
-                    <a class="dropdown-toggle btn btn-primary btn-sm" href="#" role="button" id="dropdownMenuLink"
-                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Detail <i class=""></i>
-                    </a>
-                    <div class=""
-                      aria-labelledby="">
-                      <div class="dropdown-header"></div>
-                      <a class="" href="#"></a>
-                      <a class="" href="#"></a>
-                      <a class="" href="#"></a>
-                      <a class="" href="#"></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <div class="mb-3">
-                    <div class="small text-gray-500">Keseluruhan Sekolah 
-                      <div class="small float-right"><b>90 </b></div>
-                      <div class="progress" style="height: 12px;">
-                        <div class="progress-bar bg-danger" role="progressbar" style="width: 55%" aria-valuenow="55"
-                          aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-5">
-              <div class="card mb-4">
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Jumlah Guru</h6>
-                  <div class="dropdown no-arrow">
-                    <a class="dropdown-toggle btn btn-primary btn-sm" href="#" role="button" id="dropdownMenuLink"
-                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Detail <i class=""></i>
-                    </a>
-                    <div class=""
-                      aria-labelledby="">
-                      <div class="dropdown-header"></div>
-                      <a class="" href="#"></a>
-                      <a class="" href="#"></a>
-                      <a class="" href="#"></a>
-                      <a class="" href="#"></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <div class="mb-3">
-                    <div class="small text-gray-500">Keseluruhan Guru 
-                      <div class="small float-right"><b>1500 </b></div>
-                      <div class="progress" style="height: 12px;">
-                        <div class="progress-bar bg-success" role="progressbar" style="width: 70%" aria-valuenow="70"
-                          aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Invoice Example -->
-           
-            
-          <!-- Modal Logout -->
-          <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout"
+        <!-- Modal Logout -->
+        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout"
             aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
@@ -272,7 +170,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <p>Apakah anda yakin ingin Logout?</p>
+                  <p>Anda Yakin ingin logout?</p>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
@@ -281,17 +179,93 @@
               </div>
             </div>
           </div>
+        <!-- Topbar -->
+        <h3 class="text-center text-success mt-3">Import Data</h3></a>
+        <table rules="rows">
+        <tr>
+        <th></th>
+        </tr>
+        <tr>
 
+         </tr>
+
+         </table>
+        <center><div class="container_">
+            <p>
+             Import Sekolah
+            </p>
+          <p class="image_upload">
+            <label for="userImage">
+            <a class="btn btn-warning btn-sm" rel="nofollow"><span class='glyphicon glyphicon-paperclip'></span>Pilih File</a>
+            </label>
+            <input type="file" name="userImage" id="userImage">
+            <a class="btn btn-warning btn-sm" rel="nofollow"><span class='glyphicon glyphicon-paperclip'></span>Import</a>
+            </label>
+            <input type="submit" name="userImage" id="userImage">
+          </p>
+        </div></center> 
+
+        <center><div class="container_">
+          <p>
+            Import Jumlah Siswa
+          </p>
+          <p class="image_upload">
+            <label for="userImage">
+              <a class="btn btn-warning btn-sm" rel="nofollow"><span class='glyphicon glyphicon-paperclip'></span> Pilih File</a>
+            </label>
+           <input type="file" name="userImage" id="userImage">
+           <a class="btn btn-warning btn-sm" rel="nofollow"><span class='glyphicon glyphicon-paperclip'></span>Import</a>
+            </label>
+            <input type="submit" name="userImage" id="userImage">
+          </p>
+        </div></center>
+
+        <center><div class="container_">
+          <p>
+            Import Jumlah Guru
+          </p>
+          <p class="image_upload">
+              <label for="userImage">
+               <a class="btn btn-warning btn-sm" rel="nofollow"><span class='glyphicon glyphicon-paperclip'></span>Pilih File</a>
+              </label>
+              
+              <input type="file" name="userImage" id="userImage">
+              <a class="btn btn-warning btn-sm" rel="nofollow"><span class='glyphicon glyphicon-paperclip'></span>Import</a>
+            </label>
+            <input type="submit" name="userImage" id="userImage">
+          </p>
+        </div></center>
+        <div class="container_">
+          <p>
+          </p>
+          <p class="image_upload">
+              <label for="userImage">
+               
+              </label>
+              <input type="file" name="userImage" id="userImage">
+
+            </label>
+            <input type="submit" name="userImage" id="userImage">
+          </p>
         </div>
-        <!---Container Fluid-->
-      </div>
-      <!-- Footer -->
-      
-      <!-- Footer -->
-    </div>
-  </div>
+        <div class="container_">
+          <p>
 
-  <!-- Scroll to top -->
+          </p>
+          <p class="image_upload">
+              <label for="userImage">
+               
+              </label>
+              <input type="file" name="userImage" id="userImage">
+              
+            </label>
+            <input type="submit" name="userImage" id="userImage">
+          </p>
+        </div>
+
+       
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Scroll to top -->
   <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
   </a>
@@ -302,6 +276,5 @@
   <script src="js/ruang-admin.min.js"></script>
   <script src="vendor/chart.js/Chart.min.js"></script>
   <script src="js/demo/chart-area-demo.js"></script>  
-</body>
-
+  </body>
 </html>

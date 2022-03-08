@@ -156,7 +156,7 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="">
+        <a class="nav-link" href="importprov.php">
           <i class="fa-solid fa-file-import"></i>
           <span>Import</span></a>
       </li>
@@ -200,7 +200,7 @@
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 <img class="img-profile rounded-circle" src="img/boy.png" style="max-width: 60px">
-                <span class="ml-2 d-none d-lg-inline text-white small">admindinaskab</span>
+                <span class="ml-2 d-none d-lg-inline text-white small">Admindinaskab</span>
               </a>
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                 <a class="" href="">
