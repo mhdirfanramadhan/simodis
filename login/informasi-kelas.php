@@ -97,6 +97,17 @@ background: rgba(25, 73, 243, 0.95);
 </head>
 
 <body id="page-top">
+<?php
+ session_start();
+ if($_SESSION['level']=="")
+    echo "<script>document.location.href = 'http://localhost/simodis/login/index.php';</script>";
+    
+ include "../koneksi.php";
+$username = $_SESSION['username'];
+      $sql_ortu="select * from pengguna where username='". $_SESSION['username']."'";
+      $sql_query=mysqli_query($koneksi,$sql_ortu);
+      $row_ortu=mysqli_fetch_assoc($sql_query);
+ ?>
   <div id="wrapper">
     <!-- Sidebar -->
     <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
@@ -145,8 +156,8 @@ background: rgba(25, 73, 243, 0.95);
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                <img class="img-profile rounded-circle" src="img/boy.png" style="max-width: 60px">
-                <span class="ml-2 d-none d-lg-inline text-white small">User</span>
+                <img src="../assets/img/<?php echo $row_ortu['gambar']; ?>" class="img-profile rounded-circle" style="max-width: 60px">
+                <?php echo $_SESSION['username']; ?></b></p>
               </a>
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                 <a class="dropdown-item" href="profile-dashboardOrtu.php">
@@ -164,8 +175,8 @@ background: rgba(25, 73, 243, 0.95);
           </ul>
         </nav>
         <!-- Topbar -->
-        <a href="">Edit Profil Murid</a>
-        <h3 class="text-center text-success mt-3">Informasi Murid</h3></a>
+        <a href="">Edit</a>
+        <h3 class="text-center text-success mt-3">Informasi Kelas</h3></a>
 
         <div class="button">
             <ul class="left" active>
@@ -197,73 +208,44 @@ background: rgba(25, 73, 243, 0.95);
                       <tr>
                         <th>No</th>
                         <th>Kelas</th>
-                        <th>Jurusan</th>
+                        <th>Jurusan</th>                       
                         <th>Wali Kelas</th>
                       </tr>
                     </thead>
                     
                     <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>XI-01</td>
-                        <td>RPL</td>
-                        <td>Nina Julianti</td>
-                      </tr>
+                    <?php 
+                      $sql_kelas="select * from kelas";
+                      $query_kelas=mysqli_query($koneksi, $sql_kelas);
+                      $no=1;
+                      while ($row=mysqli_fetch_assoc($query_kelas)){
+                        echo '<tr>';
+                        echo "<td>".$no++."</td>";
+                        
+                        $kelas=$row['kelas'];
+                        if ($kelas=='1') $kelas_rmw='I';
+                        else if ($kelas=='2') $kelas_rmw='II';
+                        else if ($kelas=='3') $kelas_rmw='III';
+                        else if ($kelas=='4') $kelas_rmw='IV';
+                        else if ($kelas=='5') $kelas_rmw='V';
+                        else if ($kelas=='6') $kelas_rmw='VI';
+                        else if ($kelas=='7') $kelas_rmw='VII';
+                        else if ($kelas=='8') $kelas_rmw='VIII';
+                        else if ($kelas=='9') $kelas_rmw='IX';
+                        else if ($kelas=='10') $kelas_rmw='X';
+                        else if ($kelas=='11') $kelas_rmw='XI';
+                        else if ($kelas=='12') $kelas_rmw='XII';
+                        echo "<td>".$kelas_rmw.'-'.$row['sub_kelas']."</td>";
+                        echo "<td>".$row['jurusan']."</td>";
+                        echo "<td>".$row['wali_kelas']."</td>";
+                        echo '</tr>';
 
-                      <tr>
-                        <td>2</td>
-                        <td>XI-02</td>
-                        <td>RPL</td>
-                        <td>Dedi Leman</td>
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                        <td>XI-03</td>
-                        <td>RPL</td>
-                        <td>Fatimah Dewi</td>
-                      </tr>
-                      <tr>
-                        <td>4</td>
-                        <td>XI-01</td>
-                        <td>RPL</td>
-                        <td>Keddy</td>
-                      </tr>
-                      <tr>
-                        <td>5</td>
-                        <td>XI-01</td>
-                        <td>RPL</td>
-                        <td>Sabri</td>
-                      </tr>
-                      <tr>
-                        <td>6</td>
-                        <td>XI-01</td>
-                        <td>RPL</td>
-                        <td>Diyah Firla</td>
-                      </tr>
-                      <tr>
-                        <td>7</td>
-                        <td>XI-01</td>
-                        <td>RPL</td>
-                        <td>Permata Sari</td>
-                      </tr>
-                      <tr>
-                        <td>8</td>
-                        <td>XI-01</td>
-                        <td>RPL</td>
-                        <td>Ningsih Lana</td>
-                      </tr>
-                      <tr>
-                        <td>9</td>
-                        <td>XI-01</td>
-                        <td>RPL</td>
-                        <td>Madara Uciwa</td>
-                      </tr>
-                      <tr>
-                        <td>10</td>
-                        <td>XI-01</td>
-                        <td>RPL</td>
-                        <td>Sri wulandari</td>
-                      </tr>
+                      }
+                    ?>
+                      
+
+                      
+                      
                     </tbody>
                   </table>
                 </div>

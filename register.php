@@ -263,7 +263,7 @@ if (isset($_POST['daftar'])){
 
 
     $query_sql = "INSERT INTO pengguna
-                                        VALUES ('','$nama', '$username', '$password','$tempat_lahir','$tanggal_lahir','$jenis_kelamin','$alamat','$agama','$email','$telephone','$kepegawaian','$gambar','$level')";
+                                        VALUES ('$nama', '$username', '$password','$tempat_lahir','$tanggal_lahir','$jenis_kelamin','$alamat','$agama','$email','$telephone','$kepegawaian','$gambar','$level', now())";
     if (mysqli_query($koneksi, $query_sql)) {
         echo "<script>alert('Akun Anda berhasil terdaftar');window.location.href='login/index.php'</script>";
     } else {

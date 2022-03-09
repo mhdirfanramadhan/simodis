@@ -97,6 +97,22 @@ background: rgba(25, 73, 243, 0.95);
 </head>
 
 <body id="page-top">
+<?php
+ session_start();
+ if($_SESSION['level']=="")
+    echo "<script>document.location.href = 'http://localhost/simodis/login/index.php';</script>";
+    
+ include "../koneksi.php";
+$username = $_SESSION['username'];
+      $sql_ortu="select * from pengguna where username='". $_SESSION['username']."'";
+      $sql_query=mysqli_query($koneksi,$sql_ortu);
+      $row_ortu=mysqli_fetch_assoc($sql_query);
+ ?>
+ <?php 
+            $sql_sekolah="select * from sekolah";
+            $query_sekolah=mysqli_query($koneksi, $sql_sekolah);
+            $row_sekolah=mysqli_fetch_assoc($query_sekolah);
+?>
   <div id="wrapper">
     <!-- Sidebar -->
     <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
@@ -145,8 +161,8 @@ background: rgba(25, 73, 243, 0.95);
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                <img class="img-profile rounded-circle" src="img/boy.png" style="max-width: 60px">
-                <span class="ml-2 d-none d-lg-inline text-white small">User</span>
+                <img src="../assets/img/<?php echo $row_ortu['gambar']; ?>" class="img-profile rounded-circle" style="max-width: 60px">
+                <?php echo $_SESSION['username']; ?></b></p>
               </a>
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                 <a class="dropdown-item" href="profile-dashboardOrtu.php">
@@ -196,112 +212,49 @@ background: rgba(25, 73, 243, 0.95);
                     <thead class="thead-light">
                       <tr>
                         <th>No</th>
+                        <th>NISN/NIS</th>
+                        <th>Nama</th>
                         <th>Kelas</th>
-                        <th>Jurusan</th>
-                        <th>Nis</th>
-                        <th>Nama Siswa</th>
+                        <th>Jurusan</th>                       
                         <th>Tahun Ajaran</th>
                         <th>Class</th>
                       </tr>
                     </thead>
                     
                     <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>XI-01</td>
-                        <td>RPL</td>
-                        <td>012421</td>
-                        <td>Syaifudin</td>
-                        <td>2021/2020</td>
-                        <td>Eksekutif</td>
-                      </tr>
+                    <?php 
+                      $sql_murid="select * from murid";
+                      $query_murid=mysqli_query($koneksi, $sql_murid);
+                      $no=1;
+                      while ($row=mysqli_fetch_assoc($query_murid)){
+                        echo '<tr>';
+                        echo "<td>".$no++."</td>";
+                        echo "<td>".$row['nisn']."/".$row['nis']."</td>";
+                        echo "<td>".$row['nama']."</td>";
+                        
 
-                      <tr>
-                        <td>2</td>
-                        <td>XI-01</td>
-                        <td>RPL</td>
-                        <td>012421</td>
-                        <td>Farrel</td>
-                        <td>2021/2020</td>
-                        <td>Eksekutif</td>
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                        <td>XI-01</td>
-                        <td>RPL</td>
-                        <td>1104122</td>
-                        <td>Irfan Ramadhan</td>
-                        <td>2021/2020</td>
-                        <td>Eksekutif</td>
-                      </tr>
-                      <tr>
-                        <td>4</td>
-                        <td>XI-01</td>
-                        <td>RPL</td>
-                        <td>3201941</td>
-                        <td>Daffa Giovany</td>
-                        <td>2021/2020</td>
-                        <td>Eksekutif</td>
-                      </tr>
-                      <tr>
-                        <td>5</td>
-                        <td>XI-01</td>
-                        <td>RPL</td>
-                        <td>5320953</td>
-                        <td>Ramadhan Nasution</td>
-                        <td>2021/2020</td>
-                        <td>Eksekutif</td>
-                      </tr>
-                      <tr>
-                        <td>6</td>
-                        <td>XI-01</td>
-                        <td>RPL</td>
-                        <td>4214215</td>
-                        <td>Ajis Pratama</td>
-                        <td>2021/2020</td>
-                        <td>Eksekutif</td>
-                      </tr>
+                        $kelas=$row['kelas'];
+                        if ($kelas=='1') $kelas_rmw='I';
+                        else if ($kelas=='2') $kelas_rmw='II';
+                        else if ($kelas=='3') $kelas_rmw='III';
+                        else if ($kelas=='4') $kelas_rmw='IV';
+                        else if ($kelas=='5') $kelas_rmw='V';
+                        else if ($kelas=='6') $kelas_rmw='VI';
+                        else if ($kelas=='7') $kelas_rmw='VII';
+                        else if ($kelas=='8') $kelas_rmw='VIII';
+                        else if ($kelas=='9') $kelas_rmw='IX';
+                        else if ($kelas=='10') $kelas_rmw='X';
+                        else if ($kelas=='11') $kelas_rmw='XI';
+                        else if ($kelas=='12') $kelas_rmw='XII';
+                        echo "<td>".$kelas_rmw.'-'.$row['sub_kelas']."</td>";
+                        echo "<td>".$row['jurusan']."</td>";
+                        echo "<td>".$row['tahun_ajaran']."</td>";
+                        echo "<td>".$row['class']."</td>";
+                        echo '</tr>';
 
-                      <tr>
-                        <td>7</td>
-                        <td>XI-01</td>
-                        <td>RPL</td>
-                        <td>46234</td>
-                        <td>Sepyan Permana</td>
-                        <td>2021/2020</td>
-                        <td>Regular</td>
-                      </tr>
-
-                      <tr>
-                        <td>8</td>
-                        <td>XI-01</td>
-                        <td>RPL</td>
-                        <td>54234</td>
-                        <td>Andika Siregar</td>
-                        <td>2021/2020</td>
-                        <td>Regular</td>
-                      </tr>
-
-                      <tr>
-                        <td>9</td>
-                        <td>XI-01</td>
-                        <td>RPL</td>
-                        <td>4214215</td>
-                        <td>Selvia Agustin</td>
-                        <td>2021/2020</td>
-                        <td>Eksekutif</td>
-                      </tr>
-
-                      <tr>
-                        <td>10</td>
-                        <td>XI-01</td>
-                        <td>RPL</td>
-                        <td>4323423</td>
-                        <td>Riza</td>
-                        <td>2021/2020</td>
-                        <td>Regular</td>
-                      </tr>
-
+                      }
+                    ?>
+                      
 
                       
                       

@@ -63,7 +63,7 @@
 }
 
 .btn2 {
-    margin: 1px;
+    margin: 30px;
     border-radius: 0.6em;
     color: #e74c3c;
     font-size: 1rem;
@@ -316,6 +316,12 @@ $username = $row_pengguna['username'];
         <table border="0" width="100%" style="padding-left: 2px; padding-right: 13px;">
           <tbody>
           
+          <tr>
+          <tr>
+              <td class="textt" style="font-family: Cambria;">NPSN</td>
+                <td>:</td>
+                <td style="font-family: Courier New;"><?php echo $row_sekolah['npsn'] ?></td>
+            </tr>
           <tr>
           <tr>
               <td class="textt" style="font-family: Cambria;">NSS</td>

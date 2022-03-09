@@ -190,6 +190,14 @@ $username = $_SESSION['username'];
 
                                                 <div class="col-lg-9">
                                                     <div class="form-group">
+                                                    <div class="row">
+                                                            <div class="col-lg-4">
+                                                            <label style="color:grey; padding:8px ">NPSN</label>
+                                                            </div>
+                                                            <div class="col-lg-8">
+                                                                <input type="text" class="form-control" name="npsn" value='<?php echo $row_sekolah["npsn"]; ?>' style="background-color: #F39C12; border-radius: 15px" readonly>
+                                                            </div>
+                                                        </div>
                                                         <div class="row">
                                                             <div class="col-lg-4">
                                                             <label style="color:grey; padding:8px ">NSS</label>
@@ -327,7 +335,7 @@ $username = $_SESSION['username'];
                                                             </div>
                                                         </div>
                                                         <div class="col-lg-12 mt-2" style="margin: 1px; margin-left: 10px;">
-                                                            <input type="hidden" name="gambarLama" value="../assets/img/<?php echo $row_sekolah['gambar']; ?>" class="custom-file-input">
+                                                            <input type="hidden" name="gambarLama" value="<?php echo $row_sekolah['gambar']; ?>" class="custom-file-input">
                                                              <input type="file" name="gambar" class="custom-file-input">
                                                              <label class="custom-file-label">Foto Profile</label>
                                                             </div>
