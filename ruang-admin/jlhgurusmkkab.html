@@ -9,10 +9,11 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="img/logo/logo-simodis.png" rel="icon">
-  <title>Simodis - Beranda</title>
+  <title>Simodis - JumlahGuruSmk</title>
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="css/ruang-admin.min.css" rel="stylesheet">
+  <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 </head>
 
 <body id="page-top">
@@ -28,14 +29,14 @@
       <hr class="sidebar-divider my-0">
       <li class="nav-item">
         <a class="nav-link" href="dashboard-dinaskabkota.html">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
+        <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>
       <hr class="sidebar-divider">
       <div class="sidebar-heading">
         Features
       </div>
-      
+    
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrap"
           aria-expanded="true" aria-controls="collapseBootstrap">
@@ -90,6 +91,10 @@
           <span>Import</span></a>
       </li>
     </ul>
+    
+      <hr class="sidebar-divider">
+
+    </ul>
     <!-- Sidebar -->
     <div id="content-wrapper" class="d-flex flex-column">
       <div id="content">
@@ -108,7 +113,7 @@
                 aria-labelledby="searchDropdown">
                 <form class="navbar-search">
                   <div class="input-group">
-                    <input type="text" class="form-control bg-light border-1 small" placeholder="Apa yang anda cari?"
+                    <input type="text" class="form-control bg-light border-1 small" placeholder="What do you want to look for?"
                       aria-label="Search" aria-describedby="basic-addon2" style="border-color: #3f51b5;">
                     <div class="input-group-append">
                       <button class="btn btn-primary" type="button">
@@ -120,7 +125,7 @@
               </div>
             </li>
             
-
+            
             <div class="topbar-divider d-none d-sm-block"></div>
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
@@ -133,9 +138,9 @@
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                   Profile
                 </a>
-               
+              
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="simodis/login/index.php" data-toggle="modal" data-target="#logoutModal">
+                <a class="dropdown-item" href="javascript:void(0);" data-toggle="modal" data-target="#logoutModal">
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                   Logout
                 </a>
@@ -144,112 +149,206 @@
           </ul>
         </nav>
         <!-- Topbar -->
-
         <!-- Container Fluid-->
         <div class="container-fluid" id="container-wrapper">
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Dashboard Dinas Kab</h1>
+            <h1 class="h3 mb-0 text-gray-800">Jumlah Guru SMK</h1>
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="">Dashboard Dinas Kab</a></li>
-              <li class="" aria-current=""></li>
+              <li class="breadcrumb-item"><a href="dashboard-dinaskabkota.html">Dashboard</a></li>
+              <li class="breadcrumb-item">SMA/SMK/Sederajat</li>
+              <li class="breadcrumb-item active" aria-current="page">Jumlah Guru SMK</li>
             </ol>
           </div>
 
-          <div class="row mb-3">
-            
+          <!-- Row -->
+          <div class="row">
+            <!-- Datatables -->
+            <div class="col-lg-12">
+              <div class="card mb-4">
 
+                <div class="table-responsive p-3">
+                  <table class="table align-items-center table-flush" id="dataTable">
+                    <thead class="thead-light">
+                      <tr>
+                        <th>Nama Sekolah</th>
+                        <th>Jumlah PNS</th>
+                        <th>Jumlah honor</th>
+                        <th>Tingkat administrasi</th>
+                      </tr>
+                    </thead>
+                    
+                    <tbody>
+                      <tr>
+                        <td>SMA Swasta Plus Adzikia</td>
+                        <td>7 guru</td>
+                        <td>7 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>SMA Swasta Santho Nicholas</td>
+                        <td>7 guru</td>
+                        <td>7 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>SMA UPMI</td>
+                        <td>7 guru</td>
+                        <td>7 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>SMA Afifiyah</td>
+                        <td>7 guru</td>
+                        <td>7 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>SMA Al-Ulum</td>
+                        <td>7 guru</td>
+                        <td>7 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>SMA Budi Mumi 3</td>
+                        <td>7 guru</td>
+                        <td>8 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>SMA Dharmawarngsa</td>
+                        <td>8 guru</td>
+                        <td>7 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>SMA Gajah mada</td>
+                        <td>7 guru</td>
+                        <td>8 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>SMA karya bhakti</td>
+                        <td>8 guru</td>
+                        <td>7 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>SMK bina taruna</td>
+                        <td>7 guru</td>
+                        <td>8 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>SMK Dharma bakti</td>
+                        <td>8 guru</td>
+                        <td>7 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>SMK Nurcahaya</td>
+                        <td>7 guru</td>
+                        <td>7 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>SMK Swadaya</td>
+                        <td>7 guru</td>
+                        <td>7 guru</td>
+                        <td>2 guru</td>
+                        <tr>
+                            <td>SMK Tritech informatika</td>
+                            <td>8 guru</td>
+                            <td>8 guru</td>
+                            <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>SMK bina media</td>
+                        <td>7 guru</td>
+                        <td>8 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>SMK bina sasta</td>
+                        <td>8 guru</td>
+                        <td>7 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>SMK markus</td>
+                        <td>7 guru</td>
+                        <td>8 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>SMK Lestari</td>
+                        <td>8 guru</td>
+                        <td>8 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>MA Aisyiyah</td>
+                        <td>7 guru</td>
+                        <td>8 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>MA al kautsar al akbar</td>
+                        <td>8 guru</td>
+                        <td>7 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>MA al manar</td>
+                        <td>7 guru</td>
+                        <td>8 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>MA al washliyah</td>
+                        <td>8 guru</td>
+                        <td>7 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>MA al furqoon</td>
+                        <td>7 guru</td>
+                        <td>8 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>MA iain</td>
+                        <td>7 guru</td>
+                        <td>8 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>MAN 1</td>
+                        <td>7 guru</td>
+                        <td>8 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>MAN 2</td>
+                        <td>7 guru</td>
+                        <td>8 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                      <tr>
+                        <td>MA Teladan</td>
+                        <td>7 guru</td>
+                        <td>8 guru</td>
+                        <td>2 guru</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
             
-            <!-- Pie Chart -->
-            <div class="col-xl-4 col-lg-5">
-              <div class="card mb-4">
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Jumlah Siswa</h6>
-                  <div class="dropdown no-arrow">
-                    
-                    <div class=""
-                      aria-labelledby="">
-                      <div class="dropdown-header"></div>
-                      <a class="" href="#"></a>
-                      <a class="" href="#"></a>
-                      <a class="" href="#"></a>
-                      <a class="" href="#"></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <div class="mb-3">
-                    <div class="small text-gray-500">Keseluruhan Siswa 
-                      <div class="small float-right"><b>10.000 </b></div>
-                      <div class="progress" style="height: 12px;">
-                        <div class="progress-bar bg-warning" role="progressbar" style="width: 80%" aria-valuenow="80"
-                          aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-5">
-              <div class="card mb-4">
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Jumlah Sekolah</h6>
-                  <div class="dropdown no-arrow">
-                    
-                    <div class=""
-                      aria-labelledby="">
-                      <div class="dropdown-header"></div>
-                      <a class="" href="#"></a>
-                      <a class="" href="#"></a>
-                      <a class="" href="#"></a>
-                      <a class="" href="#"></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <div class="mb-3">
-                    <div class="small text-gray-500">Keseluruhan Sekolah 
-                      <div class="small float-right"><b>90 </b></div>
-                      <div class="progress" style="height: 12px;">
-                        <div class="progress-bar bg-danger" role="progressbar" style="width: 55%" aria-valuenow="55"
-                          aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-5">
-              <div class="card mb-4">
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Jumlah Guru</h6>
-                  <div class="dropdown no-arrow">
-                    
-                    <div class=""
-                      aria-labelledby="">
-                      <div class="dropdown-header"></div>
-                      <a class="" href="#"></a>
-                      <a class="" href="#"></a>
-                      <a class="" href="#"></a>
-                      <a class="" href="#"></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <div class="mb-3">
-                    <div class="small text-gray-500">Keseluruhan Guru 
-                      <div class="small float-right"><b>1500 </b></div>
-                      <div class="progress" style="height: 12px;">
-                        <div class="progress-bar bg-success" role="progressbar" style="width: 70%" aria-valuenow="70"
-                          aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Invoice Example -->
-           
-            
+          </div>
+          <!--Row-->
+
+
           <!-- Modal Logout -->
           <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout"
             aria-hidden="true">
@@ -262,7 +361,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <p>Apakah anda yakin ingin Logout?</p>
+                  <p>Anda Yakin ingin logout?</p>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
@@ -275,6 +374,7 @@
         </div>
         <!---Container Fluid-->
       </div>
+
       <!-- Footer -->
       
       <!-- Footer -->
@@ -290,8 +390,18 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
   <script src="js/ruang-admin.min.js"></script>
-  <script src="vendor/chart.js/Chart.min.js"></script>
-  <script src="js/demo/chart-area-demo.js"></script>  
+  <!-- Page level plugins -->
+  <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script>
+    $(document).ready(function () {
+      $('#dataTable').DataTable(); // ID From dataTable 
+      $('#dataTableHover').DataTable(); // ID From dataTable with Hover
+    });
+  </script>
+
 </body>
 
 </html>

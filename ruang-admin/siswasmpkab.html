@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="img/logo/logo-simodis.png" rel="icon">
-  <title>Simodis - Beranda</title>
+  <title>Simodis - JumlahSiswaSmp</title>
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="css/ruang-admin.min.css" rel="stylesheet">
@@ -62,7 +62,7 @@
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Pilih</h6>
             <a class="collapse-item" href="siswasmakab.html">SMK/SMA/Sederajat</a>
-            <a class="collapse-item" href="siswasmpkab.html">SMP/Sederajat</a>
+            <a class="collapse-item" href="#">SMP/Sederajat</a>
             <a class="collapse-item" href="siswasdkab.html">SD/Sederajat</a>
             <a class="collapse-item" href="siswatkkab.html">TK/Sederajat</a>
           </div>
@@ -148,10 +148,11 @@
         <!-- Container Fluid-->
         <div class="container-fluid" id="container-wrapper">
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Dashboard Dinas Kab</h1>
+            <h1 class="h3 mb-0 text-gray-800">SMP/Sederajat</h1>
             <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="">Dashboard Dinas Kab</a></li>
-              <li class="" aria-current=""></li>
+              <li class="breadcrumb-item"><a href="dashboard-dinaskabkota.html">Dashboard</a></li>
+              <li class="breadcrumb-item">Jumlah Siswa</li>
+              <li class="breadcrumb-item active" aria-current="page">SMP/Sederajat</li>
             </ol>
           </div>
 
@@ -163,9 +164,8 @@
             <div class="col-xl-4 col-lg-5">
               <div class="card mb-4">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Jumlah Siswa</h6>
+                 <Center> <h6 class="m-0 font-weight-bold text-primary">Jumlah Siswa Aktif</h6></Center>
                   <div class="dropdown no-arrow">
-                    
                     <div class=""
                       aria-labelledby="">
                       <div class="dropdown-header"></div>
@@ -178,12 +178,8 @@
                 </div>
                 <div class="card-body">
                   <div class="mb-3">
-                    <div class="small text-gray-500">Keseluruhan Siswa 
-                      <div class="small float-right"><b>10.000 </b></div>
-                      <div class="progress" style="height: 12px;">
-                        <div class="progress-bar bg-warning" role="progressbar" style="width: 80%" aria-valuenow="80"
-                          aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
+                    <font color="red"> <div class="small text-gray-500">8.500 Siswa</font>
+                      <div class="small float-right"><b></b></div>
                     </div>
                   </div>
                 </div>
@@ -192,7 +188,7 @@
             <div class="col-xl-4 col-lg-5">
               <div class="card mb-4">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Jumlah Sekolah</h6>
+                 <center><h6 class="m-0 font-weight-bold text-primary">Jumlah Keseluruhan Siswa </h6></center> 
                   <div class="dropdown no-arrow">
                     
                     <div class=""
@@ -207,12 +203,8 @@
                 </div>
                 <div class="card-body">
                   <div class="mb-3">
-                    <div class="small text-gray-500">Keseluruhan Sekolah 
-                      <div class="small float-right"><b>90 </b></div>
-                      <div class="progress" style="height: 12px;">
-                        <div class="progress-bar bg-danger" role="progressbar" style="width: 55%" aria-valuenow="55"
-                          aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
+                  <font color="red"> <div class="small text-gray-500">10.000 Siswa</font>
+                      <div class="small float-right"><b> </b></div>
                     </div>
                   </div>
                 </div>
@@ -221,7 +213,7 @@
             <div class="col-xl-4 col-lg-5">
               <div class="card mb-4">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Jumlah Guru</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">Jumlah Siswa Non Aktif</h6>
                   <div class="dropdown no-arrow">
                     
                     <div class=""
@@ -236,21 +228,19 @@
                 </div>
                 <div class="card-body">
                   <div class="mb-3">
-                    <div class="small text-gray-500">Keseluruhan Guru 
-                      <div class="small float-right"><b>1500 </b></div>
-                      <div class="progress" style="height: 12px;">
-                        <div class="progress-bar bg-success" role="progressbar" style="width: 70%" aria-valuenow="70"
-                          aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
+                    <font color="red"><div class="small text-gray-500">1.500 Siswa</font> 
+                      <div class="small float-right"><b> </b></div>
+                    
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             <!-- Invoice Example -->
-           
-            
+          
           <!-- Modal Logout -->
+          
+           
           <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout"
             aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -275,9 +265,92 @@
         </div>
         <!---Container Fluid-->
       </div>
-      <!-- Footer -->
       
       <!-- Footer -->
+      <!-- Row -->
+      <div class="row">
+        <!-- Datatables -->
+        <div class="col-lg-12">
+          <div class="card mb-4">
+
+            <div class="table-responsive p-3">
+              <table class="table align-items-center table-flush" id="">
+                <thead class="thead-light">
+                  <tr>
+                    <th>SMP</th>
+                    <th>|</th>
+                    <th></th>
+                    <th>Sederajat</th>
+                  </tr>
+                </thead>
+                
+                <tbody>
+                  <tr>
+                    <td>SMP Abdi Sukma</td>
+                    <td>|</td>
+                    <td></td>
+                    <td>MTSS AL-ittihadiyah</td>
+                  </tr>
+                  <tr>
+                    <td>SMP Budi Insani</td>
+                    <td>|</td>
+                    <td></td>
+                    <td>MTSS AL-Manar</td>
+                  </tr>
+                  <tr>
+                    <td>SMP Era ibang</td>
+                    <td>|</td>
+                    <td></td>
+                    <td>MTSS AL-Waslhiyah</td>
+                  </tr>
+                  <tr>
+                    <td>SMP Al-azhar</td>
+                    <td>|</td>
+                    <td></td>
+                    <td>MTSS Nurul Huda</td>
+                  </tr>
+                  <tr>
+                    <td>SMP Negeri 11</td>
+                    <td>|</td>
+                    <td></td>
+                    <td>MTSS 2</td>
+                  </tr>
+                  <tr>
+                    <td>SMP Negeri 22</td>
+                    <td>|</td>
+                    <td></td>
+                    <td>MTSS Al-barakah</td>
+                  </tr>
+                  <tr>
+                    <td>SMP Methodist 9</td>
+                    <td>|</td>
+                    <td></td>
+                    <td>MTSS Al-jihad</td>
+                  </tr>
+                  <tr>
+                    <td>SMP pahlawan nasional</td>
+                    <td>|</td>
+                    <td></td>
+                    <td>MTSS Teladan</td>
+                  </tr>
+                  <tr>
+                    <td>SMP Negeri 27</td>
+                    <td>|</td>
+                    <td></td>
+                    <td>MTSS Islamiyah</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <!--Row-->
+      
+      
+      <!-- Footer -->
+      
     </div>
   </div>
 
