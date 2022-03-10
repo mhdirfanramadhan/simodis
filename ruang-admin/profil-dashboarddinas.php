@@ -10,7 +10,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="img/logo/logo-simodis.png" rel="icon">
-  <title>Simodis - Profile</title>
+  <title>Simodis - ProfileProv</title>
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="css/ruang-admin.min.css" rel="stylesheet">
@@ -156,7 +156,7 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="">
+        <a class="nav-link" href="importprov.php">
           <i class="fa-solid fa-file-import"></i>
           <span>Import</span></a>
       </li>
