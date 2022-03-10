@@ -156,7 +156,7 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="">
+        <a class="nav-link" href="importprov.php">
           <i class="fa-solid fa-file-import"></i>
           <span>Import</span></a>
       </li>
