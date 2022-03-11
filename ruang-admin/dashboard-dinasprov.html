@@ -27,7 +27,7 @@
       </a>
       <hr class="sidebar-divider my-0">
       <li class="nav-item">
-        <a class="nav-link" href="dashboard-dinasprov.html">
+        <a class="nav-link" href="#">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>
@@ -89,7 +89,7 @@
           <i class="fa-solid fa-file-import"></i>
           <span>Import</span></a>
       </li>
-      <hr class="sidebar-divider">
+      
     </ul>
     <!-- Sidebar -->
     <div id="content-wrapper" class="d-flex flex-column">
@@ -166,10 +166,7 @@
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                   <h6 class="m-0 font-weight-bold text-primary">Jumlah Siswa</h6>
                   <div class="dropdown no-arrow">
-                    <a class="dropdown-toggle btn btn-primary btn-sm" href="#" role="button" id="dropdownMenuLink"
-                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Detail <i class=""></i>
-                    </a>
+                    
                     <div class=""
                       aria-labelledby="">
                       <div class="dropdown-header"></div>
@@ -198,10 +195,7 @@
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                   <h6 class="m-0 font-weight-bold text-primary">Jumlah Sekolah</h6>
                   <div class="dropdown no-arrow">
-                    <a class="dropdown-toggle btn btn-primary btn-sm" href="#" role="button" id="dropdownMenuLink"
-                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Detail <i class=""></i>
-                    </a>
+                    
                     <div class=""
                       aria-labelledby="">
                       <div class="dropdown-header"></div>
@@ -230,10 +224,7 @@
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                   <h6 class="m-0 font-weight-bold text-primary">Jumlah Guru</h6>
                   <div class="dropdown no-arrow">
-                    <a class="dropdown-toggle btn btn-primary btn-sm" href="#" role="button" id="dropdownMenuLink"
-                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Detail <i class=""></i>
-                    </a>
+                    
                     <div class=""
                       aria-labelledby="">
                       <div class="dropdown-header"></div>
@@ -258,7 +249,32 @@
               </div>
             </div>
             <!-- Invoice Example -->
-           
+           <!-- Row -->
+          <div class="row">
+            <!-- Area Charts -->
+            <div class="col-lg-12">
+              <div class="card mb-4">
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">Area Chart</h6>
+                </div>
+                <div class="card-body">
+                  <div class="chart-area">
+                    <canvas id="myAreaChart"></canvas>
+                  </div>
+                <hr>
+                Styling 
+                <code>/js/demo/chart-area-demo.js</code> file.
+                </div>
+              </div>
+            </div>
+            <!-- Bar Chart -->
+            <footer class="">
+              <div class="">
+                <div class="">
+                 <span> &copy; <script> document.write(new Date().getFullYear()); </script> - Simodis <b><a href="#"
+                        target="_blank"></a></b> </span>
+            <!-- Donut Chart -->
+          <!-- Pie Chart -->
             
           <!-- Modal Logout -->
           <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout"
@@ -272,11 +288,11 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <p>Apakah anda yakin ingin Logout?</p>
+                  <p>Apakah anda ingin Logout?</p>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
-                  <a href="http://localhost/simodis/" class="btn btn-primary">Logout</a>
+                  <a href="http://localhost/simodis/index.php" class="btn btn-primary">Logout</a>
                 </div>
               </div>
             </div>
