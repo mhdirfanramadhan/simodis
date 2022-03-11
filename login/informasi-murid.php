@@ -180,7 +180,21 @@ $username = $_SESSION['username'];
           </ul>
         </nav>
         <!-- Topbar -->
+        <table rules="rows">
+        <tr>
+        <th></th>
+        </tr>
+        <tr>
+
+         </tr>
         <a href="#">Edit Profil Murid</a>
+        <table rules="rows">
+        <tr>
+        <th></th>
+        </tr>
+        <tr>
+
+         </tr>
         <h3 class="text-center text-success mt-3">Informasi Murid</h3></a>
 
         <div class="button">

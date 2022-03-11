@@ -200,7 +200,40 @@ $username = $_SESSION['username'];
     <div class="row">
       <div class="col-md-4">
       <center><div class="foto">
-        <img src="../assets/img/<?php echo $row_ortu['gambar']; ?>" class="img-thumbnail" alt="" width="400" height="180">
+        <img src="../assets/img/<?php echo $row_ortu['gambar']; ?>" class="img-thumbnail" alt="">
+        <style>
+.button {
+  border: none;
+  color: white;
+  padding: 0px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin:12px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.button1 {
+  background-color: orange; 
+  color: black; 
+  border: 2px solid #6D6A6C;
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+</style>
+<a href="ganti-password.php"> <button class="button button1" style="font-family: Cambria;">Change Password</button></a>
+
       </div></center>
       </div>
       <div class="col-md-8 kertas-biodata">
