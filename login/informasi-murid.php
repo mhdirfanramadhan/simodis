@@ -62,7 +62,7 @@
     position: absolute;
 width: 500px;
 left: 650px;
-top: 215px;
+top: 175px;
   }
 .button ul a{
   padding: 10px;
@@ -74,7 +74,7 @@ top: 215px;
 width: 412px;
 height: 51px;
 left: 545px;
-top: 1000px;
+top: 900px;
 
 background: rgba(25, 73, 243, 0.95);
 }
@@ -92,6 +92,17 @@ background: rgba(25, 73, 243, 0.95);
 }
 .fourth:hover {
   background-position: 0;
+}
+
+.edit1 {
+  margin: 5px;
+  color: green;
+  border-radius: 5px;
+}
+.edit2 {
+  margin: 7px;
+  color: red;
+  border-radius: 5px;
 }
 </style>
 </head>
@@ -180,25 +191,16 @@ $username = $_SESSION['username'];
           </ul>
         </nav>
         <!-- Topbar -->
-        <table rules="rows">
-        <tr>
-        <th></th>
-        </tr>
-        <tr>
+        
 
          </tr>
-        <a href="#">Edit Profil Murid</a>
-        <table rules="rows">
-        <tr>
-        <th></th>
-        </tr>
-        <tr>
+       
 
          </tr>
         <h3 class="text-center text-success mt-3">Informasi Murid</h3></a>
 
         <div class="button">
-            <ul class="left" active>
+            <ul class="left active">
               <a href="sekolah.php">Informasi Sekolah</a>
             </ul>
             
@@ -211,13 +213,17 @@ $username = $_SESSION['username'];
                 <a href="informasi-murid.php">Informasi Murid</a>
             </ul>
         </div>
+        
+        
         <!-- Container Fluid-->
         <div class="container-fluid" id="container-wrapper">
-
-
           <!-- Row -->
           <div class="row">
             <!-- Datatables -->
+            <div class="justify-content-end card-header">
+                        <a href="AddStudent.php" class="btn btn-outline-primary">
+                        <i class="fa-solid fa-plus"></i> Tambah</a>
+         </div>
             <div class="col-lg-12">
               <div class="card mb-4">
 
@@ -231,54 +237,68 @@ $username = $_SESSION['username'];
                         <th>Kelas</th>
                         <th>Jurusan</th>                       
                         <th>Tahun Ajaran</th>
-                        <th>Class</th>
+                        <th>Tingkat</th>
+                        <th>Aksi</th>
+
                       </tr>
                     </thead>
-                    
                     <tbody>
                     <?php 
                       $sql_murid="select * from murid";
                       $query_murid=mysqli_query($koneksi, $sql_murid);
                       $no=1;
-                      while ($row=mysqli_fetch_assoc($query_murid)){
-                        echo '<tr>';
-                        echo "<td>".$no++."</td>";
-                        echo "<td>".$row['nisn']."/".$row['nis']."</td>";
-                        echo "<td>".$row['nama']."</td>";
-                        
-
-                        $kelas=$row['kelas'];
-                        if ($kelas=='1') $kelas_rmw='I';
-                        else if ($kelas=='2') $kelas_rmw='II';
-                        else if ($kelas=='3') $kelas_rmw='III';
-                        else if ($kelas=='4') $kelas_rmw='IV';
-                        else if ($kelas=='5') $kelas_rmw='V';
-                        else if ($kelas=='6') $kelas_rmw='VI';
-                        else if ($kelas=='7') $kelas_rmw='VII';
-                        else if ($kelas=='8') $kelas_rmw='VIII';
-                        else if ($kelas=='9') $kelas_rmw='IX';
-                        else if ($kelas=='10') $kelas_rmw='X';
-                        else if ($kelas=='11') $kelas_rmw='XI';
-                        else if ($kelas=='12') $kelas_rmw='XII';
-                        echo "<td>".$kelas_rmw.'-'.$row['sub_kelas']."</td>";
-                        echo "<td>".$row['jurusan']."</td>";
-                        echo "<td>".$row['tahun_ajaran']."</td>";
-                        echo "<td>".$row['class']."</td>";
-                        echo '</tr>';
-
-                      }
-                    ?>
-                      
-
-                      
-                      
-                    </tbody>
+                      while ($row=mysqli_fetch_assoc($query_murid)){ ?>
+                                            <tr>
+                                                <td><?php echo $no; ?></td>
+                                                <td><?php echo $row['nisn']."/".$row['nis']; ?></td>
+                                                <td><?php echo $row['nama']; ?></td>
+                                                <?php
+                                                    $kelas=$row['kelas'];
+                                                    if ($kelas=='1') $kelas_rmw='I';
+                                                    else if ($kelas=='2') $kelas_rmw='II';
+                                                    else if ($kelas=='3') $kelas_rmw='III';
+                                                    else if ($kelas=='4') $kelas_rmw='IV';
+                                                    else if ($kelas=='5') $kelas_rmw='V';
+                                                    else if ($kelas=='6') $kelas_rmw='VI';
+                                                    else if ($kelas=='7') $kelas_rmw='VII';
+                                                    else if ($kelas=='8') $kelas_rmw='VIII';
+                                                    else if ($kelas=='9') $kelas_rmw='IX';
+                                                    else if ($kelas=='10') $kelas_rmw='X';
+                                                    else if ($kelas=='11') $kelas_rmw='XI';
+                                                    else if ($kelas=='12') $kelas_rmw='XII';
+                                                    echo "<td>".$kelas_rmw.'-'.$row['sub_kelas']."</td>";
+                                                    
+                                                ?>
+                                                <td><?php echo $row['jurusan']; ?></td>
+                                                <td><?php echo $row['tahun_ajaran']; ?></td>
+                                                <td><?php echo $row['class']; ?></td>
+                                                <td><span>
+                                                <a href="EditStudent.php?nisn=<?php echo $row['nisn']; ?>" class="btn btn-outline-primary">Edit</a> 
+                                                <button class="btn btn-outline-danger" type="submit" name="hapus" value="<?php echo $row['nisn']; ?>">Delete</button>
+                                                </span>
+                                                </td>
+                                            </tr>
+                                        <?php $no++; } ?>
+                                    </tbody>
+                    
                   </table>
                 </div>
               </div>
             </div>
             
           </div>
+          <?php 
+     include "../koneksi.php";
+     if(isset($_POST['hapus'])) {
+      $kode = explode(" ", $_POST['hapus']);
+      $sql_siswa = "SELECT * FROM murid WHERE nama='".$kode[1]."'";
+      $query_siswa = $koneksi->query($sql_siswa);
+      
+      $delete_siswa = "DELETE FROM murid WHERE nisn='".$kode[0]."'";
+      if($koneksi->query($delete_siswa)) echo "<script>alert('Berhasil Dihapus'); window.location.href= 'StudentTable.php'</script>";
+      else echo "<script>alert('Gagal Dihapus');</script>";
+  }
+        ?> 
           <!--Row-->
 
 
@@ -313,7 +333,7 @@ $username = $_SESSION['username'];
       <!-- Footer -->
     </div>
   </div>
-  <a href="orang_tua.php" class="btn2 fourth">Kembali</a>
+
   <!-- Scroll to top -->
   <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>

@@ -409,8 +409,6 @@ $username = $row_pengguna['username'];
     </div>
   </div>
 </div>
-
-<a href="orang_tua.php" class="btn2 fourth">Kembali</a>
 <table rules="rows">
         <tr>
         <th></th>

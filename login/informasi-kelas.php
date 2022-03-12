@@ -62,7 +62,7 @@
     position: absolute;
 width: 500px;
 left: 650px;
-top: 215px;
+top: 180px;
   }
 .button ul a{
   padding: 10px;
@@ -175,7 +175,6 @@ $username = $_SESSION['username'];
           </ul>
         </nav>
         <!-- Topbar -->
-        <a href="">Edit</a>
         <h3 class="text-center text-success mt-3">Informasi Kelas</h3></a>
 
         <div class="button">
@@ -199,54 +198,61 @@ $username = $_SESSION['username'];
           <!-- Row -->
           <div class="row">
             <!-- Datatables -->
+            <div class="justify-content-end card-header">
+                        <a href="AddStudent.php" class="btn btn-outline-primary">
+                        <i class="fa-solid fa-plus"></i> Tambah</a>
+         </div>
             <div class="col-lg-12">
               <div class="card mb-4">
 
                 <div class="table-responsive p-3">
-                  <table class="table align-items-center table-flush" id="dataTable">
+                <table class="table align-items-center table-flush" id="dataTable">
                     <thead class="thead-light">
                       <tr>
                         <th>No</th>
                         <th>Kelas</th>
-                        <th>Jurusan</th>                       
-                        <th>Wali Kelas</th>
+                        <th>Jurusan</th>  
+                        <th>Wali Kelas</th>                     
+                        <th>Aksi</th>
+
                       </tr>
                     </thead>
-                    
                     <tbody>
                     <?php 
                       $sql_kelas="select * from kelas";
                       $query_kelas=mysqli_query($koneksi, $sql_kelas);
                       $no=1;
-                      while ($row=mysqli_fetch_assoc($query_kelas)){
-                        echo '<tr>';
-                        echo "<td>".$no++."</td>";
-                        
-                        $kelas=$row['kelas'];
-                        if ($kelas=='1') $kelas_rmw='I';
-                        else if ($kelas=='2') $kelas_rmw='II';
-                        else if ($kelas=='3') $kelas_rmw='III';
-                        else if ($kelas=='4') $kelas_rmw='IV';
-                        else if ($kelas=='5') $kelas_rmw='V';
-                        else if ($kelas=='6') $kelas_rmw='VI';
-                        else if ($kelas=='7') $kelas_rmw='VII';
-                        else if ($kelas=='8') $kelas_rmw='VIII';
-                        else if ($kelas=='9') $kelas_rmw='IX';
-                        else if ($kelas=='10') $kelas_rmw='X';
-                        else if ($kelas=='11') $kelas_rmw='XI';
-                        else if ($kelas=='12') $kelas_rmw='XII';
-                        echo "<td>".$kelas_rmw.'-'.$row['sub_kelas']."</td>";
-                        echo "<td>".$row['jurusan']."</td>";
-                        echo "<td>".$row['wali_kelas']."</td>";
-                        echo '</tr>';
-
-                      }
-                    ?>
-                      
-
-                      
-                      
-                    </tbody>
+                      while ($row=mysqli_fetch_assoc($query_kelas)){ ?>
+                                            <tr>
+                                                <td><?php echo $no; ?></td>
+                                                <?php
+                                                    $kelas=$row['kelas'];
+                                                    if ($kelas=='1') $kelas_rmw='I';
+                                                    else if ($kelas=='2') $kelas_rmw='II';
+                                                    else if ($kelas=='3') $kelas_rmw='III';
+                                                    else if ($kelas=='4') $kelas_rmw='IV';
+                                                    else if ($kelas=='5') $kelas_rmw='V';
+                                                    else if ($kelas=='6') $kelas_rmw='VI';
+                                                    else if ($kelas=='7') $kelas_rmw='VII';
+                                                    else if ($kelas=='8') $kelas_rmw='VIII';
+                                                    else if ($kelas=='9') $kelas_rmw='IX';
+                                                    else if ($kelas=='10') $kelas_rmw='X';
+                                                    else if ($kelas=='11') $kelas_rmw='XI';
+                                                    else if ($kelas=='12') $kelas_rmw='XII';
+                                                    echo "<td>".$kelas_rmw.'-'.$row['sub_kelas']."</td>";
+                                                    
+                                                ?>
+                                                <td><?php echo $row['jurusan']; ?></td>
+                                                <td><?php echo $row['wali_kelas']; ?></td>
+                                                <td><span>
+                                                <a href="EditStudent.php?nisn=<?php echo $row['nisn']; ?>" class="btn btn-outline-primary">Edit</a> 
+                                                <button class="btn btn-outline-danger" type="submit" name="hapus" value="<?php echo $row['nisn']; ?>">Delete</button>
+                                                </span>
+                                                </td>
+                                            </tr>
+                                        <?php $no++; } ?>
+                                    </tbody>
+                    
                   </table>
                 </div>
               </div>
@@ -287,7 +293,6 @@ $username = $_SESSION['username'];
       <!-- Footer -->
     </div>
   </div>
-  <a href="orang_tua.php" class="btn2 fourth">Kembali</a>
   <!-- Scroll to top -->
   <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
