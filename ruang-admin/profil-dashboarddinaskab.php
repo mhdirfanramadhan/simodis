@@ -97,7 +97,7 @@
         <div class="sidebar-brand-text mx-3">Simodis</div>
       </a>
       <hr class="sidebar-divider my-0">
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="dashboard-dinaskabkota.html">
         <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
@@ -116,10 +116,10 @@
         <div id="collapseBootstrap" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Pilih</h6>
-            <a class="collapse-item" href="nilaisma.html">SMK/SMA/Sederajat</a>
-            <a class="collapse-item" href="nilaismp.html">SMP/Sederajat</a>
-            <a class="collapse-item" href="nilaisd.html">SD/Sederajat</a>
-            <a class="collapse-item" href="nilaitk.html">TK/Sederajat</a>
+            <a class="collapse-item" href="sklhsmakab.html">SMK/SMA/Sederajat</a>
+            <a class="collapse-item" href="sklhsmpkab.html">SMP/Sederajat</a>
+            <a class="collapse-item" href="sklhsdkab.html">SD/Sederajat</a>
+            <a class="collapse-item" href="sklhtkkab.html">TK/Sederajat</a>
           </div>
         </div>
       </li>
@@ -132,10 +132,10 @@
         <div id="collapseForm" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Pilih</h6>
-            <a class="collapse-item" href="jlhsiswasma.html">SMK/SMA/Sederajat</a>
-            <a class="collapse-item" href="jlhsiswasmp.html">SMP/Sederajat</a>
-            <a class="collapse-item" href="jlhsiswasd.html">SD/Sederajat</a>
-            <a class="collapse-item" href="jlhmuridtk.html">TK/Sederajat</a>
+            <a class="collapse-item" href="siswasmakab.html">SMK/SMA/Sederajat</a>
+            <a class="collapse-item" href="siswasmpkab.html">SMP/Sederajat</a>
+            <a class="collapse-item" href="siswasdkab.html">SD/Sederajat</a>
+            <a class="collapse-item" href="siswatkkab.html">TK/Sederajat</a>
           </div>
         </div>
       </li>
@@ -148,15 +148,15 @@
         <div id="collapsePage" class="collapse" aria-labelledby="headingPage" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Pilih</h6>
-            <a class="collapse-item" href="jlhgurupns.html">SMK/SMA/Sederajat</a>
-            <a class="collapse-item" href="jlhgurusmp.html">SMP/Sederajat</a>
-            <a class="collapse-item" href="jlhgurusd.html">SD/Sederajat</a>
-            <a class="collapse-item" href="jlhgurutk.html">TK/Sederajat</a>
+            <a class="collapse-item" href="gurusmakab.html">SMK/SMA/Sederajat</a>
+            <a class="collapse-item" href="gurusmpkab.html">SMP/Sederajat</a>
+            <a class="collapse-item" href="gurusdkab.html">SD/Sederajat</a>
+            <a class="collapse-item" href="gurutkkab.html">TK/Sederajat</a>
           </div>
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="importprov.php">
+        <a class="nav-link" href="importkab.php">
           <i class="fa-solid fa-file-import"></i>
           <span>Import</span></a>
       </li>

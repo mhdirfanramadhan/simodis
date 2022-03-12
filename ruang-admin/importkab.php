@@ -33,7 +33,7 @@
         </a>
         <hr class="sidebar-divider my-0">
         <li class="nav-item">
-          <a class="nav-link" href="dashboard-dinasprov.html">
+          <a class="nav-link" href="dashboard-dinaskabkota.html">
           <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
         </li>
@@ -118,7 +118,7 @@
                 aria-labelledby="searchDropdown">
                 <form class="navbar-search">
                   <div class="input-group">
-                    <input type="text" class="form-control bg-light border-1 small" placeholder="What do you want to look for?"
+                    <input type="text" class="form-control bg-light border-1 small" placeholder="Apa yang anda cari?"
                       aria-label="Search" aria-describedby="basic-addon2" style="border-color: #3f51b5;">
                     <div class="input-group-append">
                       <button class="btn btn-primary" type="button">
