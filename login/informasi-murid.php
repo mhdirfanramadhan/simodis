@@ -221,12 +221,12 @@ $username = $_SESSION['username'];
           <div class="row">
             <!-- Datatables -->
             <div class="justify-content-end card-header">
-                        <a href="AddStudent.php" class="btn btn-outline-primary">
+                        <a href="tambah-murid.php" class="btn btn-outline-primary">
                         <i class="fa-solid fa-plus"></i> Tambah</a>
          </div>
             <div class="col-lg-12">
               <div class="card mb-4">
-
+              <form action="" method="POST">
                 <div class="table-responsive p-3">
                   <table class="table align-items-center table-flush" id="dataTable">
                     <thead class="thead-light">
@@ -273,7 +273,7 @@ $username = $_SESSION['username'];
                                                 <td><?php echo $row['tahun_ajaran']; ?></td>
                                                 <td><?php echo $row['class']; ?></td>
                                                 <td><span>
-                                                <a href="EditStudent.php?nisn=<?php echo $row['nisn']; ?>" class="btn btn-outline-primary">Edit</a> 
+                                                <a href="edit-murid.php?nisn=<?php echo $row['nisn']; ?>" class="btn btn-outline-primary">Edit</a> 
                                                 <button class="btn btn-outline-danger" type="submit" name="hapus" value="<?php echo $row['nisn']; ?>">Delete</button>
                                                 </span>
                                                 </td>
@@ -283,20 +283,19 @@ $username = $_SESSION['username'];
                     
                   </table>
                 </div>
-              </div>
+               </div>
+              </form> 
             </div>
             
           </div>
           <?php 
      include "../koneksi.php";
      if(isset($_POST['hapus'])) {
-      $kode = explode(" ", $_POST['hapus']);
-      $sql_siswa = "SELECT * FROM murid WHERE nama='".$kode[1]."'";
-      $query_siswa = $koneksi->query($sql_siswa);
-      
-      $delete_siswa = "DELETE FROM murid WHERE nisn='".$kode[0]."'";
-      if($koneksi->query($delete_siswa)) echo "<script>alert('Berhasil Dihapus'); window.location.href= 'StudentTable.php'</script>";
-      else echo "<script>alert('Gagal Dihapus');</script>";
+      $nisn = $_POST['hapus'];
+      $delete_siswa = "DELETE FROM murid WHERE nisn='".$nisn."'";
+      echo $delete_siswa;
+      if($koneksi->query($delete_siswa)) echo "<script>alert('Berhasil Dihapus'); window.location.href= 'informasi-murid.php'</script>";
+      else echo "<script>alert('".$nisn."');</script>";
   }
         ?> 
           <!--Row-->
