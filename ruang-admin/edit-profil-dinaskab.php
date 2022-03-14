@@ -61,7 +61,7 @@ html,body,h1,h2,h3,h4,h5 {}
         <div class="sidebar-brand-text mx-3">Simodis</div>
       </a>
       <hr class="sidebar-divider my-0">
-      <li class="nav-item ">
+      <li class="nav-item">
         <a class="nav-link" href="dashboard-dinaskabkota.html">
         <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
