@@ -61,6 +61,11 @@ $username = $_SESSION['username'];
       $sql_query=mysqli_query($koneksi,$sql_ortu);
       $row_ortu=mysqli_fetch_assoc($sql_query);
  ?>
+ <?php 
+            $sql_murid="select * from murid";
+            $query_murid=mysqli_query($koneksi, $sql_murid);
+            $row_murid=mysqli_fetch_assoc($query_murid);
+?>
   <div id="wrapper">
     <!-- Sidebar -->
     <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
@@ -176,8 +181,8 @@ $username = $_SESSION['username'];
                                 <div class="row no-gutters">
                                     <div class="col-xl-12">
                                         <div class="auth-form">
-                                            <h4 class="text-center mb-4" style="margin-top:-50px";>Edit Profile</h4>
-                                            <a href="profile-dashboardOrtu.php" class="btn2 third"> < Kembali</a> 
+                                            <h4 class="text-center mb-4" style="margin-top:-50px";>Edit data murid</h4>
+                                            <a href="informasi-murid.php" class="btn2 third"> < Kembali</a> 
                                             <form action=""  method="post" enctype="multipart/form-data">
                                                 <div class="row">
                                                     <div class="col-lg-3">
@@ -185,12 +190,20 @@ $username = $_SESSION['username'];
 
                                                 <div class="col-lg-9">
                                                     <div class="form-group">
-                                                        <div class="row">
+                                                    <div class="row">
                                                             <div class="col-lg-4">
-                                                            <label style="color:grey; padding:8px ">Username</label>
+                                                            <label style="color:grey; padding:8px ">NISN</label>
                                                             </div>
                                                             <div class="col-lg-8">
-                                                                <input type="text" class="form-control" name="username" value='<?php echo $row_ortu["username"]; ?>' placeholder="Username" style="background-color: #F39C12; border-radius: 15px" readonly>
+                                                                <input type="text" class="form-control" name="nisn" value='<?php echo $row_murid["nisn"]; ?>' style="background-color: #F39C12; border-radius: 15px" readonly>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-lg-4">
+                                                            <label style="color:grey; padding:8px ">NIS</label>
+                                                            </div>
+                                                            <div class="col-lg-8">
+                                                                <input type="text" class="form-control" name="nis" value='<?php echo $row_murid["nis"]; ?>' style="background-color: #F39C12; border-radius: 15px">
                                                             </div>
                                                         </div>
                                                       
@@ -199,99 +212,34 @@ $username = $_SESSION['username'];
                                                             <label style="color:grey; padding:8px">Nama</label>
                                                             </div>
                                                             <div class="col-lg-8">
-                                                                <input type="text" class="form-control" name="nama" value='<?php echo $row_ortu["nama"]; ?>' placeholder="Nama Lengkap Anda" style="background-color: #F39C12; border-radius: 15px" required>
-                                                            </div>
-                                                        </div>   
-                                                       
-                                                        <div class="row">
-                                                            <div class="col-lg-4">
-                                                            <label style="color:grey; padding:8px">Tempat Lahir </label>
-                                                            </div>
-                                                            <div class="col-lg-8">
-                                                                <input type="text" class="form-control" name="tempat_lahir" value='<?php echo $row_ortu["tempat_lahir"]; ?>' placeholder="Masukkan tempat lahir Anda" style="background-color: #F39C12; border-radius: 15px" required>
-                                                            </div>
-                                                        </div> 
-                                                        <div class="row">
-                                                            <div class="col-lg-4">
-                                                            <label style="color:grey; padding:8px">Tanggal Lahir</label>
-                                                            </div>
-                                                            <div class="col-lg-8">
-                                                                <input type="date" class="form-control" name="tanggal_lahir" value='<?php echo $row_ortu["tanggal_lahir"]; ?>' placeholder="Masukkan Tanggal Lahir Anda" style="background-color: #F39C12; border-radius: 15px" required>
-                                                            </div>
-                                                        </div> 
-                                                        <div class="row">
-                                                            <div class="col-lg-4">
-                                                            <label style="color:grey; padding:8px">Jenis Kelamin</label>
-                                                            </div>
-                                                            <div class="col-lg-8">
-                                                                <input type="radio" name="jenis_kelamin" value="1" <?php if($row_ortu['jenis_kelamin']=="1") echo "checked"; ?>><label style="color:black; padding:4px">Pria</label></input>
-                                                                <input type="radio" name="jenis_kelamin" value="2" <?php if($row_ortu['jenis_kelamin']=="2") echo "checked"; ?>><label style="color:black; padding:4px">Wanita</label></input>
+                                                                <input type="text" class="form-control" name="nama" value='<?php echo $row_murid["nama"]; ?>' placeholder="Isi Nama Sekolah" style="background-color: #F39C12; border-radius: 15px" required>
                                                             </div>
                                                         </div>
+                                                        
                                                         <div class="row">
                                                             <div class="col-lg-4">
-                                                            <label style="color:grey; padding:8px">Alamat</label>
+                                                            <label style="color:grey; padding:8px">Jurusan</label>
                                                             </div>
                                                             <div class="col-lg-8">
-                                                                <input type="text" class="form-control" name="alamat" value='<?php echo $row_ortu["alamat"]; ?>'placeholder="Silahkan Isi Alamat Lengkap Anda" style="background-color: #F39C12; border-radius: 15px required">
+                                                                <input type="text" class="form-control" name="jurusan" value='<?php echo $row_murid["jurusan"]; ?>' placeholder="Isi Nama Sekolah" style="background-color: #F39C12; border-radius: 15px" required>
                                                             </div>
                                                         </div> 
                                                         <div class="row">
                                                             <div class="col-lg-4">
-                                                                <label style="color:grey; padding:8px">Agama</label>
+                                                            <label style="color:grey; padding:8px">Tahun Ajaran</label>
                                                             </div>
                                                             <div class="col-lg-8">
-                                                                <select id="inputState" class="form-control" name="agama" value='<?php echo $row_ortu["agama"]; ?>'style="background-color: #F39C12; border-radius: 15px" required>
-                                                                    <option value="" required>Silahkan dipilih</option>
-                                                                    <?php
-                                                                      $sql_agama = "SELECT * FROM agama";
-                                                                      $query_agama = mysqli_query($koneksi, $sql_agama);
-                                                                      $i = 1;
-                                                                      while($row_agama = mysqli_fetch_assoc($query_agama)) { ?>
-                                                                        <option value="<?php echo $i; ?>" <?php if($row_ortu['agama']==$i) echo "selected"; ?>><?php echo $row_agama['nama_agama']; ?></option>
-                                                                        <?php $i++;
-                                                                      }
-                                                                    ?>
-                                                                          
-                                                                </select>
+                                                                <input type="year" class="form-control" name="tahun_ajar" value='<?php echo $row_murid["tahun_ajaran"]; ?>' placeholder="Isi Nama Sekolah" style="background-color: #F39C12; border-radius: 15px" required>
                                                             </div>
-                                                        </div> 
+                                                        </div>     
                                                         <div class="row">
                                                             <div class="col-lg-4">
-                                                                <label style="color:grey; padding:8px">Email</label>
+                                                            <label style="color:grey; padding:8px">Tingkat</label>
                                                             </div>
                                                             <div class="col-lg-8">
-                                                                <input type="email" class="form-control" name="email" value='<?php echo $row_ortu["email"]; ?>'placeholder="Masukkan email Anda" style="background-color: #F39C12; border-radius: 15px" required>
+                                                                <input type="text" class="form-control" name="tingkat" value='<?php echo $row_murid["class"]; ?>' placeholder="Isi Nama Sekolah" style="background-color: #F39C12; border-radius: 15px" required>
                                                             </div>
-                                                        </div> 
-
-                                                        <div class="row">
-                                                            <div class="col-lg-4">
-                                                                <label style="color:grey; padding:8px">No Handphone</label>
-                                                            </div>
-                                                            <div class="col-lg-8">
-                                                                <input type="tel" class="form-control" name="telephone" value='<?php echo $row_ortu["telephone"]; ?>'placeholder="Masukkan No Handphone Anda" style="background-color: #F39C12; border-radius: 15px" required>
-                                                            </div>
-                                                        </div> 
-
-                                                        <div class="row">
-                                                            <div class="col-lg-4">
-                                                                <label style="color:grey; padding:8px">Status Kepegawaian</label>
-                                                            </div>
-                                                            <div class="col-lg-8">
-                                                                <select id="inputState" class="form-control" name="kepegawaian" style="background-color: #F39C12; border-radius: 15px" required>
-                                                                    <option>Pilih Status Kepegawaian</option>
-                                                                    <option value="1" <?php if($row_ortu['kepegawaian']=="1") echo "selected"; ?>>PNS</option>
-                                                                    <option value="2" <?php if($row_ortu['kepegawaian']=="2") echo "selected"; ?>>Non PNS</option>
-                                                                </select>
-                                                            </div>
-                                                            <div class="col-lg-12 mt-2" style="margin: 1px; margin-left: 10px;">
-                                                            <input type="hidden" name="gambarLama" value="<?php echo $row_ortu['gambar']; ?>" class="custom-file-input">
-                                                             <input type="file" name="gambar" class="custom-file-input">
-                                                             <label class="custom-file-label">Foto Profile</label>
-                                                            </div>
-                                                        </div> 
-                                    
+                                                        </div>   
                                                         
                                                         <br/>
                                                         <div class="col-sm-4 text-center" style="margin: auto;">
@@ -331,36 +279,17 @@ $username = $_SESSION['username'];
 </html>
 <?php
       if (isset($_POST['daftar'])){
-        function fail($username){
-          $nama=$_FILES['gambar']['name'];
-          $ext = explode('.', $nama);
-
-          $nama=$username.".".$ext[sizeof($ext)-1];
-          $temp=$_FILES['gambar']['tmp_name'];
-          if (move_uploaded_file($temp,'../assets/img/'.$nama)){
-              return $nama;
-          }
-          else
-            return "404";
-      }
-      // $password = $_POST["password"];
+      $nisn = $_POST["nisn"];
+      $nis = $_POST["nis"];
       $nama = $_POST["nama"];
-      $tempat_lahir = $_POST["tempat_lahir"];
-      $tanggal_lahir = $_POST["tanggal_lahir"];
-      $jenis_kelamin = $_POST["jenis_kelamin"];
-      $alamat = $_POST["alamat"];
-      $agama = $_POST["agama"];
-      $email = $_POST["email"];
-      $telephone = $_POST["telephone"];
-      $kepegawaian = $_POST["kepegawaian"];
-      $gambar = fail($_GET['username']);
-      if($gambar == "404") $gambar = $_POST['gambarLama']; //gambar lama
-      //$level = $_POST["level"];
-      $sql_update="UPDATE `pengguna` SET `nama`='$nama',`tempat_lahir`='$tempat_lahir',`tanggal_lahir`='$tanggal_lahir',`jenis_kelamin`='$jenis_kelamin',`alamat`='$alamat',`agama`='$agama',`email`='$email',`telephone`='$telephone',`kepegawaian`='$kepegawaian',`gambar`='$gambar' WHERE username='$username'";
+      $jurusan = $_POST["jurusan"];
+      $tahun_ajar = $_POST["tahun_ajar"];
+      $tingkat = $_POST["tingkat"];
+      $sql_update="UPDATE `murid` SET `nisn`='$nisn',`nis`='$nis',`jurusan`='$jurusan',`nama`='$nama',`tahun_ajaran`='$tahun_ajar',`class`='$tingkat' WHERE nisn='$nisn'";
       
       if (mysqli_query($koneksi, $sql_update))
-      echo "<script> alert('Profil Berhasil diperbarui');window.location.href='profile-dashboardOrtu.php'</script>";
+      echo "<script> alert('Profil Berhasil diperbarui');window.location.href='informasi-murid.php'</script>";
       else
-      echo "<script> alert('Profil Gagal Diperbarui');window.location.href='profile-dashboardOrtu.php'</script>";
+      echo "<script> alert('Profil Gagal Diperbarui');window.location.href='informasi-murid.php'</script>";
       }
 ?>

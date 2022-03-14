@@ -199,7 +199,7 @@ $username = $_SESSION['username'];
           <div class="row">
             <!-- Datatables -->
             <div class="justify-content-end card-header">
-                        <a href="AddStudent.php" class="btn btn-outline-primary">
+                        <a href="tambah-kelas.php" class="btn btn-outline-primary">
                         <i class="fa-solid fa-plus"></i> Tambah</a>
          </div>
             <div class="col-lg-12">
@@ -245,7 +245,7 @@ $username = $_SESSION['username'];
                                                 <td><?php echo $row['jurusan']; ?></td>
                                                 <td><?php echo $row['wali_kelas']; ?></td>
                                                 <td><span>
-                                                <a href="EditStudent.php?nisn=<?php echo $row['nisn']; ?>" class="btn btn-outline-primary">Edit</a> 
+                                                <a href="edit-kelas.php?walikelas=<?php echo $row['wali_kelas']; ?>" class="btn btn-outline-primary">Edit</a> 
                                                 <button class="btn btn-outline-danger" type="submit" name="hapus" value="<?php echo $row['nisn']; ?>">Delete</button>
                                                 </span>
                                                 </td>
