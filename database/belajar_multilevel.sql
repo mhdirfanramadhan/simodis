@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 12 Mar 2022 pada 04.37
--- Versi server: 10.4.20-MariaDB
--- Versi PHP: 7.4.22
+-- Generation Time: Mar 15, 2022 at 06:15 AM
+-- Server version: 10.4.20-MariaDB
+-- PHP Version: 7.4.22
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `agama`
+-- Table structure for table `agama`
 --
 
 CREATE TABLE `agama` (
@@ -33,7 +33,7 @@ CREATE TABLE `agama` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `agama`
+-- Dumping data for table `agama`
 --
 
 INSERT INTO `agama` (`id_agama`, `nama_agama`) VALUES
@@ -47,7 +47,7 @@ INSERT INTO `agama` (`id_agama`, `nama_agama`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `jenis_kelamin`
+-- Table structure for table `jenis_kelamin`
 --
 
 CREATE TABLE `jenis_kelamin` (
@@ -56,7 +56,7 @@ CREATE TABLE `jenis_kelamin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `jenis_kelamin`
+-- Dumping data for table `jenis_kelamin`
 --
 
 INSERT INTO `jenis_kelamin` (`id_jk`, `nama_kelamin`) VALUES
@@ -66,7 +66,7 @@ INSERT INTO `jenis_kelamin` (`id_jk`, `nama_kelamin`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kabupaten`
+-- Table structure for table `kabupaten`
 --
 
 CREATE TABLE `kabupaten` (
@@ -75,7 +75,7 @@ CREATE TABLE `kabupaten` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `kabupaten`
+-- Dumping data for table `kabupaten`
 --
 
 INSERT INTO `kabupaten` (`id_kabupaten`, `nama_kabupaten`) VALUES
@@ -85,7 +85,7 @@ INSERT INTO `kabupaten` (`id_kabupaten`, `nama_kabupaten`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kecamatan`
+-- Table structure for table `kecamatan`
 --
 
 CREATE TABLE `kecamatan` (
@@ -94,7 +94,7 @@ CREATE TABLE `kecamatan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `kecamatan`
+-- Dumping data for table `kecamatan`
 --
 
 INSERT INTO `kecamatan` (`id_kecamatan`, `nama_kecamatan`) VALUES
@@ -104,28 +104,27 @@ INSERT INTO `kecamatan` (`id_kecamatan`, `nama_kecamatan`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kelas`
+-- Table structure for table `kelas`
 --
 
 CREATE TABLE `kelas` (
+  `id_kelas` int(11) NOT NULL,
   `kelas` int(11) NOT NULL,
-  `sub_kelas` int(11) NOT NULL,
-  `jurusan` varchar(255) NOT NULL,
-  `wali_kelas` enum('Keddy Fadilah','Nina Juliani','Dedi Leman','Fatimah Dewi') NOT NULL
+  `sub_kelas` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `kelas`
+-- Dumping data for table `kelas`
 --
 
-INSERT INTO `kelas` (`kelas`, `sub_kelas`, `jurusan`, `wali_kelas`) VALUES
-(10, 1, 'RPL', 'Keddy Fadilah'),
-(11, 2, 'RPL', 'Dedi Leman');
+INSERT INTO `kelas` (`id_kelas`, `kelas`, `sub_kelas`) VALUES
+(1, 10, 3),
+(2, 11, 2);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kelurahan`
+-- Table structure for table `kelurahan`
 --
 
 CREATE TABLE `kelurahan` (
@@ -134,7 +133,7 @@ CREATE TABLE `kelurahan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `kelurahan`
+-- Dumping data for table `kelurahan`
 --
 
 INSERT INTO `kelurahan` (`id_kelurahan`, `nama_kelurahan`) VALUES
@@ -144,7 +143,7 @@ INSERT INTO `kelurahan` (`id_kelurahan`, `nama_kelurahan`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kepegawaian`
+-- Table structure for table `kepegawaian`
 --
 
 CREATE TABLE `kepegawaian` (
@@ -153,7 +152,7 @@ CREATE TABLE `kepegawaian` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `kepegawaian`
+-- Dumping data for table `kepegawaian`
 --
 
 INSERT INTO `kepegawaian` (`id_pegawai`, `nama_pegawai`) VALUES
@@ -163,7 +162,7 @@ INSERT INTO `kepegawaian` (`id_pegawai`, `nama_pegawai`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `level`
+-- Table structure for table `level`
 --
 
 CREATE TABLE `level` (
@@ -172,7 +171,7 @@ CREATE TABLE `level` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `level`
+-- Dumping data for table `level`
 --
 
 INSERT INTO `level` (`id_level`, `nama_level`) VALUES
@@ -184,7 +183,7 @@ INSERT INTO `level` (`id_level`, `nama_level`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `murid`
+-- Table structure for table `murid`
 --
 
 CREATE TABLE `murid` (
@@ -199,7 +198,7 @@ CREATE TABLE `murid` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `murid`
+-- Dumping data for table `murid`
 --
 
 INSERT INTO `murid` (`nisn`, `nis`, `kelas`, `sub_kelas`, `jurusan`, `nama`, `tahun_ajaran`, `class`) VALUES
@@ -208,7 +207,7 @@ INSERT INTO `murid` (`nisn`, `nis`, `kelas`, `sub_kelas`, `jurusan`, `nama`, `ta
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pengguna`
+-- Table structure for table `pengguna`
 --
 
 CREATE TABLE `pengguna` (
@@ -229,7 +228,7 @@ CREATE TABLE `pengguna` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `pengguna`
+-- Dumping data for table `pengguna`
 --
 
 INSERT INTO `pengguna` (`nama`, `username`, `password`, `tempat_lahir`, `tanggal_lahir`, `jenis_kelamin`, `alamat`, `agama`, `email`, `telephone`, `kepegawaian`, `gambar`, `level`, `tgl_daftar`) VALUES
@@ -249,7 +248,7 @@ INSERT INTO `pengguna` (`nama`, `username`, `password`, `tempat_lahir`, `tanggal
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `provinsi`
+-- Table structure for table `provinsi`
 --
 
 CREATE TABLE `provinsi` (
@@ -258,7 +257,7 @@ CREATE TABLE `provinsi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `provinsi`
+-- Dumping data for table `provinsi`
 --
 
 INSERT INTO `provinsi` (`id_provinsi`, `nama_provinsi`) VALUES
@@ -268,7 +267,7 @@ INSERT INTO `provinsi` (`id_provinsi`, `nama_provinsi`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `sekolah`
+-- Table structure for table `sekolah`
 --
 
 CREATE TABLE `sekolah` (
@@ -288,87 +287,112 @@ CREATE TABLE `sekolah` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `sekolah`
+-- Dumping data for table `sekolah`
 --
 
 INSERT INTO `sekolah` (`npsn`, `gambar`, `nss`, `nama_sekolah`, `alamat`, `kecamatan`, `kelurahan`, `kabupaten`, `provinsi`, `kode_pos`, `telephone`, `email`, `kepala_sekolah`) VALUES
-(50028422, '.jpg', '51333', 'TRITECH INFORMATIKA', 'jalan kawat 6 tanjung mulia hilir', '1', '1', '1', '1', 20241, '+621 992-020-20', 'akunml12ku@gmail.com', 'Herizal');
+(50028422, '.jpg', '51333', 'TRITECH INFORMATIKA', 'Bhayangkara', '1', '1', '1', '1', 20241, '+621 992-020-20', 'akunml12ku@gmail.com', 'Herizal');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `wali_kelas`
+--
+
+CREATE TABLE `wali_kelas` (
+  `id_walikelas` int(11) NOT NULL,
+  `nama_walikelas` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `wali_kelas`
+--
+
+INSERT INTO `wali_kelas` (`id_walikelas`, `nama_walikelas`) VALUES
+(1, 'Keddy Fadilah'),
+(2, 'Dedi Leman');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `agama`
+-- Indexes for table `agama`
 --
 ALTER TABLE `agama`
   ADD PRIMARY KEY (`id_agama`);
 
 --
--- Indeks untuk tabel `jenis_kelamin`
+-- Indexes for table `jenis_kelamin`
 --
 ALTER TABLE `jenis_kelamin`
   ADD PRIMARY KEY (`id_jk`);
 
 --
--- Indeks untuk tabel `kabupaten`
+-- Indexes for table `kabupaten`
 --
 ALTER TABLE `kabupaten`
   ADD PRIMARY KEY (`id_kabupaten`);
 
 --
--- Indeks untuk tabel `kecamatan`
+-- Indexes for table `kecamatan`
 --
 ALTER TABLE `kecamatan`
   ADD PRIMARY KEY (`id_kecamatan`);
 
 --
--- Indeks untuk tabel `kelas`
+-- Indexes for table `kelas`
 --
 ALTER TABLE `kelas`
-  ADD PRIMARY KEY (`kelas`);
+  ADD PRIMARY KEY (`id_kelas`);
 
 --
--- Indeks untuk tabel `kelurahan`
+-- Indexes for table `kelurahan`
 --
 ALTER TABLE `kelurahan`
   ADD PRIMARY KEY (`id_kelurahan`);
 
 --
--- Indeks untuk tabel `kepegawaian`
+-- Indexes for table `kepegawaian`
 --
 ALTER TABLE `kepegawaian`
   ADD PRIMARY KEY (`id_pegawai`);
 
 --
--- Indeks untuk tabel `level`
+-- Indexes for table `level`
 --
 ALTER TABLE `level`
   ADD PRIMARY KEY (`id_level`);
 
 --
--- Indeks untuk tabel `murid`
+-- Indexes for table `murid`
 --
 ALTER TABLE `murid`
   ADD PRIMARY KEY (`nisn`);
 
 --
--- Indeks untuk tabel `pengguna`
+-- Indexes for table `pengguna`
 --
 ALTER TABLE `pengguna`
   ADD PRIMARY KEY (`username`);
 
 --
--- Indeks untuk tabel `provinsi`
+-- Indexes for table `provinsi`
 --
 ALTER TABLE `provinsi`
   ADD PRIMARY KEY (`id_provinsi`);
 
 --
--- Indeks untuk tabel `sekolah`
+-- Indexes for table `sekolah`
 --
 ALTER TABLE `sekolah`
   ADD PRIMARY KEY (`npsn`);
+
+--
+-- Indexes for table `wali_kelas`
+--
+ALTER TABLE `wali_kelas`
+  ADD PRIMARY KEY (`id_walikelas`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
