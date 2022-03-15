@@ -172,46 +172,14 @@ include "../koneksi.php";
                                                         </div> 
 
                                                         <div class="row">
-                                                            <div class="col-lg-4">
-                                                                <label style="color:grey; padding:8px">Status Kepegawaian</label>
-                                                            </div>
-                                                            <div class="col-lg-8">
-                                                                <select id="inputState" class="form-control" name="kepegawaian" style="background-color: #F39C12; border-radius: 15px" required>
-                                                                    <option>Pilih Status Kepegawaian</option>
-                                                                    <?php
-                                                                        $sql_pegawai='select * from kepegawaian';
-                                                                        $query_pegawai=mysqli_query($koneksi,$sql_pegawai);
-                                                                        while ($row_pegawai=mysqli_fetch_assoc($query_pegawai)){
-                                                                            echo '<option value="'.$row_pegawai['id_pegawai'].'">'.$row_pegawai['nama_pegawai'].'</option>';
-                                                                        }
-                                                                    ?>     
-                                                                </select>
-                                                            </div>
-                                                            <div class="col-lg-4">
-                                                                <label style="color:grey; padding:8px">Daftar Sebagai</label>
-                                                            </div>
-                                                            <div class="col-lg-8">
-                                                                <select id="inputState" class="form-control" name="level" style="background-color: #F39C12; border-radius: 15px" required>
-                                                                    <option>Select..</option>
-                                                                    <?php
-                                                                        $sql_level='select * from level';
-                                                                        $query_level=mysqli_query($koneksi,$sql_level);
-                                                                        while ($row_level=mysqli_fetch_assoc($query_level)){
-                                                                            echo '<option value="'.$row_level['id_level'].'">'.$row_level['nama_level'].'</option>';
-                                                                        }
-                                                                    ?>    
-                                                                </select>
-                                                            </div>
+                                                        
+                                                                        
                                                             <div class="col-lg-12 mt-2">
                                                              <input type="file" name="gambar" id="image" onchange="showImage(this);" class="custom-file-input" required>
                                                              <label class="custom-file-label">Upload Foto</label>
                                                             </div>
                                                         </div> 
-                                                        
                                     
-                                                        <div class="new-account mt-3">
-                                                            <p style="color:black;">Already Have an Account?  <a style="color:black;" class="text-primary" href="login.php" >Sign in</a></p>
-                                                        </div>
                                                         <br/>
                                                         <div class="col-sm-4 text-center" style="margin: auto;">
                                                             <input type="submit" name="daftar" id="daftar" value="Tambah" class="btn btn-secondary btn-block" style="background-color: blue; border-color: #39B44a; height: 15%">

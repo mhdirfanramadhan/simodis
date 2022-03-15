@@ -108,6 +108,7 @@ $username = $_SESSION['username'];
       $sql_query=mysqli_query($koneksi,$sql_ortu);
       $row_ortu=mysqli_fetch_assoc($sql_query);
  ?>
+
   <div id="wrapper">
     <!-- Sidebar -->
     <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
@@ -243,7 +244,7 @@ $username = $_SESSION['username'];
                                                     
                                                 ?>
                                                 <td><?php echo $row['jurusan']; ?></td>
-                                                <td><?php echo $row['wali_kelas']; ?></td>
+                                                <td><?php echo $row_wali['nama_walikelas']; ?></td>
                                                 <td><span>
                                                 <a href="edit-kelas.php?walikelas=<?php echo $row['wali_kelas']; ?>" class="btn btn-outline-primary">Edit</a> 
                                                 <button class="btn btn-outline-danger" type="submit" name="hapus" value="<?php echo $row['nisn']; ?>">Delete</button>
