@@ -20,18 +20,23 @@ if($cek > 0){
  if($data['level']=="1"){
   $_SESSION['username'] = $username;
   $_SESSION['level'] = "1";
-  header("location:dinas_provinsi.php");
+  header("location:welcome-provinsi.php");
 
 
  }else if($data['level']=="2"){
   $_SESSION['username'] = $username;
   $_SESSION['level'] = "2";
-  header("location:dinas_kab_kota.php");
+  header("location:welcomekabkot.php");
 
 }else if($data['level']=="3"){
     $_SESSION['username'] = $username;
     $_SESSION['level'] = "3";
     header("location:welcome-ortu.php");
+
+  }else if($data['level']=="4"){
+    $_SESSION['username'] = $username;
+    $_SESSION['level'] = "4";
+    header("location:welcome-murid.php");
 
  }else{
 
