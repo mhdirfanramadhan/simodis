@@ -244,6 +244,11 @@ $username = $_SESSION['username'];
                                                     
                                                 ?>
                                                 <td><?php echo $row['jurusan']; ?></td>
+                                                <?php 
+                                                  $sql_wali='select * from wali_kelas';
+                                                  $query_wali=mysqli_query($koneksi,$sql_wali);
+                                                  $row_wali=mysqli_fetch_assoc($query_wali);
+                                                  ?>
                                                 <td><?php echo $row_wali['nama_walikelas']; ?></td>
                                                 <td><span>
                                                 <a href="edit-kelas.php?walikelas=<?php echo $row['wali_kelas']; ?>" class="btn btn-outline-primary">Edit</a> 
