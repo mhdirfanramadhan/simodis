@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 16, 2022 at 12:15 PM
+-- Generation Time: Mar 16, 2022 at 03:27 PM
 -- Server version: 10.4.20-MariaDB
 -- PHP Version: 7.4.22
 
@@ -66,6 +66,17 @@ INSERT INTO `jenis_kelamin` (`id_jk`, `nama_kelamin`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `jurusan`
+--
+
+CREATE TABLE `jurusan` (
+  `npsn` int(11) NOT NULL,
+  `kode_jurusan` char(3) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `kabupaten`
 --
 
@@ -108,7 +119,8 @@ INSERT INTO `kecamatan` (`id_kecamatan`, `nama_kecamatan`) VALUES
 --
 
 CREATE TABLE `kelas` (
-  `id_kelas` int(11) NOT NULL,
+  `npsn` int(11) NOT NULL,
+  `jurusan` varchar(255) NOT NULL,
   `kelas` int(11) NOT NULL,
   `sub_kelas` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -117,9 +129,9 @@ CREATE TABLE `kelas` (
 -- Dumping data for table `kelas`
 --
 
-INSERT INTO `kelas` (`id_kelas`, `kelas`, `sub_kelas`) VALUES
-(1, 10, 3),
-(2, 11, 2);
+INSERT INTO `kelas` (`npsn`, `jurusan`, `kelas`, `sub_kelas`) VALUES
+(1, '', 0, 0),
+(2, '', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -238,7 +250,7 @@ INSERT INTO `pengguna` (`nama`, `username`, `password`, `tempat_lahir`, `tanggal
 ('66', '666', '666', 'pertamina rantau', '1000-11-16', '1', 'dsadas', 1, 'akunml12ku@gmail.com', '2147483647', '1', '666.jpg', '4', '2022-03-09 11:47:50'),
 ('irfan', 'admin', 'admin', '', NULL, '', '', 0, '', '0', '', '', 'admin_dinProv', NULL),
 ('irfssn', 'dinas_kabkot', 'admin', '', NULL, '', '', 0, '', '0', '', '', 'dinas_kabKota', NULL),
-('Muhammad Irfan Ramadhan', 'irfan', 'irfangg123', 'pertamina rantau', '2005-10-11', '1', 'jalan kawat 6 tanjung mulia hilir', 1, 'akunml12ku@gmail.com', '082268484420', '2', 'irfan.png', '3', NULL),
+('Muhammad Irfan pasaribu', 'irfan', 'irfangg123', 'pertamina rantau', '2005-10-11', '1', 'jalan kawat 6 tanjung mulia hilir', 1, 'akunml12ku@gmail.com', '082268484420', '2', 'irfan.png', '3', NULL),
 ('', 'irfangg123', 'irfannn', 'pertamina rantau', '1222-12-01', '1', 'jalan kawat 6 tanjung mulia hilir', 4, 'akunml12ku@gmail.com', '532532', '1', 'gg.jpg', '1', NULL),
 ('Irfanramadhann', 'irfanmuris', 'irfangg123', 'medan', '1333-03-12', '1', 'medan kawat 6', 1, 'akunml12ku@gmail.com', '2147483647', '1', '531421.jpg', '4', NULL),
 ('irfanramadhansss', 'nextirfan', 'irfangg123', 'pertamina rantau', '2005-02-11', '1', 'jalan kawat 6 tanjung mulia hilir', 1, 'akunml12ku@gmail.com', '2147483647', '1', 'nextirfan.jpg', '4', NULL);
@@ -329,6 +341,12 @@ ALTER TABLE `jenis_kelamin`
   ADD PRIMARY KEY (`id_jk`);
 
 --
+-- Indexes for table `jurusan`
+--
+ALTER TABLE `jurusan`
+  ADD PRIMARY KEY (`npsn`);
+
+--
 -- Indexes for table `kabupaten`
 --
 ALTER TABLE `kabupaten`
@@ -344,7 +362,7 @@ ALTER TABLE `kecamatan`
 -- Indexes for table `kelas`
 --
 ALTER TABLE `kelas`
-  ADD PRIMARY KEY (`id_kelas`);
+  ADD PRIMARY KEY (`npsn`);
 
 --
 -- Indexes for table `kelurahan`
